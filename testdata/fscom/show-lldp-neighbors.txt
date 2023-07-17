@@ -1,0 +1,9 @@
+Capability Codes:
+       (R)Router,(B)Bridge,(C)DOCSIS Cable Device,(T)Telephone
+       (W)WLAN Access Point, (P)Repeater,(S)Station,(O)Other
+
+Device-ID       Local-Intf      Hldtme       Port-ID      Capability
+core01          TGi0/25         117          518          R B
+core02          TGi0/26         117          518          R B
+
+Total entries displayed: 1

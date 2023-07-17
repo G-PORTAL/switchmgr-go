@@ -1,0 +1,9 @@
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/14.1X53/junos" message-id="xxx" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <system-information>
+        <hardware-model>ex3200-48t</hardware-model>
+        <os-name>junos-ex</os-name>
+        <os-version>14.1X53</os-version>
+        <serial-number>xxx</serial-number>
+        <host-name>switch-host-name</host-name>
+    </system-information>
+</rpc-reply>

@@ -1,0 +1,20 @@
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/18.2R3/junos" message-id="xxx" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <lldp-neighbors-information junos:style="brief">
+        <lldp-neighbor-information>
+            <lldp-local-port-id>xe-0/2/1</lldp-local-port-id>
+            <lldp-local-parent-interface-name>ae0</lldp-local-parent-interface-name>
+            <lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+            <lldp-remote-chassis-id>aa:de:ad:ca:47:80</lldp-remote-chassis-id>
+            <lldp-remote-port-description>switchname</lldp-remote-port-description>
+            <lldp-remote-system-name>switch-system-name</lldp-remote-system-name>
+        </lldp-neighbor-information>
+        <lldp-neighbor-information>
+            <lldp-local-port-id>xe-0/2/0</lldp-local-port-id>
+            <lldp-local-parent-interface-name>ae0</lldp-local-parent-interface-name>
+            <lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+            <lldp-remote-chassis-id>c0:03:cc:7e:55:d2</lldp-remote-chassis-id>
+            <lldp-remote-port-description>switchname</lldp-remote-port-description>
+            <lldp-remote-system-name>switch-system-name2</lldp-remote-system-name>
+        </lldp-neighbor-information>
+    </lldp-neighbors-information>
+</rpc-reply>

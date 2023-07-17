@@ -1,0 +1,27 @@
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/14.1X53/junos" message-id="xxx" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <ethernet-switching-table-information xmlns="http://xml.juniper.net/junos/14.1X53/junos-esw" junos:style="brief">
+        <ethernet-switching-table junos:style="brief">
+            <mac-table-count>2</mac-table-count>
+            <mac-table-learned>2</mac-table-learned>
+            <mac-table-persistent>0</mac-table-persistent>
+            <mac-table-entry junos:style="brief">
+                <mac-vlan>vlan1</mac-vlan>
+                <mac-address>*</mac-address>
+                <mac-type>Flood</mac-type>
+                <mac-age>-</mac-age>
+                <mac-interfaces-list>
+                    <mac-interfaces>All-members</mac-interfaces>
+                </mac-interfaces-list>
+            </mac-table-entry>
+            <mac-table-entry junos:style="brief">
+                <mac-vlan>vlan2</mac-vlan>
+                <mac-address>00:aa:36:74:34:20</mac-address>
+                <mac-type>Learn</mac-type>
+                <mac-age junos:seconds="0">0</mac-age>
+                <mac-interfaces-list>
+                    <mac-interfaces>ge-0/0/0.0</mac-interfaces>
+                </mac-interfaces-list>
+            </mac-table-entry>
+        </ethernet-switching-table>
+    </ethernet-switching-table-information>
+</rpc-reply>

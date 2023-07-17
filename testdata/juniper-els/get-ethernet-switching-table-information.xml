@@ -1,0 +1,28 @@
+<rpc-reply xmlns:junos="http://xml.juniper.net/junos/18.2R3/junos" message-id="xxx" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <l2ng-l2ald-rtb-macdb>
+        <l2ng-l2ald-mac-entry-vlan junos:style="brief-rtb">
+            <mac-count-global>2</mac-count-global>
+            <learnt-mac-count>2</learnt-mac-count>
+            <l2ng-l2-mac-routing-instance>default-switch</l2ng-l2-mac-routing-instance>
+            <l2ng-l2-vlan-id>1</l2ng-l2-vlan-id>
+            <l2ng-mac-entry>
+                <l2ng-l2-mac-vlan-name>vlan1</l2ng-l2-mac-vlan-name>
+                <l2ng-l2-mac-address>a0:fe:ad:ee:00:10</l2ng-l2-mac-address>
+                <l2ng-l2-mac-flags>D</l2ng-l2-mac-flags>
+                <l2ng-l2-mac-age>-</l2ng-l2-mac-age>
+                <l2ng-l2-mac-logical-interface>ae0.0</l2ng-l2-mac-logical-interface>
+                <l2ng-l2-mac-fwd-next-hop>0</l2ng-l2-mac-fwd-next-hop>
+                <l2ng-l2-mac-rtr-id>0</l2ng-l2-mac-rtr-id>
+            </l2ng-mac-entry>
+            <l2ng-mac-entry>
+                <l2ng-l2-mac-vlan-name>vlan2</l2ng-l2-mac-vlan-name>
+                <l2ng-l2-mac-address>2a:aa:7f:d6:9d:6c</l2ng-l2-mac-address>
+                <l2ng-l2-mac-flags>D</l2ng-l2-mac-flags>
+                <l2ng-l2-mac-age>-</l2ng-l2-mac-age>
+                <l2ng-l2-mac-logical-interface>ge-0/0/20.0</l2ng-l2-mac-logical-interface>
+                <l2ng-l2-mac-fwd-next-hop>0</l2ng-l2-mac-fwd-next-hop>
+                <l2ng-l2-mac-rtr-id>0</l2ng-l2-mac-rtr-id>
+            </l2ng-mac-entry>
+        </l2ng-l2ald-mac-entry-vlan>
+    </l2ng-l2ald-rtb-macdb>
+</rpc-reply>

@@ -1,0 +1,218 @@
+!version 2.2.0E build 99013
+service timestamps log date
+service timestamps debug date
+service password-encryption
+!
+hostname switch
+!
+!
+lldp run
+!
+!
+!
+!
+!
+!
+spanning-tree mode rstp
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+aaa authentication login ssh local
+aaa authentication login default local
+aaa authentication enable default none
+aaa authorization exec default local
+!
+username admin password 7 xxx
+42d221d252b57626933
+!
+!
+!
+!
+!
+interface Null0
+!
+interface GigaEthernet0/1
+ switchport trunk vlan-untagged 1
+ switchport mode trunk
+!
+interface GigaEthernet0/2
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/3
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/4
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/5
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/6
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/7
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/8
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/9
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/10
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/11
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/12
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/13
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/14
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/15
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/16
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/17
+ switchport mode trunk
+ switchport pvid 6
+ shutdown
+!
+interface GigaEthernet0/18
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/19
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/20
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/21
+ switchport mode trunk
+ switchport pvid 6
+!
+interface GigaEthernet0/22
+ switchport mode access
+!
+interface GigaEthernet0/23
+ switchport mode access
+ switchport access vlan 6
+!
+interface GigaEthernet0/24
+ description test-123
+ switchport trunk vlan-allowed 2,4,21-25
+ switchport trunk vlan-untagged 21
+ switchport pvid 21
+ switchport mode trunk
+!
+interface TGigaEthernet0/25
+ switchport mode trunk
+!
+interface TGigaEthernet0/26
+!
+interface TGigaEthernet0/27
+!
+interface TGigaEthernet0/28
+!
+interface VLAN4
+ ip address 10.10.10.253 255.255.240.0
+ no ip directed-broadcast
+!
+!
+!
+vlan 4
+ name name2
+!
+vlan 6
+ name name
+!
+vlan 1,4,6
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip route default 10.10.10.1
+ip exf
+!
+ipv6 exf
+!
+!
+!
+!
+ip telnet attack-defense
+no ip telnet enable
+!
+ip http language english
+ip http server
+!
+!
+!
+!
+line console 0
+ exec-timeout 1500
+!
+line vty 0 31
+ exec-timeout 1500
+!
+!
+!
+ip sshd auth-method ssh
+ip sshd enable
+!
+!
+!
+!
+!
+!
+!Pending configurations for absent linecards:
+!
+!No configurations pending global
