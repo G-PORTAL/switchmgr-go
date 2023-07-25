@@ -8,8 +8,8 @@ import (
 )
 
 var serialRegex = regexp.MustCompile(`Serial num:([0-9A-Z]+), ID num:`)
-var modelRegex = regexp.MustCompile(`([0-9A-Z-]+)\sSeries Software, Version`)
-var versionRegex = regexp.MustCompile(`Series\sSoftware,\sVersion\s([0-9A-Z.]+)`)
+var modelRegex = regexp.MustCompile(`([0-9A-Z-]+)\s(Series\s)?Software,\sVersion`)
+var versionRegex = regexp.MustCompile(`(Series\s)?Software,\sVersion\s([0-9A-Z.]+)`)
 var hostnameRegex = regexp.MustCompile(`(.+)\suptime\sis\s`)
 
 func (fs *FSCom) GetHardwareInfo() (*models.HardwareInfo, error) {
@@ -35,17 +35,17 @@ func ParseHardwareInfo(output string) (*models.HardwareInfo, error) {
 
 	// model
 	matches = modelRegex.FindStringSubmatch(output)
-	if len(matches) != 2 {
+	if len(matches) != 3 {
 		return nil, errors.New("could not parse model")
 	}
 	hwInfo.Model = matches[1]
 
 	// firmware version
 	matches = versionRegex.FindStringSubmatch(output)
-	if len(matches) != 2 {
+	if len(matches) != 3 {
 		return nil, errors.New("could not parse firmware version")
 	}
-	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", matches[1])
+	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", matches[2])
 
 	// hostname
 	matches = hostnameRegex.FindStringSubmatch(output)

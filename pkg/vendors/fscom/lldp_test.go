@@ -7,7 +7,7 @@ import (
 )
 
 func TestParseLLDPTable(t *testing.T) {
-	table, err := fscom.ParseLLDPNeighbors(utils.ReadTestData("show lldp neighbors"))
+	table, err := fscom.ParseLLDPNeighbors(utils.ReadTestData("show lldp neighbors", nil))
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}

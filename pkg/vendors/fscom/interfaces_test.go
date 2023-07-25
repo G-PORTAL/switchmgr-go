@@ -7,7 +7,7 @@ import (
 )
 
 func TestListInterfaces(t *testing.T) {
-	iosConfig, err := fscom.ParseConfiguration(utils.ReadTestData("show running-config"))
+	iosConfig, err := fscom.ParseConfiguration(utils.ReadTestData("show running-config", nil))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -130,7 +130,7 @@ func TestListInterfaces(t *testing.T) {
 }
 
 func TestParseInterfaces(t *testing.T) {
-	nics, err := fscom.ParseInterfaces(utils.ReadTestData("show interfaces"))
+	nics, err := fscom.ParseInterfaces(utils.ReadTestData("show interfaces", nil))
 	if err != nil {
 		t.Fatal(err)
 	}

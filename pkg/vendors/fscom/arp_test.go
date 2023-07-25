@@ -7,7 +7,7 @@ import (
 )
 
 func TestParseArpTable(t *testing.T) {
-	entries, err := fscom.ParseArpTable(utils.ReadTestData("show mac address table"))
+	entries, err := fscom.ParseArpTable(utils.ReadTestData("show mac address table", nil))
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
