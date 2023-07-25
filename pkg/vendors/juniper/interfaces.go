@@ -15,7 +15,8 @@ import (
 const defaultMTU = 1500
 
 func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
-	if err := j.updateVlanMap(); err != nil {
+	cfg, err := j.GetRunningConfig()
+	if err != nil {
 		return nil, err
 	}
 	reply, err := j.session.Exec(netconf.RawMethod("<get-interface-information><level>extensive</level></get-interface-information>"))
@@ -39,8 +40,18 @@ func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
 			MTU:         defaultMTU,
 			Speed:       physicalInterface.GetSpeed(),
 		}
+		if portMode, err := cfg.getInterfaceMode(physicalInterfaceName); err == nil {
+			nic.Mode = portMode
+		}
 
-		mtu, err := strconv.Atoi(physicalInterface.MTU)
+		if vlanCfg, err := cfg.getVlansByInterface(physicalInterfaceName); err == nil {
+			nic.TaggedVLANs = vlanCfg.TaggedVLANs
+			if vlanCfg.UntaggedVLAN > 0 {
+				nic.UntaggedVLAN = &vlanCfg.UntaggedVLAN
+			}
+		}
+
+		mtu, err := strconv.Atoi(strings.TrimSpace(physicalInterface.MTU))
 		if err == nil && mtu > 0 {
 			nic.MTU = uint32(mtu)
 		}
@@ -58,16 +69,6 @@ func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
 		}
 
 		resp = append(resp, nic)
-	}
-
-	// Add VLANs to interfaces
-	for i := range resp {
-		if vlanCfg, ok := j.interfaceVlans[resp[i].Name]; ok {
-			resp[i].TaggedVLANs = vlanCfg.TaggedVLANs
-			if vlanCfg.UntaggedVLAN > 0 {
-				resp[i].UntaggedVLAN = &vlanCfg.UntaggedVLAN
-			}
-		}
 	}
 
 	return resp, nil

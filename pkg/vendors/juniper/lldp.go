@@ -17,7 +17,6 @@ func (j *Juniper) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
 		return nil, err
 	}
 
-	// TODO: add mtu, speed, management, mode
 	entries := make([]models.LLDPNeighbor, 0)
 	for _, entry := range interfaces.Entries {
 		localInterface1 := strings.TrimSuffix(strings.TrimSpace(entry.LocalInterface), ".0")
