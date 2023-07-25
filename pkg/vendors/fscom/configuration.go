@@ -84,8 +84,6 @@ func (fs *FSCom) getConfiguration() (Configuration, error) {
 		return nil, err
 	}
 
-	fs.Logger().Debugf("configuration: %s", output)
-
 	cfg, err := ParseConfiguration(output)
 	if err != nil {
 		return nil, err

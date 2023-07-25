@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func InfoTest() {
+func main() {
 	driver, err := vendors.New(vendors.Vendor(os.Getenv("SWITCH_VENDOR")))
 	if err != nil {
 		log.Fatalf("Failed to create driver: %v", err)

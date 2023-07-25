@@ -9,6 +9,7 @@ import (
 	"io"
 	"regexp"
 	"strings"
+	"time"
 )
 
 type FSCom struct {
@@ -120,6 +121,12 @@ func (fs *FSCom) save() error {
 func (fs *FSCom) sendCommands(commands ...string) (string, error) {
 	output := ""
 
+	startTime := time.Now()
+	fs.Logger().Debugf("sendCommands %q", commands)
+	defer func() {
+		fs.Logger().Debugf("sendCommands %q took %s", commands, time.Since(startTime).String())
+	}()
+
 	reader := bufio.NewReader(fs.reader)
 	for _, s := range commands {
 		// send the command to the switch
@@ -140,7 +147,7 @@ func (fs *FSCom) sendCommands(commands ...string) (string, error) {
 	return output, nil
 }
 
-var moreRgx = regexp.MustCompile(`--More--(?:\s\b)+`)
+var moreRgx = regexp.MustCompile(`--More--[\s\\b]+`)
 
 func readUntil(command string, reader *bufio.Reader, writer io.Writer) (string, error) {
 	output := ""
