@@ -3,9 +3,6 @@ package juniper
 import (
 	"errors"
 	"github.com/g-portal/switchmgr-go/pkg/models"
-	"github.com/g-portal/switchmgr-go/pkg/utils"
-	"log"
-	"regexp"
 	"strconv"
 	"strings"
 )
@@ -74,88 +71,6 @@ type junosVlan struct {
 type junosConfiguration struct {
 	VLANs      []junosVlan `xml:"data>configuration>vlans>vlan"`
 	Interfaces []junosNif  `xml:"data>configuration>interfaces>interface"`
-}
-
-func (j *junosConfiguration) getVlanIDByName(name string) (int32, error) {
-	for _, vlan := range j.VLANs {
-		if vlan.Name == name {
-			return vlan.ID, nil
-		}
-	}
-	intval, err := strconv.Atoi(strings.TrimSpace(name))
-	if err == nil {
-		return int32(intval), nil
-	}
-	return 0, errors.New("no vlan found")
-}
-
-func (j *junosConfiguration) getInterfaceMode(name string) (models.InterfaceMode, error) {
-	for _, nic := range j.Interfaces {
-		if nic.Name != name {
-			continue
-		}
-		switch strings.TrimSpace(nic.PortMode) {
-		case "trunk":
-			return models.InterfaceModeTrunk, nil
-		case "access":
-			return models.InterfaceModeAccess, nil
-		}
-	}
-	return "", errors.New("no interface found")
-}
-
-func (j *junosConfiguration) getVlansByInterface(name string) (*junosVlanMapEntry, error) {
-	rgSingleVLAN := regexp.MustCompile("^[0-9]+$")
-	rgVLANRange := regexp.MustCompile(`^[0-9]+-[0-9]+$`)
-	for _, nic := range j.Interfaces {
-		if nic.Name != name {
-			continue
-		}
-		junosInterface := junosVlanMapEntry{}
-		if rgSingleVLAN.MatchString(nic.UntaggedVLAN) {
-			intId, err := strconv.Atoi(nic.UntaggedVLAN)
-			if err != nil {
-				log.Println(err.Error())
-				continue
-			}
-
-			junosInterface.UntaggedVLAN = int32(intId)
-		} else {
-			vlanID, err := j.getVlanIDByName(nic.UntaggedVLAN)
-			if err == nil {
-				junosInterface.UntaggedVLAN = vlanID
-			}
-		}
-
-		for _, vlan := range nic.TaggedVLANs {
-			vlan = strings.TrimSpace(vlan)
-			// Numeric -> to int32
-			if rgSingleVLAN.MatchString(vlan) {
-				intId, err := strconv.Atoi(vlan)
-				if err != nil {
-					log.Println(err.Error())
-					continue
-				}
-
-				if int32(intId) == junosInterface.UntaggedVLAN {
-					continue
-				}
-
-				junosInterface.TaggedVLANs = append(junosInterface.TaggedVLANs, int32(intId))
-			} else if rgVLANRange.MatchString(vlan) {
-				convertedVlans := utils.ConvertVlans(vlan, ",")
-				convertedVlans = utils.DeleteVlanFromIDs(convertedVlans, junosInterface.UntaggedVLAN)
-				junosInterface.TaggedVLANs = append(junosInterface.TaggedVLANs, convertedVlans...)
-			} else {
-				vlanID, err := j.getVlanIDByName(nic.UntaggedVLAN)
-				if err == nil {
-					junosInterface.TaggedVLANs = append(junosInterface.TaggedVLANs, vlanID)
-				}
-			}
-		}
-		return &junosInterface, nil
-	}
-	return nil, errors.New("no interface found")
 }
 
 type junosArpTable struct {

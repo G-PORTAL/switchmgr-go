@@ -115,14 +115,14 @@
                 </interface>
                 <interface>
                     <name>ge-0/0/1</name>
-                    <native-vlan-id>1</native-vlan-id>
+                    <native-vlan-id>2</native-vlan-id>
                     <unit>
                         <name>0</name>
                         <family>
                             <ethernet-switching>
-                                <interface-mode>trunk</interface-mode>
+                                <interface-mode>access</interface-mode>
                                 <vlan>
-                                    <members>1</members>
+                                    <members>2</members>
                                 </vlan>
                                 <storm-control>
                                     <profile-name>default</profile-name>

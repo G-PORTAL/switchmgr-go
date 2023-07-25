@@ -1,4 +1,4 @@
-package juniper
+package juniper_els
 
 import (
 	"encoding/xml"
@@ -13,7 +13,7 @@ import (
 	"strings"
 )
 
-func (j *Juniper) GetRunningConfig() (*junosConfiguration, error) {
+func (j *JuniperELS) GetRunningConfig() (*junosConfiguration, error) {
 	reply, err := j.session.Exec(netconf.RawMethod("<get-config><source><running/></source></get-config>"))
 	if err != nil {
 		return nil, err
@@ -23,7 +23,7 @@ func (j *Juniper) GetRunningConfig() (*junosConfiguration, error) {
 	if err := xml.Unmarshal([]byte(reply.RawReply), &cfg); err != nil {
 		return nil, err
 	}
-	return &cfg, err
+	return &cfg, nil
 }
 
 // GetVlanMap returns the int32 representation of a specified vlan name
@@ -40,7 +40,7 @@ func (j *junosConfiguration) GetVlanIDByName(name string) (int32, error) {
 	if err == nil {
 		return int32(intval), nil
 	}
-	return 0, fmt.Errorf("GetVlanIDByName: no vlan found: %s", name)
+	return 0, errors.New("GetVlanIDByName: no vlan found")
 }
 
 // GetInterfaceMode returns the mode of a specified interface

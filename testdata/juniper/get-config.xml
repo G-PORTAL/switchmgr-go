@@ -126,6 +126,22 @@
                         </family>
                     </unit>
                 </interface>
+                <interface>
+                    <name>ge-0/0/2</name>
+                    <description>server</description>
+                    <unit>
+                        <name>0</name>
+                        <family>
+                            <ethernet-switching>
+                                <port-mode>access</port-mode>
+                                <vlan>
+                                    <members>4</members>
+                                    <members>intern</members>
+                                </vlan>
+                            </ethernet-switching>
+                        </family>
+                    </unit>
+                </interface>
             </interfaces>
             <snmp>
                 <community>

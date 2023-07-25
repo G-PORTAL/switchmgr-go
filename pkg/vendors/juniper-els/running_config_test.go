@@ -1,6 +1,7 @@
 package juniper_els_test
 
 import (
+	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
 	"testing"
 )
@@ -25,6 +26,25 @@ func TestGetRunningConfig(t *testing.T) {
 			}
 		} else {
 			t.Errorf("vlan %s (%d) not found in expected vlans", vlan.Name, vlan.ID)
+		}
+	}
+
+	// Test if the GetInterfaceMode utility works
+	expectedModes := map[string]models.InterfaceMode{
+		"ge-0/0/0":  models.InterfaceModeTrunk,
+		"ge-0/0/1":  models.InterfaceModeAccess,
+		"pfe-0/0/0": models.InterfaceModeAccess,
+	}
+	for iface, mode := range expectedModes {
+		if actualMode, err := cfg.GetInterfaceMode(iface); err == nil {
+			if actualMode != mode {
+				t.Errorf("interface %s has wrong mode, expected %s, got %s", iface, mode, actualMode)
+			}
+		} else {
+			if iface == "pfe-0/0/0" {
+				continue
+			}
+			t.Errorf("interface %s not found in config", iface)
 		}
 	}
 }

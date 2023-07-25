@@ -29,7 +29,6 @@ func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
 		return nil, err
 	}
 
-	// TODO: add management, mode
 	resp := make([]*models.Interface, 0)
 	for _, physicalInterface := range interfaces.Interfaces {
 		physicalInterfaceName := strings.TrimSpace(physicalInterface.Name)
@@ -40,29 +39,64 @@ func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
 			MTU:         defaultMTU,
 			Speed:       physicalInterface.GetSpeed(),
 		}
-		if portMode, err := cfg.getInterfaceMode(physicalInterfaceName); err == nil {
+
+		// Define type of interface
+		switch strings.Split(physicalInterfaceName, ".")[0] {
+		case "xe-":
+			nic.Type = models.InterfaceType10GSFPPlus
+		case "et-":
+			nic.Type = models.InterfaceType40QGSFPPlus
+		case "ae":
+			nic.Type = models.InterfaceTypeLAG
+		default:
+			nic.Type = models.InterfaceType1GE
+		}
+
+		// Get mode of the interface based on switch configuration
+		if portMode, err := cfg.GetInterfaceMode(physicalInterfaceName); err == nil {
 			nic.Mode = portMode
 		}
 
-		if vlanCfg, err := cfg.getVlansByInterface(physicalInterfaceName); err == nil {
+		// Set VLANs of the interface based on switch configuration
+		if vlanCfg, err := cfg.GetVlansByInterface(physicalInterfaceName); err == nil {
 			nic.TaggedVLANs = vlanCfg.TaggedVLANs
 			if vlanCfg.UntaggedVLAN > 0 {
 				nic.UntaggedVLAN = &vlanCfg.UntaggedVLAN
 			}
 		}
 
+		// Set MTU of the interface
 		mtu, err := strconv.Atoi(strings.TrimSpace(physicalInterface.MTU))
 		if err == nil && mtu > 0 {
 			nic.MTU = uint32(mtu)
 		}
 
+		nic.IPAddresses = make([]string, 0)
 		for _, logicalInterface := range physicalInterface.LogicalInterfaces {
+			// Check if interface is used for management
 			if len(logicalInterface.AddressFamily.Addresses) > 0 {
 				nic.Management = true
 				break
 			}
+
+			// Set IP addresses of the interface
+			for _, address := range logicalInterface.AddressFamily.Addresses {
+				nic.IPAddresses = append(nic.IPAddresses, strings.TrimSpace(address.IP))
+			}
+
+			// Add LAG interfaces to the interface if it is a LAG
+			if nic.Type == models.InterfaceTypeLAG {
+				nic.LagInterfaces = make([]string, 0)
+				if strings.TrimSpace(logicalInterface.Name) == fmt.Sprintf("%s.0", physicalInterfaceName) {
+					for _, lagLink := range logicalInterface.LagTrafficStatistics.Links {
+						nic.LagInterfaces = append(nic.LagInterfaces, strings.TrimSuffix(strings.TrimSpace(lagLink.Name), ".0"))
+					}
+					break
+				}
+			}
 		}
 
+		// Set MAC address of the interface
 		mac := models.MacAddress(strings.TrimSpace(physicalInterface.MacAddress))
 		if mac.Valid() {
 			nic.MacAddress = mac

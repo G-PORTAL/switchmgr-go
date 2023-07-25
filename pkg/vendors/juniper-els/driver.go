@@ -29,8 +29,6 @@ func NewMockDriver() *JuniperELS {
 		_, err = os.Stat(directory + "/testdata")
 	}
 	return &JuniperELS{
-		vlanMapping:    make(map[string]int32),
-		interfaceVlans: make(map[string]junosVlanMapEntry),
 		session: &MockDriver{
 			mockBasePath: directory + "/testdata/juniper-els/",
 		},

@@ -13,13 +13,23 @@ func TestListInterfaces(t *testing.T) {
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
-	if len(interfaces) != 2 {
-		t.Errorf("expected 2 interface, got %d", len(interfaces))
+	if len(interfaces) != 3 {
+		t.Errorf("expected 3 interface, got %d", len(interfaces))
+	}
+
+	expectedMTUs := map[string]uint32{
+		"ge-0/0/0": 1514,
+		"ge-0/0/1": 1337,
 	}
 
 	for _, m := range interfaces {
 		if m.MacAddress == "" {
 			continue
+		}
+		if desiredMTU, ok := expectedMTUs[m.Name]; ok {
+			if m.MTU != desiredMTU {
+				t.Errorf("interface %s has wrong MTU, expected %d, got %d", m.Name, desiredMTU, m.MTU)
+			}
 		}
 
 		if _, err = net.ParseMAC(string(m.MacAddress)); err != nil {

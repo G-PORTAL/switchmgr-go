@@ -14,7 +14,8 @@ import (
 )
 
 func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
-	if err := j.updateVlanMap(); err != nil {
+	cfg, err := j.GetRunningConfig()
+	if err != nil {
 		return nil, err
 	}
 
@@ -41,7 +42,10 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 		}
 
 		// Mode
-		m := models.InterfaceModeAccess
+		mode := models.InterfaceModeAccess
+		if detectedMode, err := cfg.GetInterfaceMode(physicalInterfaceName); err == nil {
+			mode = detectedMode
+		}
 
 		// MTU
 		mtu := 0
@@ -63,7 +67,6 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 		if strings.HasPrefix(physicalInterfaceName, "ae") {
 			t = models.InterfaceTypeLAG
 			// If it is a LAG, the mode is trunk
-			m = models.InterfaceModeTrunk
 			for _, logicalInterface := range physicalInterface.LogicalInterfaces {
 				if strings.TrimSpace(logicalInterface.Name) == fmt.Sprintf("%s.0", physicalInterfaceName) {
 					for _, lagLink := range logicalInterface.LagTrafficStatistics.Links {
@@ -76,7 +79,7 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 
 		nic := &models.Interface{
 			Name:          physicalInterfaceName,
-			Mode:          m,
+			Mode:          mode,
 			Type:          t,
 			MTU:           uint32(mtu),
 			Speed:         physicalInterface.GetSpeed(),
@@ -108,7 +111,7 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 
 	// Add VLANs to interfaces
 	for i := range resp {
-		if vlanCfg, ok := j.interfaceVlans[resp[i].Name]; ok {
+		if vlanCfg, err := cfg.GetVlansByInterface(resp[i].Name); err == nil {
 			resp[i].TaggedVLANs = vlanCfg.TaggedVLANs
 			if vlanCfg.UntaggedVLAN > 0 {
 				resp[i].UntaggedVLAN = &vlanCfg.UntaggedVLAN

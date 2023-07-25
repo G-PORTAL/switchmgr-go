@@ -17,10 +17,8 @@ import (
 // fully implemented yet.
 type JuniperELS struct {
 	unimplemented.Unimplemented
-	vlanMapping    map[string]int32
-	interfaceVlans map[string]junosVlanMapEntry
-	session        JuniperDriver
-	identifier     string
+	session    JuniperDriver
+	identifier string
 }
 
 var configMutex = keymutex.New(128)

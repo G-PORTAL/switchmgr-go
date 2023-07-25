@@ -12,6 +12,7 @@ type junosNif struct {
 	Description  string   `xml:"description"`
 	UntaggedVLAN string   `xml:"native-vlan-id"`
 	TaggedVLANs  []string `xml:"unit>family>ethernet-switching>vlan>members"`
+	PortMode     string   `xml:"unit>family>ethernet-switching>interface-mode"`
 }
 
 type junosVlanMapEntry struct {
