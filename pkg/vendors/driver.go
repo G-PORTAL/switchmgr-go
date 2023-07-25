@@ -22,7 +22,7 @@ const (
 	VendorJuniper Vendor = "juniper"
 	// VendorJuniperELS Juniper, version 15.1 and higher with advanced
 	// ELS (enhanced layer 2 software) features.
-	VendorJuniperELS Vendor = "juniper-els"
+	VendorJuniperELS Vendor = "juniper_els"
 )
 
 // Valid checks if this lib supports the given vendor.
