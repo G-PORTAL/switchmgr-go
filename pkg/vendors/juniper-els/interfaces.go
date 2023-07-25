@@ -42,6 +42,8 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 
 		// Mode
 		m := models.InterfaceModeAccess
+
+		// MTU
 		mtu := 0
 		if m, err := strconv.Atoi(strings.TrimSpace(physicalInterface.MTU)); err == nil {
 			mtu = m
@@ -60,6 +62,7 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 		lagPorts := make([]string, 0)
 		if strings.HasPrefix(physicalInterfaceName, "ae") {
 			t = models.InterfaceTypeLAG
+			// If it is a LAG, the mode is trunk
 			m = models.InterfaceModeTrunk
 			for _, logicalInterface := range physicalInterface.LogicalInterfaces {
 				if strings.TrimSpace(logicalInterface.Name) == fmt.Sprintf("%s.0", physicalInterfaceName) {
