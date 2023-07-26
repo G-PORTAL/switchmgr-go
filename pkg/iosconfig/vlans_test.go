@@ -2,15 +2,12 @@ package iosconfig_test
 
 import (
 	"github.com/g-portal/switchmgr-go/pkg/iosconfig"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom/utils"
 	"testing"
 )
 
 func TestConfig_Vlans(t *testing.T) {
-	//cfg := iosconfig.
-	cfg, err := iosconfig.Parse(plainConfig)
-	if err != nil {
-		t.Error(err)
-	}
+	cfg := iosconfig.Parse(utils.ReadTestData("show running-config", nil))
 
 	vlans := cfg.Vlans()
 

@@ -27,7 +27,7 @@ fmt.println(info.FirmwareVersion)
 
 ## Test
 
-    go test ./... -count-1 -v
+    go test ./... -count=1 -v
 
 ## Linting
 

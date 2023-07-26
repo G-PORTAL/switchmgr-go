@@ -84,10 +84,7 @@ func (fs *FSCom) getConfiguration() (Configuration, error) {
 		return nil, err
 	}
 
-	cfg, err := ParseConfiguration(output)
-	if err != nil {
-		return nil, err
-	}
+	cfg := ParseConfiguration(output)
 
 	return Configuration(cfg), nil
 }
@@ -108,6 +105,6 @@ func (cfg Configuration) GetInterface(name string) (*models.Interface, error) {
 }
 
 // ParseConfiguration parses the configuration of a FSCom switch.
-func ParseConfiguration(cfg string) (iosconfig.Config, error) {
+func ParseConfiguration(cfg string) iosconfig.Config {
 	return iosconfig.Parse(cfg)
 }

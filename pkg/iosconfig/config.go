@@ -97,26 +97,36 @@ type Config map[string]ConfigValues
 
 var parentRgx = regexp.MustCompile(`^[a-z]+`)
 
-func Parse(config string) (Config, error) {
+// Parse parses a Cisco IOS config and returns a Config object.
+func Parse(config string) Config {
 	parts := strings.Split(config, "!")
 
 	cfg := Config{}
 
+	// Each part consists of the key like "interface GigabitEthernet1/0/1" and
+	// the config values like "switchport mode access" and "switchport access vlan 10"
+	// separated by a newline. The key is always the first line of the part.
+	// The key is used as the parent for the config values.
 	for _, part := range parts {
 		part = strings.TrimSpace(part)
+		// Skip empty lines
 		if part == "" {
 			continue
 		}
 
+		// Extract the values for the key
 		parent := ""
 		lines := strings.Split(part, "\n")
 		for _, line := range lines {
-			if parentRgx.MatchString(line) {
+			// If the line matches the parent regex, it's a new parent (key)
+			if parent == "" && parentRgx.MatchString(line) {
 				parent = strings.TrimSpace(line)
 				cfg[parent] = nil
+				continue
 			}
 
-			if !parentRgx.MatchString(line) && parent != "" {
+			// Otherwise, it's a config value
+			if parent != "" {
 				if cfg[parent] == nil {
 					cfg[parent] = make(ConfigValues, 0)
 				}
@@ -126,7 +136,5 @@ func Parse(config string) (Config, error) {
 		}
 	}
 
-	// TODO: sort the config by key value of the map
-
-	return cfg, nil
+	return cfg
 }

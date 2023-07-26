@@ -7,10 +7,7 @@ import (
 )
 
 func TestListInterfaces(t *testing.T) {
-	iosConfig, err := fscom.ParseConfiguration(utils.ReadTestData("show running-config", nil))
-	if err != nil {
-		t.Fatal(err)
-	}
+	iosConfig := fscom.ParseConfiguration(utils.ReadTestData("show running-config", nil))
 
 	cfg := fscom.Configuration(iosConfig)
 
