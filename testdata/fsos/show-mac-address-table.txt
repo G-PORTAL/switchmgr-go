@@ -1,0 +1,19 @@
+          Mac Address Table
+-------------------------------------------
+(*)  - Security Entry     (M)  - MLAG Entry
+(MO) - MLAG Output Entry  (MI) - MLAG Input Entry
+(E)  - EVPN Entry         (EO) - EVPN Output Entry
+(EI) - EVPN Input Entry
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+20      649d.990a.7acb    dynamic(*)  agg1
+20      649d.9906.1145    dynamic(*)  agg1
+20      00de.adbe.ef02    static(*)   agg1
+20      00de.adbe.ef01    static(*)   agg1
+1160    507c.6f16.f926    dynamic(*)  eth-0-16
+15      5ced.8c31.0ae7    dynamic(*)  eth-0-16
+15      9c6b.001d.74d4    dynamic(*)  eth-0-17
+15      5cba.2c39.172b    dynamic(*)  eth-0-14
+15      5cba.2c3a.1c17    dynamic(*)  eth-0-15
+15      00de.adbe.ef02    static(*)   agg1
+15      00c0.1dc0.ffee    static(*)   agg1

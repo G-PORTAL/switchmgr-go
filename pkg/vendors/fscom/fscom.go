@@ -15,6 +15,8 @@ import (
 type FSCom struct {
 	unimplemented.Unimplemented
 
+	LoginCommands []string
+
 	conn    *ssh.Client
 	session *ssh.Session
 
@@ -34,7 +36,7 @@ func (fs *FSCom) Connect(cfg config.Connection) error {
 				return []string{}, err
 			}),
 		},
-		HostKeyAlgorithms: []string{ssh.KeyAlgoDSA},
+		HostKeyAlgorithms: []string{ssh.KeyAlgoDSA, ssh.KeyAlgoRSA, ssh.KeyAlgoECDSA256, ssh.KeyAlgoED25519},
 		HostKeyCallback:   ssh.InsecureIgnoreHostKey(),
 	}
 
@@ -76,7 +78,7 @@ func (fs *FSCom) Connect(cfg config.Connection) error {
 	}
 
 	// entering the shell
-	if _, err = fs.sendCommands("enter", "terminal length 0"); err != nil {
+	if _, err = fs.SendCommands(fs.LoginCommands...); err != nil {
 		return err
 	}
 
@@ -105,7 +107,7 @@ func (fs *FSCom) Disconnect() error {
 
 // / save saves the configuration to startup config
 func (fs *FSCom) save() error {
-	output, err := fs.sendCommands("write")
+	output, err := fs.SendCommands("write")
 	if err != nil {
 		return err
 	}
@@ -117,14 +119,14 @@ func (fs *FSCom) save() error {
 	return err
 }
 
-// sendCommand sends a command to the switch and returns the output
-func (fs *FSCom) sendCommands(commands ...string) (string, error) {
+// SendCommands sends a command to the switch and returns the output
+func (fs *FSCom) SendCommands(commands ...string) (string, error) {
 	output := ""
 
 	startTime := time.Now()
-	fs.Logger().Debugf("sendCommands %q", commands)
+	fs.Logger().Debugf("SendCommands %q", commands)
 	defer func() {
-		fs.Logger().Debugf("sendCommands %q took %s", commands, time.Since(startTime).String())
+		fs.Logger().Debugf("SendCommands %q took %s", commands, time.Since(startTime).String())
 	}()
 
 	reader := bufio.NewReader(fs.reader)

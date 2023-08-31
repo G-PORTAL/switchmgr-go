@@ -1,0 +1,12 @@
+FSOS Software, S5800, Version 7.4.5.r1
+Copyright (C) 2009-2022 FS.COM Inc.  All Rights Reserved.
+The current running image is flash:/boot/S5800-Series-Switches-FSOS-V7.4.5.R1.R.bin
+
+wup-as-test123 uptime is 8 days, 0 hours, 38 minutes
+Hardware Type is 48T4S
+Hardware Version is 3.1
+SDRAM size 2048M
+Flash size 8192M
+BootRom Version is A.2.18
+System serial number is CG2112162735N00000
+Current Web Version is 7.4.1.r1

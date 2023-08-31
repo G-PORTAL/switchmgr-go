@@ -18,7 +18,7 @@ const (
 )
 
 func (fs *FSCom) ListInterfaces() ([]*models.Interface, error) {
-	config, err := fs.getConfiguration()
+	config, err := fs.GetConfiguration()
 	if err != nil {
 		return nil, err
 	}
@@ -100,7 +100,7 @@ func (fs *FSCom) ConfigureInterface(update *models.UpdateInterface) (bool, error
 
 	// exit interface config mode
 	commands = append(commands, "exit", "exit")
-	_, err = fs.sendCommands(commands...)
+	_, err = fs.SendCommands(commands...)
 	if err != nil {
 		return false, fmt.Errorf("failed to configure interface: %w", err)
 	}
@@ -123,7 +123,7 @@ func (fs *FSCom) ConfigureInterface(update *models.UpdateInterface) (bool, error
 }
 
 func (fs *FSCom) getInterfaceInfo() (map[string]fscomInterface, error) {
-	output, err := fs.sendCommands("show interface")
+	output, err := fs.SendCommands("show interface")
 	if err != nil {
 		return nil, err
 	}

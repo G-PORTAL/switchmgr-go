@@ -1,0 +1,22 @@
+show lldp neighbor brief
+Local Port  : eth-0-17
+Remote Port : 9c:6b:00:1d:74:d4
+Hold Time   : 120
+Expire Time : 99
+System Name : AMI9C6B001D74D4
+
+------------------------------------------------------------
+Local Port  : eth-0-51
+Remote Port : eth-0-9
+Hold Time   : 120
+Expire Time : 100
+System Name : wup-ds-07
+
+------------------------------------------------------------
+Local Port  : eth-0-52
+Remote Port : eth-0-9
+Hold Time   : 120
+Expire Time : 100
+System Name : wup-ds-08
+
+------------------------------------------------------------

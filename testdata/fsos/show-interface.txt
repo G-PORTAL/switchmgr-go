@@ -1,0 +1,1598 @@
+Interface eth-0-1
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff34 (bia 649d.9906.ff34)
+  Bandwidth 1000000 kbits
+  Index 1 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-2
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff35 (bia 649d.9906.ff35)
+  Bandwidth 1000000 kbits
+  Index 2 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-3
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff36 (bia 649d.9906.ff36)
+  Bandwidth 1000000 kbits
+  Index 3 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-4
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff37 (bia 649d.9906.ff37)
+  Bandwidth 1000000 kbits
+  Index 4 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-5
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff38 (bia 649d.9906.ff38)
+  Bandwidth 1000000 kbits
+  Index 5 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-6
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff39 (bia 649d.9906.ff39)
+  Bandwidth 1000000 kbits
+  Index 6 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-7
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3a (bia 649d.9906.ff3a)
+  Bandwidth 1000000 kbits
+  Index 7 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-8
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3b (bia 649d.9906.ff3b)
+  Bandwidth 1000000 kbits
+  Index 8 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-9
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3c (bia 649d.9906.ff3c)
+  Bandwidth 1000000 kbits
+  Index 9 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-10
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3d (bia 649d.9906.ff3d)
+  Bandwidth 1000000 kbits
+  Index 10 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-11
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3e (bia 649d.9906.ff3e)
+  Bandwidth 1000000 kbits
+  Index 11 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-12
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff3f (bia 649d.9906.ff3f)
+  Bandwidth 1000000 kbits
+  Index 12 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-13
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff40 (bia 649d.9906.ff40)
+  Bandwidth 1000000 kbits
+  Index 13 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-14
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff41 (bia 649d.9906.ff41)
+  Bandwidth 10000 kbits
+  Index 14 , Metric 1 , Encapsulation ARPA
+  Speed - 10Mb/s , Duplex - Full  , Media type is 1000BASE_T
+  Last up time(UTC): 2023-08-25 06:07:50
+  Last down time(UTC): 2023-08-25 06:07:48
+  Up counts: 49
+  Down counts: 48
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 10 bits/sec, 0 packets/sec
+    5 minute output rate 3149190 bits/sec, 4682 packets/sec
+    688441 packets input, 104495517 bytes
+    Received 676838 unicast, 306 broadcast, 11297 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    3853935893 packets output, 331290035128 bytes
+    Transmitted 5678108 unicast, 3846821196 broadcast, 1436588 multicast
+    0 underruns, 0 output errors, 0 pause output
+    982344 output discard
+Interface eth-0-15
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff42 (bia 649d.9906.ff42)
+  Bandwidth 10000 kbits
+  Index 15 , Metric 1 , Encapsulation ARPA
+  Speed - 10Mb/s , Duplex - Full  , Media type is 1000BASE_T
+  Last up time(UTC): 2023-08-25 06:06:48
+  Last down time(UTC): 2023-08-25 06:06:47
+  Up counts: 49
+  Down counts: 48
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 54 bits/sec, 0 packets/sec
+    5 minute output rate 3148185 bits/sec, 4681 packets/sec
+    548532 packets input, 74837131 bytes
+    Received 535176 unicast, 472 broadcast, 11343 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 1541 pause input
+    3849559520 packets output, 329776083097 bytes
+    Transmitted 4827354 unicast, 3843296108 broadcast, 1436058 multicast
+    0 underruns, 0 output errors, 0 pause output
+    4521664 output discard
+Interface eth-0-16
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff43 (bia 649d.9906.ff43)
+  Bandwidth 1000000 kbits
+  Index 16 , Metric 1 , Encapsulation ARPA
+  Speed - 1000Mb/s , Duplex - Full  , Media type is 1000BASE_T
+  Last up time(UTC): 2023-08-31 12:08:46
+  Last down time(UTC): 2023-08-31 12:08:44
+  Up counts: 52
+  Down counts: 51
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 97001 bits/sec, 25 packets/sec
+    5 minute output rate 3764289 bits/sec, 4733 packets/sec
+    1932484 packets input, 303280486 bytes
+    Received 1916778 unicast, 2970 broadcast, 12736 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    3879449050 packets output, 333340719729 bytes
+    Transmitted 6962461 unicast, 3871043437 broadcast, 1443152 multicast
+    0 underruns, 0 output errors, 0 pause output
+    342669 output discard
+Interface eth-0-17
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff44 (bia 649d.9906.ff44)
+  Bandwidth 1000000 kbits
+  Index 17 , Metric 1 , Encapsulation ARPA
+  Speed - 1000Mb/s , Duplex - Full  , Media type is 1000BASE_T
+  Last up time(UTC): 2023-08-29 13:35:10
+  Last down time(UTC): 2023-08-29 13:35:08
+  Up counts: 70
+  Down counts: 69
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 193 bits/sec, 0 packets/sec
+    5 minute output rate 3149345 bits/sec, 4682 packets/sec
+    172290 packets input, 36947845 bytes
+    Received 123542 unicast, 23210 broadcast, 25538 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    3873096175 packets output, 325662386288 bytes
+    Transmitted 690547 unicast, 3870962501 broadcast, 1443127 multicast
+    0 underruns, 0 output errors, 0 pause output
+    98300 output discard
+Interface eth-0-18
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff45 (bia 649d.9906.ff45)
+  Bandwidth 1000000 kbits
+  Index 18 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-19
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff46 (bia 649d.9906.ff46)
+  Bandwidth 1000000 kbits
+  Index 19 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-20
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff47 (bia 649d.9906.ff47)
+  Bandwidth 1000000 kbits
+  Index 20 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-21
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff48 (bia 649d.9906.ff48)
+  Bandwidth 1000000 kbits
+  Index 21 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-22
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff49 (bia 649d.9906.ff49)
+  Bandwidth 1000000 kbits
+  Index 22 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-23
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4a (bia 649d.9906.ff4a)
+  Bandwidth 1000000 kbits
+  Index 23 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-24
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4b (bia 649d.9906.ff4b)
+  Bandwidth 1000000 kbits
+  Index 24 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-25
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4c (bia 649d.9906.ff4c)
+  Bandwidth 1000000 kbits
+  Index 25 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-26
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4d (bia 649d.9906.ff4d)
+  Bandwidth 1000000 kbits
+  Index 26 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-27
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4e (bia 649d.9906.ff4e)
+  Bandwidth 1000000 kbits
+  Index 27 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-28
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff4f (bia 649d.9906.ff4f)
+  Bandwidth 1000000 kbits
+  Index 28 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-29
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff50 (bia 649d.9906.ff50)
+  Bandwidth 1000000 kbits
+  Index 29 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-30
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff51 (bia 649d.9906.ff51)
+  Bandwidth 1000000 kbits
+  Index 30 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-31
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff52 (bia 649d.9906.ff52)
+  Bandwidth 1000000 kbits
+  Index 31 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-32
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff53 (bia 649d.9906.ff53)
+  Bandwidth 1000000 kbits
+  Index 32 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-33
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff54 (bia 649d.9906.ff54)
+  Bandwidth 1000000 kbits
+  Index 33 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-34
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff55 (bia 649d.9906.ff55)
+  Bandwidth 1000000 kbits
+  Index 34 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-35
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff56 (bia 649d.9906.ff56)
+  Bandwidth 1000000 kbits
+  Index 35 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-36
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff57 (bia 649d.9906.ff57)
+  Bandwidth 1000000 kbits
+  Index 36 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-37
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff58 (bia 649d.9906.ff58)
+  Bandwidth 1000000 kbits
+  Index 37 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-38
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff59 (bia 649d.9906.ff59)
+  Bandwidth 1000000 kbits
+  Index 38 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-39
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5a (bia 649d.9906.ff5a)
+  Bandwidth 1000000 kbits
+  Index 39 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-40
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5b (bia 649d.9906.ff5b)
+  Bandwidth 1000000 kbits
+  Index 40 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-41
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5c (bia 649d.9906.ff5c)
+  Bandwidth 1000000 kbits
+  Index 41 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-42
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5d (bia 649d.9906.ff5d)
+  Bandwidth 1000000 kbits
+  Index 42 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-43
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5e (bia 649d.9906.ff5e)
+  Bandwidth 1000000 kbits
+  Index 43 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-44
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff5f (bia 649d.9906.ff5f)
+  Bandwidth 1000000 kbits
+  Index 44 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-45
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff60 (bia 649d.9906.ff60)
+  Bandwidth 1000000 kbits
+  Index 45 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-46
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff61 (bia 649d.9906.ff61)
+  Bandwidth 1000000 kbits
+  Index 46 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-47
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff62 (bia 649d.9906.ff62)
+  Bandwidth 1000000 kbits
+  Index 47 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-48
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff63 (bia 649d.9906.ff63)
+  Bandwidth 1000000 kbits
+  Index 48 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is 1000BASE_T
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-49
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff64 (bia 649d.9906.ff64)
+  Bandwidth 1000000 kbits
+  Index 49 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is Unknown
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-50
+  Interface current state: DOWN
+  Hardware is Ethernet, address is 649d.9906.ff65 (bia 649d.9906.ff65)
+  Bandwidth 1000000 kbits
+  Index 50 , Metric 1 , Encapsulation ARPA
+  Speed - Auto , Duplex - Auto  , Media type is Unknown
+  Last up time: -
+  Last down time: -
+  Up counts: 0
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: Unknown
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 0 bits/sec, 0 packets/sec
+    5 minute output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes
+    Received 0 unicast, 0 broadcast, 0 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    0 packets output, 0 bytes
+    Transmitted 0 unicast, 0 broadcast, 0 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-51
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff66 (bia 649d.9906.ff66)
+  Bandwidth 10000000 kbits
+  Index 51 , Metric 1 , Encapsulation ARPA
+  Speed - 10Gb/s , Duplex - Full  , Media type is 10GBASE_LRM
+  Last up time(UTC): 2023-08-23 09:33:15
+  Last down time: -
+  Up counts: 1
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 3968587 bits/sec, 5220 packets/sec
+    5 minute output rate 95956 bits/sec, 25 packets/sec
+    4223275795 packets input, 377251790493 bytes
+    Received 17088735 unicast, 4202072037 broadcast, 4115023 multicast
+    0 runts, 1692631 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    2000599 packets output, 346789309 bytes
+    Transmitted 1932259 unicast, 26697 broadcast, 41643 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface eth-0-52
+  Interface current state: UP
+  Hardware is Ethernet, address is 649d.9906.ff67 (bia 649d.9906.ff67)
+  Bandwidth 10000000 kbits
+  Index 52 , Metric 1 , Encapsulation ARPA
+  Speed - 10Gb/s , Duplex - Full  , Media type is 10GBASE_LRM
+  Last up time(UTC): 2023-08-23 09:33:15
+  Last down time: -
+  Up counts: 1
+  Down counts: 0
+  Current system time(UTC): 2023-08-31 12:29:32
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  Admin input flow-control is off, output flow-control is off
+  Oper input flow-control is off, output flow-control is off
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 417102 bits/sec, 591 packets/sec
+    5 minute output rate 12049 bits/sec, 2 packets/sec
+    392285461 packets input, 34700055626 bytes
+    Received 10870 unicast, 389464456 broadcast, 2810135 multicast
+    0 runts, 0 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    1757882 packets output, 287163900 bytes
+    Transmitted 1715383 unicast, 265 broadcast, 42234 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface agg1
+  Interface current state: UP
+  Hardware is AGGREGATE, address is 649d.9906.ff66 (bia 649d.9906.ff66)
+  Bandwidth 20000000 kbits
+  Index 2049 , Metric 1 , Encapsulation ARPA
+  Speed - 20.00Gb/s , Duplex - Full  , Media type is Aggregation
+  Up counts: 1
+  Down counts: 0
+  Link type is autonegotiation
+  FEC config: DEFAULT
+  FEC status: OFF
+  The Maximum Frame Size is 9600 bytes
+  VRF binding: not bound
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+    5 minute input rate 4385478 bits/sec, 5811 packets/sec
+    5 minute output rate 108006 bits/sec, 27 packets/sec
+    4615561271 packets input, 411951847379 bytes
+    Received 17099605 unicast, 4591536508 broadcast, 6925158 multicast
+    0 runts, 1692631 giants, 0 input errors, 0 CRC
+    0 frame, 0 overrun, 0 pause input
+    3758481 packets output, 633953209 bytes
+    Transmitted 3647642 unicast, 26962 broadcast, 83877 multicast
+    0 underruns, 0 output errors, 0 pause output
+    0 output discard
+Interface vlan20
+  Interface current state: UP
+  Hardware is VLAN, address is 649d.9906.ff33 (bia 649d.9906.ff33)
+  Description: Switches
+  Bandwidth 1000000 kbits
+  Index 4116 , Metric 1 , Encapsulation ARPA
+  The maximum transmit unit (MTU) is 1500 bytes
+  VRF binding: not bound
+  VRRP master of :  VRRP is not configured on this interface
+  ARP timeout 01:00:00,  ARP retry interval 1s
+  ARP Proxy is disabled, Local ARP Proxy is disabled
+  Internet primary address:
+    10.143.2.231/22 broadcast 10.143.3.255

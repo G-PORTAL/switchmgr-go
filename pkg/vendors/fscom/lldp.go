@@ -10,7 +10,7 @@ import (
 var lldpLineRgx = regexp.MustCompile(`([a-zA-Z0-9\_]+)\s+([a-zA-Z0-9\_]+\/[0-9]+)\s`)
 
 func (fs *FSCom) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
-	output, err := fs.sendCommands("show lldp neighbors")
+	output, err := fs.SendCommands("show lldp neighbors")
 	if err != nil {
 		return nil, err
 	}

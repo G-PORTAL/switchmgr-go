@@ -9,8 +9,8 @@ import (
 func TestConfig_Interfaces(t *testing.T) {
 	cfg := iosconfig.Parse(utils.ReadTestData("show running-config", nil))
 
-	if len(cfg) != 56 {
-		t.Errorf("Config length is not 56, it is %d", len(cfg))
+	if len(cfg) != 46 {
+		t.Errorf("Config length is not 46, it is %d", len(cfg))
 	}
 
 	if len(cfg.Interfaces()) != 30 {
