@@ -20,7 +20,7 @@ func TestParseHardwareInfo(t *testing.T) {
 		t.Fatalf("Serial number is wrong: %s", hwInfo.Serial)
 	}
 
-	if hwInfo.Model != "48T4S" {
+	if hwInfo.Model != "S5800-48T4S" {
 		t.Fatalf("Model is wrong: %s", hwInfo.Model)
 	}
 
