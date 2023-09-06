@@ -64,25 +64,40 @@ func TestParseInterfaces(t *testing.T) {
 		t.Fatalf("expected 54 nics, got %d", len(nics))
 	}
 
-	info, ok := nics["vlan20"]
-	if !ok {
+	if info, ok := nics["vlan20"]; !ok {
 		t.Fatalf("interface vlan20 not found")
+	} else {
+
+		if info.MacAddress.String() != "64:9d:99:06:ff:33" {
+			t.Fatalf("expected vlan20 mac 64:9d:99:06:ff:33, got %s", info.MacAddress.String())
+		}
+
+		if info.MTU != 1300 {
+			t.Fatalf("expected vlan20 MTU 1300, got %d", info.MTU)
+		}
+
+		if info.Speed != 10000000 {
+			t.Fatalf("expected vlan20 Speed 10000000, got %d", info.Speed)
+		}
 	}
 
-	if info.MacAddress.String() != "64:9d:99:06:ff:33" {
-		t.Fatalf("expected vlan20 mac 64:9d:99:06:ff:33, got %s", info.MacAddress.String())
+	if info, ok := nics["eth-0-51"]; !ok {
+		t.Fatalf("interface eth-0-51 not found")
+	} else {
+		if info.MacAddress.String() != "64:9d:99:06:ff:66" {
+			t.Fatalf("expected eth-0-51 mac 64:9d:99:06:ff:66, got %s", info.MacAddress.String())
+		}
+
+		if info.MTU != 1500 {
+			t.Fatalf("expected eth-0-51 MTU 1500, got %d", info.MTU)
+		}
+
+		if info.Speed != 10000000 {
+			t.Fatalf("expected eth-0-51 Speed 10000000, got %d", info.Speed)
+		}
 	}
 
-	if info.MTU != 1300 {
-		t.Fatalf("expected vlan20 MTU 1300, got %d", info.MTU)
-	}
-
-	if info.Speed != 10000000 {
-		t.Fatalf("expected Speed 10000000, got %d", info.Speed)
-	}
-
-	_, ok = nics["TGigaEthernet0/123"]
-	if ok {
+	if _, ok := nics["TGigaEthernet0/123"]; ok {
 		t.Fatalf("interface TGigaEthernet0/123 found, but should not exist")
 	}
 
