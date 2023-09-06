@@ -73,8 +73,8 @@ func (fs *FSOS) ConfigureInterface(update *models.UpdateInterface) (bool, error)
 	}
 
 	commands := []string{
-		"config",                                 // enter config mode
-		fmt.Sprintf("interface %s", update.Name), // enter interface config mode,
+		"configure terminal",                                  // enter config mode
+		fmt.Sprintf("interface %s", update.Name),              // enter interface config mode,
 		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode
 	}
 
