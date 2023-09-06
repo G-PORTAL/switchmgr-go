@@ -106,7 +106,7 @@ func (fs *FSCom) Disconnect() error {
 }
 
 // / save saves the configuration to startup config
-func (fs *FSCom) save() error {
+func (fs *FSCom) Save() error {
 	output, err := fs.SendCommands("write")
 	if err != nil {
 		return err

@@ -1,11 +1,13 @@
 package fsos
 
 import (
+	"bufio"
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"net"
 	"regexp"
 	"strconv"
+	"strings"
 )
 
 type InterfaceMode string
@@ -58,68 +60,68 @@ func (fs *FSOS) GetInterface(name string) (*models.Interface, error) {
 	return nil, fmt.Errorf("interface %s not found", name)
 }
 
-//func (fs *FSOS) ConfigureInterface(update *models.UpdateInterface) (bool, error) {
-//	nic, err := fs.GetInterface(update.Name)
-//	if err != nil {
-//		return false, err
-//	}
-//
-//	// Check if the interface is already configured as requested
-//	if !nic.Differs(update) {
-//		fs.Logger().Debugf("interface %s is already configured as requested", update.Name)
-//		return false, nil
-//	}
-//
-//	commands := []string{
-//		"config",                                 // enter config mode
-//		fmt.Sprintf("interface %s", update.Name), // enter interface config mode,
-//		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode
-//	}
-//
-//	if update.Description != nil {
-//		commands = append(commands, fmt.Sprintf("description %s", *update.Description)) // set interface description
-//	}
-//
-//	if update.UntaggedVLAN != nil {
-//		commands = append(commands, fmt.Sprintf("switchport pvid %d", *update.UntaggedVLAN)) // set untagged vlan
-//	}
-//
-//	if update.TaggedVLANs != nil {
-//		taggedVLANs := make([]string, 0)
-//		if update.UntaggedVLAN != nil {
-//			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(*update.UntaggedVLAN)))
-//		}
-//
-//		for _, vlan := range update.TaggedVLANs {
-//			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(vlan)))
-//		}
-//
-//		commands = append(commands, fmt.Sprintf("switchport trunk vlan-allowed %s", strings.Join(taggedVLANs, ",")))
-//	}
-//
-//	// exit interface config mode
-//	commands = append(commands, "exit", "exit")
-//	_, err = fs.SendCommands(commands...)
-//	if err != nil {
-//		return false, fmt.Errorf("failed to configure interface: %w", err)
-//	}
-//
-//	nic, err = fs.GetInterface(update.Name)
-//	if err != nil {
-//		return false, err
-//	}
-//
-//	if nic.Differs(update) {
-//		return false, fmt.Errorf("interface differs, original %v, updated %v", nic, update)
-//	}
-//
-//	err = fs.save()
-//	if err != nil {
-//		return false, err
-//	}
-//
-//	return true, nil
-//}
+func (fs *FSOS) ConfigureInterface(update *models.UpdateInterface) (bool, error) {
+	nic, err := fs.GetInterface(update.Name)
+	if err != nil {
+		return false, err
+	}
+
+	// Check if the interface is already configured as requested
+	if !nic.Differs(update) {
+		fs.Logger().Debugf("interface %s is already configured as requested", update.Name)
+		return false, nil
+	}
+
+	commands := []string{
+		"config",                                 // enter config mode
+		fmt.Sprintf("interface %s", update.Name), // enter interface config mode,
+		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode
+	}
+
+	if update.Description != nil {
+		commands = append(commands, fmt.Sprintf("description %s", *update.Description)) // set interface description
+	}
+
+	if update.UntaggedVLAN != nil {
+		commands = append(commands, fmt.Sprintf("switchport trunk native vlan %d", *update.UntaggedVLAN)) // set untagged vlan
+	}
+
+	if update.TaggedVLANs != nil {
+		taggedVLANs := make([]string, 0)
+		if update.UntaggedVLAN != nil {
+			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(*update.UntaggedVLAN)))
+		}
+
+		for _, vlan := range update.TaggedVLANs {
+			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(vlan)))
+		}
+
+		commands = append(commands, fmt.Sprintf("switchport trunk vlan-allowed %s", strings.Join(taggedVLANs, ",")))
+	}
+
+	// exit interface config mode
+	commands = append(commands, "exit", "exit")
+	_, err = fs.SendCommands(commands...)
+	if err != nil {
+		return false, fmt.Errorf("failed to configure interface: %w", err)
+	}
+
+	nic, err = fs.GetInterface(update.Name)
+	if err != nil {
+		return false, err
+	}
+
+	if nic.Differs(update) {
+		return false, fmt.Errorf("interface differs, original %v, updated %v", nic, update)
+	}
+
+	err = fs.Save()
+	if err != nil {
+		return false, err
+	}
+
+	return true, nil
+}
 
 func (fs *FSOS) getInterfaceInfo() (map[string]fscomInterface, error) {
 	output, err := fs.SendCommands("show interface")
@@ -130,49 +132,61 @@ func (fs *FSOS) getInterfaceInfo() (map[string]fscomInterface, error) {
 	return ParseInterfaces(output)
 }
 
-var interfaceRgx = regexp.MustCompile(`Interface\s([a-zA-Z0-9\/-]+)\r\n.*?Hardware is Ethernet, address is ([a-z0-9]{4}\.[a-z0-9]{4}\.[a-z0-9]{4}) \(bia .*\) is (down|up),.+\n(?:\s+.+\n)+\s+.+\s+.+[a|A]ddress\sis\s([a-z0-9]{4}\.[a-z0-9]{4}\.[a-z0-9]{4}).+\n\s+(.+\n\s\s)?MTU\s([0-9]+)\s.+BW\s([0-9]+)`)
-
 type fscomInterface struct {
 	MacAddress net.HardwareAddr
 	MTU        uint32
 	Speed      uint32
 }
 
+var interfaceMacAddressRegex = regexp.MustCompile(`address is ([0-9a-fA-F.]+)`)
+var interfaceBandwithRegex = regexp.MustCompile(`Bandwidth (\d+) kbits`)
+var interfaceMTURegex = regexp.MustCompile(`The maximum transmit unit \(MTU\) is (\d+) bytes`)
+
 func ParseInterfaces(output string) (map[string]fscomInterface, error) {
-	interfaceInfo := make(map[string]fscomInterface)
-
-	matches := interfaceRgx.FindAllStringSubmatch(output, -1)
-	return nil, fmt.Errorf("asdf")
-	for _, match := range matches {
-		nic := match[1]
-		mac := match[2]
-
-		macAddress, err := net.ParseMAC(mac)
-		if err != nil {
-			return nil, err
+	interfaces := map[string]*fscomInterface{}
+	reader := strings.NewReader(output)
+	scanner := bufio.NewScanner(reader)
+	currentInterface := ""
+	var currentInterfaceConfig *fscomInterface
+	for scanner.Scan() {
+		line := scanner.Text()
+		if strings.HasPrefix(line, "Interface ") {
+			// New interface definition reached, saving old one
+			currentInterface = strings.TrimSpace(strings.TrimPrefix(line, "Interface "))
 		}
-
-		mtu := uint32(1500)
-		if match[4] != "" {
-			mtuInt, err := strconv.Atoi(match[4])
-			if err == nil {
-				mtu = uint32(mtuInt)
+		if _, ok := interfaces[currentInterface]; !ok {
+			currentInterfaceConfig = &fscomInterface{
+				Speed: uint32(1000000),
+				MTU:   uint32(1500),
 			}
+			interfaces[currentInterface] = currentInterfaceConfig
+			continue
 		}
-
-		speed := uint32(1000000)
-		if match[3] != "" {
-			speedInt, err := strconv.Atoi(match[3])
-			if err == nil {
-				speed = uint32(speedInt)
+		if currentInterface != "" {
+			if match := interfaceMacAddressRegex.FindStringSubmatch(line); len(match) > 1 {
+				if mac, err := net.ParseMAC(match[1]); err == nil {
+					currentInterfaceConfig.MacAddress = mac
+				}
 			}
-		}
-
-		interfaceInfo[nic] = fscomInterface{
-			MacAddress: macAddress,
-			MTU:        mtu,
-			Speed:      speed,
+			if match := interfaceBandwithRegex.FindStringSubmatch(line); len(match) > 1 {
+				if bw, err := strconv.Atoi(match[1]); err == nil {
+					currentInterfaceConfig.Speed = uint32(bw)
+				}
+			}
+			if match := interfaceMTURegex.FindStringSubmatch(line); len(match) > 1 {
+				if mtu, err := strconv.Atoi(match[1]); err == nil {
+					currentInterfaceConfig.MTU = uint32(mtu)
+				}
+			}
 		}
 	}
-	return interfaceInfo, nil
+	if err := scanner.Err(); err != nil {
+		panic(err)
+		return nil, err
+	}
+	var interfaces2 = map[string]fscomInterface{}
+	for k, v := range interfaces {
+		interfaces2[k] = *v
+	}
+	return interfaces2, nil
 }

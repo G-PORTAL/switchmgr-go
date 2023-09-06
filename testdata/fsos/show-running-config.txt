@@ -200,6 +200,7 @@ interface eth-0-9
  loopback-detect enable
  spanning-tree edgeport
  spanning-tree edgeport bpdu-guard enable
+ shutdown
 !
 interface eth-0-10
  port-isolate group 1

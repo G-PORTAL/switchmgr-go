@@ -114,7 +114,7 @@ func (fs *FSCom) ConfigureInterface(update *models.UpdateInterface) (bool, error
 		return false, fmt.Errorf("interface differs, original %v, updated %v", nic, update)
 	}
 
-	err = fs.save()
+	err = fs.Save()
 	if err != nil {
 		return false, err
 	}

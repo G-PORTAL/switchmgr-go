@@ -1587,9 +1587,9 @@ Interface vlan20
   Interface current state: UP
   Hardware is VLAN, address is 649d.9906.ff33 (bia 649d.9906.ff33)
   Description: Switches
-  Bandwidth 1000000 kbits
+  Bandwidth 10000000 kbits
   Index 4116 , Metric 1 , Encapsulation ARPA
-  The maximum transmit unit (MTU) is 1500 bytes
+  The maximum transmit unit (MTU) is 1300 bytes
   VRF binding: not bound
   VRRP master of :  VRRP is not configured on this interface
   ARP timeout 01:00:00,  ARP retry interval 1s
