@@ -181,7 +181,6 @@ func ParseInterfaces(output string) (map[string]fscomInterface, error) {
 		}
 	}
 	if err := scanner.Err(); err != nil {
-		panic(err)
 		return nil, err
 	}
 	var interfaces2 = map[string]fscomInterface{}

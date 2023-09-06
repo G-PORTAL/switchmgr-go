@@ -78,15 +78,16 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 }
 
 // GetConfiguration returns the configuration of a FSCom switch.
-func (fs *FSCom) GetConfiguration() (Configuration, error) {
+func (fs *FSCom) GetConfiguration() (*Configuration, error) {
 	output, err := fs.SendCommands("show running-config")
 	if err != nil {
 		return nil, err
 	}
 
 	cfg := ParseConfiguration(output)
+	config := Configuration(cfg)
 
-	return Configuration(cfg), nil
+	return &config, nil
 }
 
 func (cfg Configuration) GetInterface(name string) (*models.Interface, error) {
