@@ -1,4 +1,4 @@
-package configure_port
+package main
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func ConfigurePortTest() {
+func main() {
 	driver, err := vendors.New(vendors.Vendor(os.Getenv("SWITCH_VENDOR")))
 	if err != nil {
 		log.Fatalf("Failed to create driver: %v", err)
@@ -78,8 +78,14 @@ func ConfigurePortTest() {
 		update.TaggedVLANs = taggedVLANs
 	}
 
-	ok, err := driver.ConfigureInterface(update)
-	if !ok || err != nil {
+	changed, err := driver.ConfigureInterface(update)
+	if err != nil {
 		log.Errorf(fmt.Sprintf("Failed to configure interface: %v", err))
+	}
+
+	if changed {
+		log.Infof("Interface %s has been configured", name)
+	} else {
+		log.Infof("Interface %s is already configured", name)
 	}
 }

@@ -96,7 +96,9 @@ func (fs *FSOS) ConfigureInterface(update *models.UpdateInterface) (bool, error)
 			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(vlan)))
 		}
 
-		commands = append(commands, fmt.Sprintf("switchport trunk vlan-allowed %s", strings.Join(taggedVLANs, ",")))
+		commands = append(commands,
+			"switchport trunk allowed vlan none",
+			fmt.Sprintf("switchport trunk allowed vlan add %s", strings.Join(taggedVLANs, ",")))
 	}
 
 	// exit interface config mode

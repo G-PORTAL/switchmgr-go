@@ -6,6 +6,7 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
+	"golang.org/x/exp/slices"
 	"io"
 	"regexp"
 	"strings"
@@ -112,7 +113,7 @@ func (fs *FSCom) Save() error {
 		return err
 	}
 
-	if !strings.Contains(output, "OK!") {
+	if !slices.Contains([]string{"Saving current configuration...\r\n\nOK!", "Building configuration...\r\n\n[OK]"}, strings.TrimSpace(output)) {
 		return fmt.Errorf("failed to save the configuration: %s", output)
 	}
 

@@ -71,8 +71,12 @@ func main() {
 		driver.Logger().Errorf("Failed to get interfaces: %v", err)
 	} else {
 		for _, nic := range nics {
-			driver.Logger().Infof("Interface: %q (%s): %s (untagged: %v, tagged: %+v, enabled: %v)",
-				nic.Name, nic.Description, nic.MacAddress, nic.UntaggedVLAN, nic.TaggedVLANs, nic.Enabled)
+			untagged := "-"
+			if nic.UntaggedVLAN != nil {
+				untagged = fmt.Sprintf("%d", *nic.UntaggedVLAN)
+			}
+			driver.Logger().Infof("Interface: %q (%s): %s (untagged: %s, tagged: %+v, enabled: %v)",
+				nic.Name, nic.Description, nic.MacAddress, untagged, nic.TaggedVLANs, nic.Enabled)
 		}
 	}
 
