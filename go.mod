@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/Juniper/go-netconf v0.3.0
 	github.com/charmbracelet/log v0.2.2
+	github.com/google/go-cmp v0.5.8
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
 	golang.org/x/crypto v0.11.0
 	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1

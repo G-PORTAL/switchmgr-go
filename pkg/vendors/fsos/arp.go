@@ -1,4 +1,4 @@
-package fscom
+package fsos
 
 import (
 	"github.com/g-portal/switchmgr-go/pkg/models"
@@ -8,9 +8,9 @@ import (
 	"strings"
 )
 
-var arpLineRgx = regexp.MustCompile(`^(\d+)\s+([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})\s+([A-Z]+)\s+(.*)$`)
+var arpLineRgx = regexp.MustCompile(`^(\d+)\s+([0-9a-f]{4}\.[0-9a-f]{4}\.[0-9a-f]{4})\s+(.+)\s+(.*)$`)
 
-func (fs *FSCom) ListArpTable() ([]models.ArpEntry, error) {
+func (fs *FSOS) ListArpTable() ([]models.ArpEntry, error) {
 	output, err := fs.SendCommands("show mac address-table")
 	if err != nil {
 		return nil, err
@@ -25,6 +25,7 @@ func ParseArpTable(output string) ([]models.ArpEntry, error) {
 	portsWithMac := map[string][]models.MacAddress{}
 
 	for _, line := range strings.Split(output, "\n") {
+		line = strings.TrimSpace(line)
 		if !arpLineRgx.MatchString(line) {
 			continue
 		}
@@ -40,7 +41,7 @@ func ParseArpTable(output string) ([]models.ArpEntry, error) {
 			portsWithMac[matches[4]] = []models.MacAddress{}
 		}
 
-		mac := models.MacAddress(matches[2])
+		mac := models.MacAddress(strings.TrimSpace(matches[2]))
 		if !mac.Valid() {
 			continue
 		}

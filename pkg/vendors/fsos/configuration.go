@@ -1,4 +1,4 @@
-package fscom
+package fsos
 
 import (
 	"fmt"
@@ -39,15 +39,15 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 			accessVlanID := int32(1)
 			if config.Exists("switchport trunk vlan-untagged", false) {
 				accessVlanID = config.GetInt32Value("switchport trunk vlan-untagged", 1)
-			} else if config.Exists("switchport pvid", false) {
-				accessVlanID = config.GetInt32Value("switchport pvid", 1)
+			} else if config.Exists("switchport trunk native vlan", false) {
+				accessVlanID = config.GetInt32Value("switchport trunk native vlan", 1)
 			}
 
 			untaggedVLAN = &accessVlanID
-			taggedVLANs = config.GetInt32Values("switchport trunk vlan-allowed", vlanIDs)
+			taggedVLANs = config.GetInt32Values("switchport trunk allowed vlan add", vlanIDs)
 
-			if config.Exists("switchport trunk vlan-allowed", false) {
-				taggedVLANs = utils.ConvertVlans(config.GetStringValue("switchport trunk vlan-allowed", ""), ",")
+			if config.Exists("switchport trunk allowed vlan add", false) {
+				taggedVLANs = utils.ConvertVlans(config.GetStringValue("switchport trunk allowed vlan add", ""), ",")
 			}
 
 			// remove untagged vlan from tagged VLANs
@@ -78,7 +78,7 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 }
 
 // GetConfiguration returns the configuration of a FSCom switch.
-func (fs *FSCom) GetConfiguration() (*Configuration, error) {
+func (fs *FSOS) GetConfiguration() (*Configuration, error) {
 	output, err := fs.SendCommands("show running-config")
 	if err != nil {
 		return nil, err
