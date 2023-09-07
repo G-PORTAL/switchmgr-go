@@ -1,10 +1,13 @@
 package juniper_els_test
 
 import (
+	"bytes"
+	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
 	"golang.org/x/exp/slices"
 	"net"
 	"testing"
+	"text/template"
 )
 
 func TestListInterfaces(t *testing.T) {
@@ -67,5 +70,49 @@ func TestGetInterface(t *testing.T) {
 	}
 	if iface.MTU != 1514 {
 		t.Errorf("MTU should be 1514, got %v", iface.MTU)
+	}
+}
+
+const EditPortConfigurationExpected = `<interfaces>
+	<interface operation="replace">
+		<name>eth0</name>
+		<description>example interface</description>
+		<native-vlan-id>1337</native-vlan-id>
+		<unit>
+			<name>0</name>
+			<family>
+				<ethernet-switching>
+					<interface-mode>trunk</interface-mode>
+					<vlan>
+						<members>1</members><members>2</members><members>3</members>
+					</vlan>
+					<storm-control>
+						<profile-name>default</profile-name>
+					</storm-control>
+				</ethernet-switching>
+			</family>       
+		</unit>             
+	</interface>   
+</interfaces>`
+
+func TestConfigureInterfaceTemplate(t *testing.T) {
+	var tpl bytes.Buffer
+	tmpl, err := template.New("").Parse(juniper_els.EditPortConfigurationTemplate)
+	if err != nil {
+		t.Errorf("unexpected error: %s", err.Error())
+	}
+
+	interfaceDescription := "example interface"
+	untaggedVlan := int32(1337)
+	if err = tmpl.Execute(&tpl, &models.UpdateInterface{
+		Name:         "eth0",
+		Description:  &interfaceDescription,
+		UntaggedVLAN: &untaggedVlan,
+		TaggedVLANs:  []int32{1, 2, 3},
+	}); err != nil {
+		t.Errorf("unexpected error: %s", err.Error())
+	}
+	if tpl.String() != EditPortConfigurationExpected {
+		t.Errorf("expected:\n%s\ngot:\n%s", EditPortConfigurationExpected, tpl.String())
 	}
 }

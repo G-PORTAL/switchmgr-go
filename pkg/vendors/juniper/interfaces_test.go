@@ -1,10 +1,13 @@
 package juniper_test
 
 import (
+	"bytes"
+	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
 	"golang.org/x/exp/slices"
 	"net"
 	"testing"
+	"text/template"
 )
 
 func TestListInterfaces(t *testing.T) {
@@ -42,5 +45,58 @@ func TestGetInterface(t *testing.T) {
 	}
 	if !slices.Contains(iface.TaggedVLANs, 4) {
 		t.Errorf("expected interface ge-0/0/0 being member of vlan 4, got %v", iface.TaggedVLANs)
+	}
+}
+
+const EditPortConfigurationExpected = `<edit-config>
+	<target>
+		<candidate/>
+	</target>
+    <default-operation>merge</default-operation>
+    <test-option>test-then-set</test-option>
+	<config>
+		<configuration>
+			<interfaces>
+				<interface operation="replace">
+					<name>eth0</name>
+					<description>example interface</description>
+					<unit>
+						<name>0</name>
+						<family>
+							<ethernet-switching>
+								<port-mode>trunk</port-mode>
+								<vlan>
+									<members>1</members><members>2</members><members>3</members>
+								</vlan>
+								<native-vlan-id>1337</native-vlan-id>
+							</ethernet-switching>
+						</family>       
+					</unit>             
+				</interface>   
+			</interfaces>
+		</configuration>
+	</config>
+</edit-config>
+`
+
+func TestConfigureInterfaceTemplate(t *testing.T) {
+	var tpl bytes.Buffer
+	tmpl, err := template.New("").Parse(juniper.EditPortConfigurationTemplate)
+	if err != nil {
+		t.Errorf("unexpected error: %s", err.Error())
+	}
+
+	interfaceDescription := "example interface"
+	untaggedVlan := int32(1337)
+	if err = tmpl.Execute(&tpl, &models.UpdateInterface{
+		Name:         "eth0",
+		Description:  &interfaceDescription,
+		UntaggedVLAN: &untaggedVlan,
+		TaggedVLANs:  []int32{1, 2, 3},
+	}); err != nil {
+		t.Errorf("unexpected error: %s", err.Error())
+	}
+	if tpl.String() != EditPortConfigurationExpected {
+		t.Errorf("expected:\n%s\ngot:\n%s", EditPortConfigurationExpected, tpl.String())
 	}
 }
