@@ -155,7 +155,7 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 
 	config := `<interfaces>
 	<interface operation="replace">
-		<name>{{ .Port }}</name>
+		<name>{{ .Name }}</name>
 		<description>{{ .Comment }}</description>
 		{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
 		<unit>
