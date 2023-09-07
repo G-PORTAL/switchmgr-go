@@ -133,23 +133,7 @@ func (s *Juniper) isUplink(inter string) bool {
 	return false
 }
 
-func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, error) {
-	configMutex.Lock(j.identifier)
-	defer configMutex.Unlock(j.identifier)
-
-	if j.isUplink(update.Name) {
-		return false, fmt.Errorf("never configure the uplink port %s", update.Name)
-	}
-
-	swport, err := j.GetInterface(update.Name)
-	if err != nil {
-		return false, err
-	}
-	if !swport.Differs(update) {
-		return false, nil
-	}
-
-	config := `<edit-config>
+const EditPortConfigurationTemplate = `<edit-config>
 	<target>
 		<candidate/>
 	</target>
@@ -180,12 +164,28 @@ func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, erro
 </edit-config>
 `
 
+func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, error) {
+	configMutex.Lock(j.identifier)
+	defer configMutex.Unlock(j.identifier)
+
+	if j.isUplink(update.Name) {
+		return false, fmt.Errorf("never configure the uplink port %s", update.Name)
+	}
+
+	swport, err := j.GetInterface(update.Name)
+	if err != nil {
+		return false, err
+	}
+	if !swport.Differs(update) {
+		return false, nil
+	}
+
 	if len(update.TaggedVLANs) == 0 && update.UntaggedVLAN != nil && *update.UntaggedVLAN == 0 {
 		return false, errors.New("switch port has no vlans to configure")
 	}
 
 	var tpl bytes.Buffer
-	tmpl, err := template.New("").Parse(config)
+	tmpl, err := template.New("").Parse(EditPortConfigurationTemplate)
 	if err != nil {
 		return false, err
 	}

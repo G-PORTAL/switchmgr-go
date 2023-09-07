@@ -134,6 +134,28 @@ func (s *JuniperELS) isUplink(inter string) bool {
 	return false
 }
 
+const EditPortConfigurationTemplate = `<interfaces>
+	<interface operation="replace">
+		<name>{{ .Name }}</name>
+		<description>{{ .Description }}</description>
+		{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
+		<unit>
+			<name>0</name>
+			<family>
+				<ethernet-switching>
+					<interface-mode>trunk</interface-mode>
+					<vlan>
+						{{range .TaggedVLANs }}<members>{{ . }}</members>{{end}}
+					</vlan>
+					<storm-control>
+						<profile-name>default</profile-name>
+					</storm-control>
+				</ethernet-switching>
+			</family>       
+		</unit>             
+	</interface>   
+</interfaces>`
+
 // ConfigureInterface configures a single interface. It returns true if the
 // configuration has changed. If the interface is an uplink, it will return
 // false and an error.
@@ -153,28 +175,6 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 		return false, nil
 	}
 
-	config := `<interfaces>
-	<interface operation="replace">
-		<name>{{ .Name }}</name>
-		<description>{{ .Comment }}</description>
-		{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
-		<unit>
-			<name>0</name>
-			<family>
-				<ethernet-switching>
-					<interface-mode>trunk</interface-mode>
-					<vlan>
-						{{range .TaggedVLANs }}<members>{{ . }}</members>{{end}}
-					</vlan>
-					<storm-control>
-						<profile-name>default</profile-name>
-					</storm-control>
-				</ethernet-switching>
-			</family>       
-		</unit>             
-	</interface>   
-</interfaces>`
-
 	// Add the untagged VLAN id to tagged VLANs, otherwise it won't work
 	if *update.UntaggedVLAN != 0 {
 		update.TaggedVLANs = append(update.TaggedVLANs, *update.UntaggedVLAN)
@@ -188,7 +188,7 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 	}
 
 	var tpl bytes.Buffer
-	tmpl, err := template.New("").Parse(config)
+	tmpl, err := template.New("").Parse(EditPortConfigurationTemplate)
 	if err != nil {
 		return false, err
 	}
