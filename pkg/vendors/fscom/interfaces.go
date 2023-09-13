@@ -81,10 +81,6 @@ func (fs *FSCom) ConfigureInterface(update *models.UpdateInterface) (bool, error
 		commands = append(commands, fmt.Sprintf("description %s", *update.Description)) // set interface description
 	}
 
-	if update.UntaggedVLAN != nil {
-		commands = append(commands, fmt.Sprintf("switchport pvid %d", *update.UntaggedVLAN)) // set untagged vlan
-	}
-
 	if update.TaggedVLANs != nil {
 		taggedVLANs := make([]string, 0)
 		if update.UntaggedVLAN != nil {
@@ -96,6 +92,12 @@ func (fs *FSCom) ConfigureInterface(update *models.UpdateInterface) (bool, error
 		}
 
 		commands = append(commands, fmt.Sprintf("switchport trunk vlan-allowed %s", strings.Join(taggedVLANs, ",")))
+	}
+
+	if update.UntaggedVLAN != nil {
+		commands = append(commands,
+			"no switchport trunk vlan-untagged",
+			fmt.Sprintf("switchport pvid %d", *update.UntaggedVLAN)) // set untagged vlan
 	}
 
 	// exit interface config mode
