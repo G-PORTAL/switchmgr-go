@@ -1,4 +1,4 @@
-package fscom
+package fsos_s3
 
 import (
 	"errors"
@@ -12,7 +12,7 @@ var modelRegex = regexp.MustCompile(`([0-9A-Z-]+)\s(Series\s)?Software,\sVersion
 var versionRegex = regexp.MustCompile(`(Series\s)?Software,\sVersion\s([0-9A-Z.]+)`)
 var hostnameRegex = regexp.MustCompile(`(.+)\suptime\sis\s`)
 
-func (fs *FSCom) GetHardwareInfo() (*models.HardwareInfo, error) {
+func (fs *FSComS3) GetHardwareInfo() (*models.HardwareInfo, error) {
 	output, err := fs.SendCommands("show version")
 	if err != nil {
 		return nil, err

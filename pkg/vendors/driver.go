@@ -5,8 +5,8 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/models"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
@@ -17,10 +17,10 @@ import (
 type Vendor string
 
 const (
-	// VendorFiberStore FSCom (FiberStore) switches, cheaper ones
-	VendorFiberStore Vendor = "fscom"
-	// VendorFSOS FSOS (FiberStore) switches, more expensive ones
-	VendorFSOS Vendor = "fsos"
+	// VendorFSOSS3 FSComS3 (FiberStore), series S3XX
+	VendorFSOSS3 Vendor = "fsos_s3"
+	// VendorFSOSS5 FSComS3 (FiberStore), series S5XX
+	VendorFSOSS5 Vendor = "fsos_s5"
 	// VendorJuniper Juniper, up to version 15 (legacy)
 	VendorJuniper Vendor = "juniper"
 	// VendorJuniperELS Juniper, version 15.1 and higher with advanced
@@ -31,7 +31,7 @@ const (
 // Valid checks if this lib supports the given vendor.
 func (v Vendor) Valid() bool {
 	switch v {
-	case VendorFiberStore, VendorJuniper, VendorJuniperELS, VendorFSOS:
+	case VendorFSOSS3, VendorFSOSS5, VendorJuniper, VendorJuniperELS:
 		return true
 	default:
 		return false
@@ -87,19 +87,19 @@ func New(vendor Vendor) (Driver, error) {
 	}
 
 	switch vendor {
-	case VendorFiberStore:
-		return &fscom.FSCom{
-			LoginCommands: []string{
-				"enter", "terminal length 0",
-			},
-		}, nil
 	case VendorJuniper:
 		return &juniper.Juniper{}, nil
 	case VendorJuniperELS:
 		return &juniper_els.JuniperELS{}, nil
-	case VendorFSOS:
-		return &fsos.FSOS{
-			FSCom: fscom.FSCom{
+	case VendorFSOSS3:
+		return &fsos_s3.FSComS3{
+			LoginCommands: []string{
+				"enter", "terminal length 0",
+			},
+		}, nil
+	case VendorFSOSS5:
+		return &fsos_s5.FSComS5{
+			FSComS3: fsos_s3.FSComS3{
 				LoginCommands: []string{
 					"terminal length 0",
 				},

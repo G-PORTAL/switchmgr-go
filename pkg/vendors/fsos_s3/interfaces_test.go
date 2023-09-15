@@ -1,15 +1,15 @@
-package fscom_test
+package fsos_s3_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3/utils"
 	"testing"
 )
 
 func TestListInterfaces(t *testing.T) {
-	iosConfig := fscom.ParseConfiguration(utils.ReadTestData("show running-config", nil))
+	iosConfig := fsos_s3.ParseConfiguration(utils.ReadTestData("show running-config", nil))
 
-	cfg := fscom.Configuration(iosConfig)
+	cfg := fsos_s3.Configuration(iosConfig)
 
 	nics, err := cfg.ListInterfaces()
 	if err != nil {
@@ -127,7 +127,7 @@ func TestListInterfaces(t *testing.T) {
 }
 
 func TestParseInterfaces(t *testing.T) {
-	nics, err := fscom.ParseInterfaces(utils.ReadTestData("show interfaces", nil))
+	nics, err := fsos_s3.ParseInterfaces(utils.ReadTestData("show interfaces", nil))
 	if err != nil {
 		t.Fatal(err)
 	}

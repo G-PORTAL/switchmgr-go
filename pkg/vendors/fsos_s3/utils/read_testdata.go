@@ -19,7 +19,7 @@ func ReadTestData(command string, version *int) string {
 	_, err = os.Stat(directory + "/testdata")
 	for os.IsNotExist(err) {
 		directory, _ = filepath.Abs(directory + "/..")
-		_, err = os.Stat(directory + "/testdata/fscom/")
+		_, err = os.Stat(directory + "/testdata/fsos_s3/")
 	}
 
 	// add version to mockfile name
@@ -28,7 +28,7 @@ func ReadTestData(command string, version *int) string {
 		mockfile = fmt.Sprintf("%s-%v", mockfile, *version)
 	}
 
-	absPath, err := filepath.Abs(fmt.Sprintf("%s/%s.txt", directory+"/testdata/fscom/", mockfile))
+	absPath, err := filepath.Abs(fmt.Sprintf("%s/%s.txt", directory+"/testdata/fsos_s3/", mockfile))
 	if err != nil {
 		return ""
 	}

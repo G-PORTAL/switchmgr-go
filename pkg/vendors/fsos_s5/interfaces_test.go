@@ -1,16 +1,15 @@
-package fsos_test
+package fsos_s5_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5/utils"
 	"testing"
 )
 
 func TestListInterfaces(t *testing.T) {
-	iosConfig := fscom.ParseConfiguration(utils.ReadTestData("show running-config", nil))
+	iosConfig := fsos_s5.ParseConfiguration(utils.ReadTestData("show running-config", nil))
 
-	cfg := fsos.Configuration(iosConfig)
+	cfg := fsos_s5.Configuration(iosConfig)
 
 	nics, err := cfg.ListInterfaces()
 	if err != nil {
@@ -55,7 +54,7 @@ func TestListInterfaces(t *testing.T) {
 }
 
 func TestParseInterfaces(t *testing.T) {
-	nics, err := fsos.ParseInterfaces(utils.ReadTestData("show interface", nil))
+	nics, err := fsos_s5.ParseInterfaces(utils.ReadTestData("show interface", nil))
 	if err != nil {
 		t.Fatal(err)
 	}

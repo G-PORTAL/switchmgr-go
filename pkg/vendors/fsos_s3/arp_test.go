@@ -1,13 +1,13 @@
-package fscom_test
+package fsos_s3_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3/utils"
 	"testing"
 )
 
 func TestParseArpTable(t *testing.T) {
-	entries, err := fscom.ParseArpTable(utils.ReadTestData("show mac address table", nil))
+	entries, err := fsos_s3.ParseArpTable(utils.ReadTestData("show mac address table", nil))
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}

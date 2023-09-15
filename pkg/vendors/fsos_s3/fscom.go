@@ -1,4 +1,4 @@
-package fscom
+package fsos_s3
 
 import (
 	"bufio"
@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-type FSCom struct {
+type FSComS3 struct {
 	unimplemented.Unimplemented
 
 	LoginCommands []string
@@ -26,7 +26,7 @@ type FSCom struct {
 }
 
 // Connect Connecting to a FiberStore switch using SSH
-func (fs *FSCom) Connect(cfg config.Connection) error {
+func (fs *FSComS3) Connect(cfg config.Connection) error {
 	fs.Logger().SetPrefix(fmt.Sprintf("[fscom/%s]", cfg.Host))
 
 	var err error
@@ -86,7 +86,7 @@ func (fs *FSCom) Connect(cfg config.Connection) error {
 	return nil
 }
 
-func (fs *FSCom) Disconnect() error {
+func (fs *FSComS3) Disconnect() error {
 	if fs.session != nil {
 		if err := fs.session.Close(); err != nil && err != io.EOF {
 			return err
@@ -107,7 +107,7 @@ func (fs *FSCom) Disconnect() error {
 }
 
 // / save saves the configuration to startup config
-func (fs *FSCom) Save() error {
+func (fs *FSComS3) Save() error {
 	output, err := fs.SendCommands("write")
 	if err != nil {
 		return err
@@ -121,7 +121,7 @@ func (fs *FSCom) Save() error {
 }
 
 // SendCommands sends a command to the switch and returns the output
-func (fs *FSCom) SendCommands(commands ...string) (string, error) {
+func (fs *FSComS3) SendCommands(commands ...string) (string, error) {
 	output := ""
 
 	startTime := time.Now()

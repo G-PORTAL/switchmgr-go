@@ -1,1 +1,1 @@
-testdata/fsos/*.txt text eol=crlf
+testdata/fsos_s5/*.txt text eol=crlf

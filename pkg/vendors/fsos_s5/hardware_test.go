@@ -1,13 +1,13 @@
-package fsos_test
+package fsos_s5_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5/utils"
 	"testing"
 )
 
 func TestParseHardwareInfo(t *testing.T) {
-	hwInfo, err := fsos.ParseHardwareInfo(utils.ReadTestData("show version", nil))
+	hwInfo, err := fsos_s5.ParseHardwareInfo(utils.ReadTestData("show version", nil))
 	if err != nil {
 		t.Fatalf("Error parsing hardware info: %s", err.Error())
 	}
@@ -28,7 +28,7 @@ func TestParseHardwareInfo(t *testing.T) {
 		t.Fatalf("Vendor is wrong: %s", hwInfo.Vendor)
 	}
 
-	if hwInfo.FirmwareVersion != "FSOS 7.4.1.r1" {
+	if hwInfo.FirmwareVersion != "FSComS5 7.4.1.r1" {
 		t.Fatalf("Firmware version is wrong: %s", hwInfo.FirmwareVersion)
 	}
 

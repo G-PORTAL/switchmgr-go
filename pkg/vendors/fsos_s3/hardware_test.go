@@ -1,13 +1,13 @@
-package fscom_test
+package fsos_s3_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3/utils"
 	"testing"
 )
 
 func TestParseHardwareInfo(t *testing.T) {
-	hwInfo, err := fscom.ParseHardwareInfo(utils.ReadTestData("show version", nil))
+	hwInfo, err := fsos_s3.ParseHardwareInfo(utils.ReadTestData("show version", nil))
 	if err != nil {
 		t.Fatalf("Error parsing hardware info: %s", err.Error())
 	}
@@ -41,7 +41,7 @@ func TestParseHardwareInfo(t *testing.T) {
 func TestParseHardwareInfo2(t *testing.T) {
 	version := 2
 
-	hwInfo, err := fscom.ParseHardwareInfo(utils.ReadTestData("show version", &version))
+	hwInfo, err := fsos_s3.ParseHardwareInfo(utils.ReadTestData("show version", &version))
 	if err != nil {
 		t.Fatalf("Error parsing hardware info: %s", err.Error())
 	}

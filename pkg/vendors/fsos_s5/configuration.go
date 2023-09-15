@@ -1,4 +1,4 @@
-package fsos
+package fsos_s5
 
 import (
 	"fmt"
@@ -77,8 +77,8 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 	return interfaces, nil
 }
 
-// GetConfiguration returns the configuration of a FSCom switch.
-func (fs *FSOS) GetConfiguration() (*Configuration, error) {
+// GetConfiguration returns the configuration of a FSComS3 switch.
+func (fs *FSComS5) GetConfiguration() (*Configuration, error) {
 	output, err := fs.SendCommands("show running-config")
 	if err != nil {
 		return nil, err
@@ -105,7 +105,7 @@ func (cfg Configuration) GetInterface(name string) (*models.Interface, error) {
 	return nil, fmt.Errorf("interface %q not found", name)
 }
 
-// ParseConfiguration parses the configuration of a FSCom switch.
+// ParseConfiguration parses the configuration of a FSComS3 switch.
 func ParseConfiguration(cfg string) iosconfig.Config {
 	return iosconfig.Parse(cfg)
 }

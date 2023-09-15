@@ -1,9 +1,9 @@
-package fsos_test
+package fsos_s5_test
 
 import (
 	"github.com/g-portal/switchmgr-go/pkg/models"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5/utils"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"testing"
@@ -33,7 +33,7 @@ var expectedEntries = map[string][]models.MacAddress{
 }
 
 func TestParseArpTable(t *testing.T) {
-	entries, err := fsos.ParseArpTable(utils.ReadTestData("show mac address table", nil))
+	entries, err := fsos_s5.ParseArpTable(utils.ReadTestData("show mac address table", nil))
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}

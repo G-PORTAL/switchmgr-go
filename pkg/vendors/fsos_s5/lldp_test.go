@@ -1,13 +1,13 @@
-package fsos_test
+package fsos_s5_test
 
 import (
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5/utils"
 	"testing"
 )
 
 func TestParseLLDPTable(t *testing.T) {
-	table, err := fsos.ParseLLDPNeighbors(utils.ReadTestData("show lldp neighbor brief", nil))
+	table, err := fsos_s5.ParseLLDPNeighbors(utils.ReadTestData("show lldp neighbor brief", nil))
 	if err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}

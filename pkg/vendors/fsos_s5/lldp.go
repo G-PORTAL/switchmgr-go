@@ -1,4 +1,4 @@
-package fsos
+package fsos_s5
 
 import (
 	"github.com/g-portal/switchmgr-go/pkg/models"
@@ -9,7 +9,7 @@ import (
 var lldpLineRgx = regexp.MustCompile(`(?s)Local\sPort\s+:\s+([A-Za-z0-9-]+)\r\n.+System\sName\s+:\s+(.+)\r\n`)
 var lldpGroupRgx = regexp.MustCompile(`(-+)\r\n`)
 
-func (fs *FSOS) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
+func (fs *FSComS5) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
 	output, err := fs.SendCommands("show lldp neighbor brief")
 	if err != nil {
 		return nil, err
