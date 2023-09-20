@@ -73,27 +73,36 @@ func TestGetInterface(t *testing.T) {
 	}
 }
 
-const EditPortConfigurationExpected = `<interfaces>
-	<interface operation="replace">
-		<name>eth0</name>
-		<description>example interface</description>
-		<native-vlan-id>1337</native-vlan-id>
-		<unit>
-			<name>0</name>
-			<family>
-				<ethernet-switching>
-					<interface-mode>trunk</interface-mode>
-					<vlan>
-						<members>1</members><members>2</members><members>3</members>
-					</vlan>
-					<storm-control>
-						<profile-name>default</profile-name>
-					</storm-control>
-				</ethernet-switching>
-			</family>       
-		</unit>             
-	</interface>   
-</interfaces>`
+const EditPortConfigurationExpected = `<edit-config>
+	<target>
+		<candidate/>
+	</target>
+    <default-operation>merge</default-operation>
+    <test-option>test-then-set</test-option>
+	<config>
+		<configuration>
+			<interfaces>
+				<interface operation="replace">
+					<name>eth0</name>
+					<description>example interface</description>
+					<native-vlan-id>1337</native-vlan-id>
+					<unit>
+						<name>0</name>
+						<family>
+							<ethernet-switching>
+								<interface-mode>trunk</interface-mode>
+								<vlan>
+									<members>1</members><members>2</members><members>3</members>
+								</vlan>
+							</ethernet-switching>
+						</family>       
+					</unit>             
+				</interface>   
+			</interfaces>
+		</configuration>
+	</config>
+</edit-config>
+`
 
 func TestConfigureInterfaceTemplate(t *testing.T) {
 	var tpl bytes.Buffer
