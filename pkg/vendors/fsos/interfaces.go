@@ -85,7 +85,7 @@ func (fs *FSOS) ConfigureInterface(update *models.UpdateInterface) (bool, error)
 	if update.UntaggedVLAN != nil && *update.UntaggedVLAN != 1 {
 		commands = append(commands, fmt.Sprintf("switchport trunk native vlan %d", *update.UntaggedVLAN)) // set untagged vlan
 	} else if update.UntaggedVLAN != nil && *update.UntaggedVLAN == 1 {
-		commands = append(commands, fmt.Sprintf("no switchport trunk native vlan"))
+		commands = append(commands, "no switchport trunk native vlan")
 	}
 
 	if update.TaggedVLANs != nil {
