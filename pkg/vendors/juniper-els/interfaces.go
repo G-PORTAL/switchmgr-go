@@ -3,7 +3,6 @@ package juniper_els
 import (
 	"bytes"
 	"encoding/xml"
-	"errors"
 	"fmt"
 	"github.com/Juniper/go-netconf/netconf"
 	"github.com/g-portal/switchmgr-go/pkg/models"
@@ -134,27 +133,36 @@ func (s *JuniperELS) isUplink(inter string) bool {
 	return false
 }
 
-const EditPortConfigurationTemplate = `<interfaces>
-	<interface operation="replace">
-		<name>{{ .Name }}</name>
-		<description>{{ .Description }}</description>
-		{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
-		<unit>
-			<name>0</name>
-			<family>
-				<ethernet-switching>
-					<interface-mode>trunk</interface-mode>
-					<vlan>
-						{{range .TaggedVLANs }}<members>{{ . }}</members>{{end}}
-					</vlan>
-					<storm-control>
-						<profile-name>default</profile-name>
-					</storm-control>
-				</ethernet-switching>
-			</family>       
-		</unit>             
-	</interface>   
-</interfaces>`
+const EditPortConfigurationTemplate = `<edit-config>
+	<target>
+		<candidate/>
+	</target>
+    <default-operation>merge</default-operation>
+    <test-option>test-then-set</test-option>
+	<config>
+		<configuration>
+			<interfaces>
+				<interface operation="replace">
+					<name>{{ .Name }}</name>
+					<description>{{ .Description }}</description>
+					{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
+					<unit>
+						<name>0</name>
+						<family>
+							<ethernet-switching>
+								<interface-mode>trunk</interface-mode>
+								{{if gt (len .TaggedVLANs) 0}}<vlan>
+									{{range .TaggedVLANs }}<members>{{ . }}</members>{{end}}
+								</vlan>{{end}}
+							</ethernet-switching>
+						</family>       
+					</unit>             
+				</interface>   
+			</interfaces>
+		</configuration>
+	</config>
+</edit-config>
+`
 
 // ConfigureInterface configures a single interface. It returns true if the
 // configuration has changed. If the interface is an uplink, it will return
@@ -171,6 +179,7 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 	if err != nil {
 		return false, err
 	}
+
 	if !swport.Differs(update) {
 		return false, nil
 	}
@@ -184,7 +193,7 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 	update.TaggedVLANs = utils.UniqueVlanIDs(update.TaggedVLANs)
 
 	if len(update.TaggedVLANs) == 0 && update.UntaggedVLAN != nil && *update.UntaggedVLAN == 0 {
-		return false, errors.New("switch port has no vlans to configure")
+		return false, fmt.Errorf("switch port has no vlans to configure")
 	}
 
 	var tpl bytes.Buffer
