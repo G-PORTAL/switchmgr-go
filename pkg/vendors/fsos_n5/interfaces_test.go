@@ -1,6 +1,7 @@
 package fsos_n5_test
 
 import (
+	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5/utils"
 	"testing"
@@ -34,57 +35,96 @@ func TestListInterfaces(t *testing.T) {
 		t.Fatalf("Expected interface %s to be enabled", nic.Name)
 	}
 
-	if nic.Name != "eth-0-5" {
-		t.Fatalf("Expected interface %s name to be eth-0-5", nic.Name)
+	if nic.Name != "TenGigabitEthernet 0/34" {
+		t.Fatalf("Expected interface %s name to be TenGigabitEthernet 0/34", nic.Name)
 	}
 
 	if nic.UntaggedVLAN == nil {
 		t.Fatalf("Expected untagged VLAN to be set on %s", nic.Name)
 	}
 
-	nic, err = cfg.GetInterface("eth-0-9")
+	untaggedVLAN := int32(4)
+	if *nic.UntaggedVLAN != untaggedVLAN {
+		t.Fatalf("Expected untagged VLAN to be %d, got %d", untaggedVLAN, *nic.UntaggedVLAN)
+	}
+
+	nic, err = cfg.GetInterface("AggregatePort 4")
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	if nic.Enabled {
+	if !nic.Enabled {
 		t.Fatalf("Expected interface %s to be disabled", nic.Name)
+	}
+
+	if nic.Mode != models.InterfaceModeTrunk {
+		t.Fatalf("Expected interface %s to be in trunk mode", nic.Name)
+	}
+
+	if nic.UntaggedVLAN == nil {
+		t.Fatalf("Expected untagged VLAN to be set on %s", nic.Name)
+	}
+
+	untaggedVLAN = int32(1900)
+	if *nic.UntaggedVLAN != untaggedVLAN {
+		t.Fatalf("Expected untagged VLAN to be %d, got %d", untaggedVLAN, *nic.UntaggedVLAN)
+	}
+
+	nic, err = cfg.GetInterface("VLAN 4")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if !nic.Enabled {
+		t.Fatalf("Expected interface %s to be disabled", nic.Name)
+	}
+
+	if nic.Mode != models.InterfaceModeAccess {
+		t.Fatalf("Expected interface %s to be in access mode", nic.Name)
+	}
+
+	if nic.UntaggedVLAN == nil {
+		t.Fatalf("Expected untagged VLAN to be set on %s", nic.Name)
+	}
+
+	untaggedVLAN = int32(4)
+	if *nic.UntaggedVLAN != untaggedVLAN {
+		t.Fatalf("Expected untagged VLAN to be %d, got %d", untaggedVLAN, *nic.UntaggedVLAN)
 	}
 
 }
 
 func TestParseInterfaces(t *testing.T) {
-	nics, err := fsos_n5.ParseInterfaces(utils.ReadTestData("show interface", nil))
+	nics, err := fsos_n5.ParseInterfaces(utils.ReadTestData("show interfaces", nil))
 	if err != nil {
 		t.Fatal(err)
 	}
 
-	if len(nics) != 72 {
-		t.Fatalf("expected 72 nics, got %d", len(nics))
+	if len(nics) != 71 {
+		t.Fatalf("expected 71 nics, got %d", len(nics))
 	}
 
-	if info, ok := nics["vlan20"]; !ok {
-		t.Fatalf("interface vlan20 not found")
+	if info, ok := nics["VLAN 4"]; !ok {
+		t.Fatalf("interface VLAN 4 not found")
 	} else {
-
-		if info.MacAddress.String() != "64:9d:99:06:ff:33" {
-			t.Fatalf("expected vlan20 mac 64:9d:99:06:ff:33, got %s", info.MacAddress.String())
+		if info.MacAddress.String() != "64:9d:99:d2:50:2e" {
+			t.Fatalf("expected vlan20 mac 64:9d:99:d2:50:2e, got %s", info.MacAddress.String())
 		}
 
-		if info.MTU != 1300 {
-			t.Fatalf("expected vlan20 MTU 1300, got %d", info.MTU)
+		if info.MTU != 1500 {
+			t.Fatalf("expected VLAN 4 MTU 1500, got %d", info.MTU)
 		}
 
-		if info.Speed != 10000000 {
-			t.Fatalf("expected vlan20 Speed 10000000, got %d", info.Speed)
+		if info.Speed != 1000000 {
+			t.Fatalf("expected VLAN 4 Speed 1000000, got %d", info.Speed)
 		}
 	}
 
-	if info, ok := nics["eth-0-51"]; !ok {
-		t.Fatalf("interface eth-0-51 not found")
+	if info, ok := nics["TenGigabitEthernet 0/1"]; !ok {
+		t.Fatalf("interface TenGigabitEthernet 0/1 not found")
 	} else {
-		if info.MacAddress.String() != "64:9d:99:06:ff:66" {
-			t.Fatalf("expected eth-0-51 mac 64:9d:99:06:ff:66, got %s", info.MacAddress.String())
+		if info.MacAddress.String() != "64:9d:99:d2:50:2d" {
+			t.Fatalf("expected eth-0-51 mac 64:9d:99:d2:50:2d, got %s", info.MacAddress.String())
 		}
 
 		if info.MTU != 1500 {
@@ -96,8 +136,8 @@ func TestParseInterfaces(t *testing.T) {
 		}
 	}
 
-	if _, ok := nics["TGigaEthernet0/123"]; ok {
-		t.Fatalf("interface TGigaEthernet0/123 found, but should not exist")
+	if _, ok := nics["TenGigabitEthernet 0/100"]; ok {
+		t.Fatalf("interface TenGigabitEthernet 0/100 found, but should not exist")
 	}
 
 }

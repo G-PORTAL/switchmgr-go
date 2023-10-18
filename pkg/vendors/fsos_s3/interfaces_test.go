@@ -124,6 +124,10 @@ func TestListInterfaces(t *testing.T) {
 		t.Fatalf("Expected management to be true, got %t", nic.Management)
 	}
 
+	if nic.UntaggedVLAN == nil || *nic.UntaggedVLAN != int32(4) {
+		t.Fatal("Expected untagged VLAN to be 4")
+	}
+
 }
 
 func TestParseInterfaces(t *testing.T) {

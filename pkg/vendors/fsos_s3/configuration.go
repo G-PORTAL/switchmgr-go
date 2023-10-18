@@ -5,6 +5,8 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/iosconfig"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/utils"
+	"strconv"
+	"strings"
 )
 
 type Configuration iosconfig.Config
@@ -30,17 +32,27 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 
 		interfaceMode := models.InterfaceModeAccess
 
+		defaultVLAN := int32(1)
+		if strings.HasPrefix(strings.TrimSpace(nic), "VLAN") {
+			var err error
+			defaultVLANInt, err := strconv.Atoi(strings.TrimSpace(strings.TrimPrefix(nic, "VLAN")))
+			// check if err is nil and defaultVLANInt can be converted to int32
+			if err == nil && int32(defaultVLANInt) > 0 {
+				defaultVLAN = int32(defaultVLANInt)
+			}
+		}
+
 		switch mode {
 		case InterfaceModeAccess:
-			accessVlanID := config.GetInt32Value("switchport access vlan", 1)
+			accessVlanID := config.GetInt32Value("switchport access vlan", defaultVLAN)
 			untaggedVLAN = &accessVlanID
 		case InterfaceModeTrunk:
 			interfaceMode = models.InterfaceModeTrunk
-			accessVlanID := int32(1)
+			accessVlanID := defaultVLAN
 			if config.Exists("switchport trunk vlan-untagged", false) {
-				accessVlanID = config.GetInt32Value("switchport trunk vlan-untagged", 1)
+				accessVlanID = config.GetInt32Value("switchport trunk vlan-untagged", defaultVLAN)
 			} else if config.Exists("switchport pvid", false) {
-				accessVlanID = config.GetInt32Value("switchport pvid", 1)
+				accessVlanID = config.GetInt32Value("switchport pvid", defaultVLAN)
 			}
 
 			untaggedVLAN = &accessVlanID

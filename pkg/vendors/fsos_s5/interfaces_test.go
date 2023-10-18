@@ -1,6 +1,7 @@
 package fsos_s5_test
 
 import (
+	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5/utils"
 	"testing"
@@ -51,6 +52,28 @@ func TestListInterfaces(t *testing.T) {
 		t.Fatalf("Expected interface %s to be disabled", nic.Name)
 	}
 
+	nic, err = cfg.GetInterface("vlan20")
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if !nic.Enabled {
+		t.Fatalf("Expected interface %s to be enabled", nic.Name)
+	}
+
+	if nic.Mode != models.InterfaceModeAccess {
+		t.Fatalf("Expected interface %s to be in access mode", nic.Name)
+	}
+
+	if nic.UntaggedVLAN == nil {
+		t.Fatalf("Expected untagged VLAN to be set on %s", nic.Name)
+	}
+
+	untaggedVLAN := int32(20)
+	if *nic.UntaggedVLAN != untaggedVLAN {
+		t.Fatalf("Expected untagged VLAN to be %d, got %d", untaggedVLAN, *nic.UntaggedVLAN)
+	}
+
 }
 
 func TestParseInterfaces(t *testing.T) {
@@ -66,7 +89,6 @@ func TestParseInterfaces(t *testing.T) {
 	if info, ok := nics["vlan20"]; !ok {
 		t.Fatalf("interface vlan20 not found")
 	} else {
-
 		if info.MacAddress.String() != "64:9d:99:06:ff:33" {
 			t.Fatalf("expected vlan20 mac 64:9d:99:06:ff:33, got %s", info.MacAddress.String())
 		}

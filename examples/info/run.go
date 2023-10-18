@@ -28,7 +28,7 @@ func main() {
 		}
 	}()
 
-	driver.Logger().SetLevel(log.DebugLevel)
+	driver.Logger().SetLevel(log.InfoLevel)
 	driver.Logger().Info("+++++++++++++++++++")
 	driver.Logger().Info("System Information:")
 	driver.Logger().Info("+++++++++++++++++++")

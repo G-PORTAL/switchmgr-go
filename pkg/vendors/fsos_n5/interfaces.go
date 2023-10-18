@@ -143,8 +143,8 @@ type fscomInterface struct {
 }
 
 var interfaceMacAddressRegex = regexp.MustCompile(`address is ([0-9a-fA-F.]+)`)
-var interfaceBandwithRegex = regexp.MustCompile(`Bandwidth (\d+) kbits`)
-var interfaceMTURegex = regexp.MustCompile(`The maximum transmit unit \(MTU\) is (\d+) bytes`)
+var interfaceBandwithRegex = regexp.MustCompile(`,\sBW\s([0-9]+)\sKbit`)
+var interfaceMTURegex = regexp.MustCompile(`TMTU\s([0-9]+)\sbytes`)
 
 func ParseInterfaces(output string) (map[string]fscomInterface, error) {
 	interfaces := map[string]*fscomInterface{}
@@ -154,9 +154,9 @@ func ParseInterfaces(output string) (map[string]fscomInterface, error) {
 	var currentInterfaceConfig *fscomInterface
 	for scanner.Scan() {
 		line := scanner.Text()
-		if strings.HasPrefix(line, "Interface ") {
+		if strings.HasPrefix(line, "==========================") {
 			// New interface definition reached, saving old one
-			currentInterface = strings.TrimSpace(strings.TrimPrefix(line, "Interface "))
+			currentInterface = strings.TrimSpace(strings.ReplaceAll(line, "=", " "))
 		}
 		if _, ok := interfaces[currentInterface]; !ok {
 			currentInterfaceConfig = &fscomInterface{

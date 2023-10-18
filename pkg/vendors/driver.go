@@ -5,6 +5,7 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
@@ -33,7 +34,7 @@ const (
 // Valid checks if this lib supports the given vendor.
 func (v Vendor) Valid() bool {
 	switch v {
-	case VendorFSOSS3, VendorFSOSS5, VendorJuniper, VendorJuniperELS:
+	case VendorFSOSS3, VendorFSOSS5, VendorFSOSN5, VendorJuniper, VendorJuniperELS:
 		return true
 	default:
 		return false
@@ -101,6 +102,14 @@ func New(vendor Vendor) (Driver, error) {
 		}, nil
 	case VendorFSOSS5:
 		return &fsos_s5.FSComS5{
+			FSComS3: fsos_s3.FSComS3{
+				LoginCommands: []string{
+					"terminal length 0",
+				},
+			},
+		}, nil
+	case VendorFSOSN5:
+		return &fsos_n5.FSComN5{
 			FSComS3: fsos_s3.FSComS3{
 				LoginCommands: []string{
 					"terminal length 0",
