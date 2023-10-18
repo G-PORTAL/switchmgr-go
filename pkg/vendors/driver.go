@@ -21,6 +21,8 @@ const (
 	VendorFSOSS3 Vendor = "fsos_s3"
 	// VendorFSOSS5 FSComS3 (FiberStore), series S5XX
 	VendorFSOSS5 Vendor = "fsos_s5"
+	// VendorFSOSN5 FSComS3 (FiberStore), series N5XX
+	VendorFSOSN5 Vendor = "fsos_n5"
 	// VendorJuniper Juniper, up to version 15 (legacy)
 	VendorJuniper Vendor = "juniper"
 	// VendorJuniperELS Juniper, version 15.1 and higher with advanced

@@ -1,0 +1,343 @@
+
+Building configuration...
+Current configuration : 8207 bytes
+
+version 11.0(5)B9P66S2
+hostname openshift-core2
+!
+spanning-tree loopguard default
+spanning-tree mst 0 priority 4096
+spanning-tree
+!
+vtep
+ source loopback 1
+ arp suppress enable
+ remote arp learn enable
+!
+username admin privilege 15 password 7 xxx
+!
+no auto-provision
+!
+install 0 N5860-48SC
+!
+sysmac 649d.99d2.502a
+!
+nfpp
+ arp-guard rate-limit per-port 10000
+ arp-guard attack-threshold per-port 12000
+!
+switch-mode vxlan slot 0
+mtu forwarding 9216
+!
+service password-encryption
+!
+redundancy
+!
+no zam
+enable password 7 041c0a0868067d3230201d395c2607150e
+enable service ssh-server
+!
+vlan range 1,4,6,10,1900,2011
+!
+interface TenGigabitEthernet 0/1
+ port-group 4 mode active
+!
+interface TenGigabitEthernet 0/2
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/3
+ port-group 5 mode active
+!
+interface TenGigabitEthernet 0/4
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/5
+ port-group 6 mode active
+!
+interface TenGigabitEthernet 0/6
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/7
+ port-group 7 mode active
+!
+interface TenGigabitEthernet 0/8
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/9
+ port-group 8 mode active
+!
+interface TenGigabitEthernet 0/10
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/11
+ port-group 9 mode active
+!
+interface TenGigabitEthernet 0/12
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/13
+ port-group 11 mode active
+!
+interface TenGigabitEthernet 0/14
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/15
+ port-group 3 mode active
+!
+interface TenGigabitEthernet 0/16
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/17
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/18
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/19
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/20
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/21
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/22
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/23
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/24
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/25
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/26
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/27
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/28
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/29
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/30
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/31
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/32
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/33
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/34
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/35
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/36
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/37
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/38
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/39
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/40
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/41
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/42
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/43
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/44
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/45
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/46
+ switchport access vlan 4
+ spanning-tree portfast
+!
+interface TenGigabitEthernet 0/47
+ port-group 1 mode active
+!
+interface TenGigabitEthernet 0/48
+ port-group 2 mode active
+!
+interface HundredGigabitEthernet 0/49
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/50
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/51
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/52
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/53
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/54
+ spanning-tree portfast
+!
+interface HundredGigabitEthernet 0/55
+ description to-core1
+ port-group 10
+!
+interface HundredGigabitEthernet 0/56
+ spanning-tree portfast
+!
+interface AggregatePort 1
+ switchport access vlan 1900
+ spanning-tree bpdufilter enable
+ vap 2
+!
+interface AggregatePort 2
+ description downlink-to-ipmi-switch
+ switchport mode trunk
+ spanning-tree portfast
+ vap 3
+!
+interface AggregatePort 3
+ description proxmox-stl
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ spanning-tree portfast
+ vap 4
+!
+interface AggregatePort 4
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5004
+ spanning-tree portfast
+ vap 5
+!
+interface AggregatePort 5
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5005
+ spanning-tree portfast
+ vap 6
+!
+interface AggregatePort 6
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5006
+ spanning-tree portfast
+ vap 7
+!
+interface AggregatePort 7
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5007
+ spanning-tree portfast
+ vap 8
+!
+interface AggregatePort 8
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5008
+ spanning-tree portfast
+ vap 9
+!
+interface AggregatePort 9
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5009
+ spanning-tree portfast
+ vap 10
+!
+interface AggregatePort 10
+ no mac-address-learning
+ switchport mode trunk
+ peer-link
+!
+interface AggregatePort 11
+ switchport mode trunk
+ switchport trunk native vlan 1900
+ lacp system-id 649d.99d2.5011
+ spanning-tree portfast
+ vap 11
+!
+interface Loopback 1
+ ip address 10.255.255.1 255.255.255.255
+!
+interface VLAN 1
+!
+interface VLAN 4
+ ip address 10.16.207.253 255.255.240.0
+!
+interface Mgmt 0
+!
+interface OverlayTunnel 1
+ tunnel source 10.255.255.1
+ tunnel destination 10.255.255.0
+!
+ip route 0.0.0.0 0.0.0.0 10.16.192.1
+!
+line console 0
+line vty 0 35
+ login local
+ width 256
+ length 512
+!
+end
