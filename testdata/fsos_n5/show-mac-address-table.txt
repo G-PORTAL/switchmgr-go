@@ -1,0 +1,9 @@
+Vlan        MAC Address          Type     Interface                              Live Time
+----------  -------------------- -------- -------------------------------------- -----------------
+   4        48df.3779.be20       DYNAMIC  AggregatePort 7                        0d 00:04:54
+   4        48df.3779.be90       DYNAMIC  AggregatePort 8                        0d 00:09:55
+   6        48df.3779.be90       DYNAMIC  AggregatePort 8                        27d 18:49:29
+1900        00c0.1dc0.ffee       DYNAMIC  AggregatePort 1                        69d 19:07:37
+1900        48df.3779.be90       DYNAMIC  AggregatePort 8                        27d 18:49:48
+1900        985d.8247.d093       DYNAMIC  AggregatePort 1                        69d 19:07:50
+1900        985d.8247.d6d9       DYNAMIC  AggregatePort 1                        32d 21:34:01

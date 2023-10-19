@@ -2,7 +2,7 @@ package iosconfig_test
 
 import (
 	"github.com/g-portal/switchmgr-go/pkg/iosconfig"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fscom/utils"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3/utils"
 	"testing"
 )
 

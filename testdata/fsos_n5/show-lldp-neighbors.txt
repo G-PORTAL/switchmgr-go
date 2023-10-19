@@ -1,0 +1,9 @@
+openshift-core2#show lldp neighbors
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+System Name                 Local Intf          Port ID                          Capability   Aging-time
+stl-ds-07                   Te0/47              eth-0-21                         B, R         1minutes 55seconds
+openshift-core1             Hu0/55              HundredGigabitEthernet 0/55      P, B, R      1minutes 37seconds
+
+Total entries displayed: 2

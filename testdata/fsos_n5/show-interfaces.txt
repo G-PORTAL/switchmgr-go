@@ -1,0 +1,2459 @@
+========================== TenGigabitEthernet 0/1 ========================
+Index(dec):1 (hex):1
+TenGigabitEthernet 0/1 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-15 17:32:43
+    Time duration since last link state change: 0 days,  0 hours, 50 minutes, 49 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 332 bits/sec, at 2023-09-15 17:36:16
+  Output peak rate: 11079 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 1976 bits/sec, 1 packets/sec
+    115 packets input, 13866 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35926631 packets output, 10856349555 bytes, 0 underruns , 0 no buffer, 2 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/2 ========================
+Index(dec):2 (hex):2
+TenGigabitEthernet 0/2 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 34 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/3 ========================
+Index(dec):3 (hex):3
+TenGigabitEthernet 0/3 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-15 17:32:43
+    Time duration since last link state change: 0 days,  0 hours, 50 minutes, 50 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 512 bits/sec, at 2023-09-15 17:21:41
+  Output peak rate: 11177 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 64 bits/sec, 0 packets/sec
+   10 seconds output rate 2218 bits/sec, 1 packets/sec
+    131 packets input, 16280 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35927938 packets output, 10856568143 bytes, 0 underruns , 0 no buffer, 1 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/4 ========================
+Index(dec):4 (hex):4
+TenGigabitEthernet 0/4 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/5 ========================
+Index(dec):5 (hex):5
+TenGigabitEthernet 0/5 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-15 17:32:46
+    Time duration since last link state change: 0 days,  0 hours, 50 minutes, 47 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 440 bits/sec, at 2023-09-15 17:36:21
+  Output peak rate: 11144 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 2218 bits/sec, 1 packets/sec
+    110 packets input, 13470 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35927716 packets output, 10856516321 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/6 ========================
+Index(dec):6 (hex):6
+TenGigabitEthernet 0/6 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/7 ========================
+Index(dec):7 (hex):7
+TenGigabitEthernet 0/7 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-14 03:45:23
+    Time duration since last link state change: 1 days, 14 hours, 38 minutes,  9 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 738 bits/sec, at 2023-03-13 22:43:24
+  Output peak rate: 11143 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 2218 bits/sec, 1 packets/sec
+    19 packets input, 1612 bytes, 0 no buffer, 0 dropped
+    Received 9 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35927562 packets output, 10856554751 bytes, 0 underruns , 0 no buffer, 1 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/8 ========================
+Index(dec):8 (hex):8
+TenGigabitEthernet 0/8 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/9 ========================
+Index(dec):9 (hex):9
+TenGigabitEthernet 0/9 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-04-06 23:23:29
+    Time duration since last link state change: 161 days, 19 hours,  0 minutes,  3 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 836 bits/sec, at 2023-03-13 22:42:14
+  Output peak rate: 11014 bits/sec, at 2023-09-02 17:58:38
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 2219 bits/sec, 1 packets/sec
+    25 packets input, 2182 bytes, 0 no buffer, 0 dropped
+    Received 14 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35927311 packets output, 10856528039 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/10 ========================
+Index(dec):10 (hex):a
+TenGigabitEthernet 0/10 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/11 ========================
+Index(dec):11 (hex):b
+TenGigabitEthernet 0/11 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-04-06 23:23:29
+    Time duration since last link state change: 161 days, 19 hours,  0 minutes,  3 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 735 bits/sec, at 2023-03-13 22:42:39
+  Output peak rate: 11244 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 2218 bits/sec, 1 packets/sec
+    21 packets input, 1676 bytes, 0 no buffer, 0 dropped
+    Received 12 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35926997 packets output, 10857584989 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/12 ========================
+Index(dec):12 (hex):c
+TenGigabitEthernet 0/12 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/13 ========================
+Index(dec):13 (hex):d
+TenGigabitEthernet 0/13 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-04-06 23:23:29
+    Time duration since last link state change: 161 days, 19 hours,  0 minutes,  3 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 295 bits/sec, at 2023-03-13 22:48:24
+  Output peak rate: 10961 bits/sec, at 2023-09-07 06:49:17
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 2218 bits/sec, 1 packets/sec
+    11 packets input, 1186 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    35923732 packets output, 10857241739 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/14 ========================
+Index(dec):14 (hex):e
+TenGigabitEthernet 0/14 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:25:59
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:25:59
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/15 ========================
+Index(dec):15 (hex):f
+TenGigabitEthernet 0/15 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-13 21:53:27
+    Time duration since last link state change: 1 days, 20 hours, 30 minutes,  6 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 56232698 bits/sec, at 2023-09-15 17:35:21
+  Output peak rate: 614734410 bits/sec, at 2023-09-15 17:03:10
+   10 seconds input rate 9835 bits/sec, 8 packets/sec
+   10 seconds output rate 142012 bits/sec, 48 packets/sec
+    8471395 packets input, 1321669076 bytes, 0 no buffer, 0 dropped
+    Received 75640 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    64791367 packets output, 11685414958 bytes, 0 underruns , 0 no buffer, 4 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/16 ========================
+Index(dec):16 (hex):10
+TenGigabitEthernet 0/16 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/17 ========================
+Index(dec):17 (hex):11
+TenGigabitEthernet 0/17 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/18 ========================
+Index(dec):18 (hex):12
+TenGigabitEthernet 0/18 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/19 ========================
+Index(dec):19 (hex):13
+TenGigabitEthernet 0/19 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/20 ========================
+Index(dec):20 (hex):14
+TenGigabitEthernet 0/20 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/21 ========================
+Index(dec):21 (hex):15
+TenGigabitEthernet 0/21 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/22 ========================
+Index(dec):22 (hex):16
+TenGigabitEthernet 0/22 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/23 ========================
+Index(dec):23 (hex):17
+TenGigabitEthernet 0/23 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/24 ========================
+Index(dec):24 (hex):18
+TenGigabitEthernet 0/24 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/25 ========================
+Index(dec):25 (hex):19
+TenGigabitEthernet 0/25 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/26 ========================
+Index(dec):26 (hex):1a
+TenGigabitEthernet 0/26 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/27 ========================
+Index(dec):27 (hex):1b
+TenGigabitEthernet 0/27 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/28 ========================
+Index(dec):28 (hex):1c
+TenGigabitEthernet 0/28 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/29 ========================
+Index(dec):29 (hex):1d
+TenGigabitEthernet 0/29 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/30 ========================
+Index(dec):30 (hex):1e
+TenGigabitEthernet 0/30 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/31 ========================
+Index(dec):31 (hex):1f
+TenGigabitEthernet 0/31 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/32 ========================
+Index(dec):32 (hex):20
+TenGigabitEthernet 0/32 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/33 ========================
+Index(dec):33 (hex):21
+TenGigabitEthernet 0/33 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/34 ========================
+Index(dec):34 (hex):22
+TenGigabitEthernet 0/34 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/35 ========================
+Index(dec):35 (hex):23
+TenGigabitEthernet 0/35 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/36 ========================
+Index(dec):36 (hex):24
+TenGigabitEthernet 0/36 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/37 ========================
+Index(dec):37 (hex):25
+TenGigabitEthernet 0/37 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/38 ========================
+Index(dec):38 (hex):26
+TenGigabitEthernet 0/38 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/39 ========================
+Index(dec):39 (hex):27
+TenGigabitEthernet 0/39 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/40 ========================
+Index(dec):40 (hex):28
+TenGigabitEthernet 0/40 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/41 ========================
+Index(dec):41 (hex):29
+TenGigabitEthernet 0/41 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/42 ========================
+Index(dec):42 (hex):2a
+TenGigabitEthernet 0/42 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/43 ========================
+Index(dec):43 (hex):2b
+TenGigabitEthernet 0/43 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 32 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/44 ========================
+Index(dec):44 (hex):2c
+TenGigabitEthernet 0/44 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/45 ========================
+Index(dec):45 (hex):2d
+TenGigabitEthernet 0/45 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/46 ========================
+Index(dec):46 (hex):2e
+TenGigabitEthernet 0/46 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/47 ========================
+Index(dec):47 (hex):2f
+TenGigabitEthernet 0/47 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-08-15 15:11:38
+    Time duration since last link state change: 31 days,  3 hours, 11 minutes, 56 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 614859040 bits/sec, at 2023-09-15 17:03:10
+  Output peak rate: 7722014 bits/sec, at 2023-09-15 16:48:45
+   10 seconds input rate 36838 bits/sec, 46 packets/sec
+   10 seconds output rate 9902 bits/sec, 8 packets/sec
+    476477423 packets input, 36718665107 bytes, 0 no buffer, 0 dropped
+    Received 466663730 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    8961380 packets output, 1018933556 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== TenGigabitEthernet 0/48 ========================
+Index(dec):48 (hex):30
+TenGigabitEthernet 0/48 is UP  , line protocol is UP
+  Hardware is Broadcom TenGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-04-01 01:30:53
+    Time duration since last link state change: 167 days, 16 hours, 52 minutes, 41 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 4576290 bits/sec, at 2023-09-15 17:35:51
+  Output peak rate: 56696027 bits/sec, at 2023-09-15 17:35:21
+   10 seconds input rate 1143 bits/sec, 0 packets/sec
+   10 seconds output rate 18543 bits/sec, 32 packets/sec
+    16686738 packets input, 9040393120 bytes, 0 no buffer, 0 dropped
+    Received 15762794 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    463192446 packets output, 32490521681 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/49 ========================
+Index(dec):49 (hex):31
+HundredGigabitEthernet 0/49 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/50 ========================
+Index(dec):50 (hex):32
+HundredGigabitEthernet 0/50 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/51 ========================
+Index(dec):51 (hex):33
+HundredGigabitEthernet 0/51 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/52 ========================
+Index(dec):52 (hex):34
+HundredGigabitEthernet 0/52 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/53 ========================
+Index(dec):53 (hex):35
+HundredGigabitEthernet 0/53 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/54 ========================
+Index(dec):54 (hex):36
+HundredGigabitEthernet 0/54 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/55 ========================
+Index(dec):55 (hex):37
+HundredGigabitEthernet 0/55 is UP  , line protocol is UP
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Description: to-core2
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 40000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:28:08
+    Time duration since last link state change: 185 days, 19 hours, 55 minutes, 26 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 40G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 104356759 bits/sec, at 2023-08-10 12:07:17
+  Output peak rate: 95448 bits/sec, at 2023-08-23 05:25:17
+   10 seconds input rate 10151 bits/sec, 14 packets/sec
+   10 seconds output rate 39137 bits/sec, 48 packets/sec
+    1368584042 packets input, 98922015638 bytes, 0 no buffer, 0 dropped
+    Received 1280651891 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    561251242 packets output, 48024242838 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== HundredGigabitEthernet 0/56 ========================
+Index(dec):56 (hex):38
+HundredGigabitEthernet 0/56 is DOWN  , line protocol is DOWN
+  Hardware is Broadcom HundredGigabitEthernet, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 100000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Flow control admin status is OFF, flow control oper status is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is none
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 1 ========================
+Index(dec):58 (hex):3a
+AggregatePort 1 is UP  , line protocol is UP
+  Hardware is AggregateLink AggregatePort, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-08-15 15:11:42
+    Time duration since last link state change: 31 days,  3 hours, 11 minutes, 51 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 1900
+  Aggregate Port Informations:
+        Aggregate Number: 1
+        Name: "AggregatePort 1"
+        Members: (count=1)
+        Lower Limit: 1
+        TenGigabitEthernet 0/47                  Link Status: Up       Lacp Status: bndl
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 614859040 bits/sec, at 2023-09-15 17:03:15
+  Output peak rate: 7722014 bits/sec, at 2023-09-15 16:48:50
+   10 seconds input rate 41982 bits/sec, 51 packets/sec
+   10 seconds output rate 9328 bits/sec, 7 packets/sec
+    476476547 packets input, 36718608403 bytes, 0 no buffer, 0 dropped
+    Received 466662877 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    8961363 packets output, 1018931246 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 2 ========================
+Index(dec):59 (hex):3b
+AggregatePort 2 is UP  , line protocol is UP
+  Hardware is AggregateLink AggregatePort, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Description: downlink-to-ipmi-switch
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-04-01 01:30:59
+    Time duration since last link state change: 167 days, 16 hours, 52 minutes, 35 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: trunk
+    Native vlan: 1
+    Allowed vlan lists: 1-4094
+    Active vlan lists: 1,4,6,10,1900,2011
+  Aggregate Port Informations:
+        Aggregate Number: 2
+        Name: "AggregatePort 2"
+        Members: (count=1)
+        Lower Limit: 1
+        TenGigabitEthernet 0/48                  Link Status: Up       Lacp Status: bndl
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 4576290 bits/sec, at 2023-09-15 17:35:56
+  Output peak rate: 56696027 bits/sec, at 2023-09-15 17:35:26
+   10 seconds input rate 1017 bits/sec, 0 packets/sec
+   10 seconds output rate 19910 bits/sec, 35 packets/sec
+    16686738 packets input, 9040393120 bytes, 0 no buffer, 0 dropped
+    Received 15762794 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    463192428 packets output, 32490518383 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 3 ========================
+Index(dec):57 (hex):39
+AggregatePort 3 is UP  , line protocol is UP
+  Hardware is AggregateLink AggregatePort, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 10000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-09-13 21:56:42
+    Time duration since last link state change: 1 days, 20 hours, 26 minutes, 52 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 10G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: trunk
+    Native vlan: 1900
+    Allowed vlan lists: 1-4094
+    Active vlan lists: 1,4,6,10,1900,2011
+  Aggregate Port Informations:
+        Aggregate Number: 3
+        Name: "AggregatePort 3"
+        Members: (count=1)
+        Lower Limit: 1
+        TenGigabitEthernet 0/15                  Link Status: Up       Lacp Status: bndl
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 56232698 bits/sec, at 2023-09-15 17:35:26
+  Output peak rate: 614734410 bits/sec, at 2023-09-15 17:03:15
+   10 seconds input rate 9114 bits/sec, 7 packets/sec
+   10 seconds output rate 25804 bits/sec, 40 packets/sec
+    8470896 packets input, 1321606161 bytes, 0 no buffer, 0 dropped
+    Received 75528 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    50511132 packets output, 9792205216 bytes, 0 underruns , 0 no buffer, 4 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 4 ========================
+Index(dec):61 (hex):3d
+AggregatePort 4 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:19
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 4
+        Name: "AggregatePort 4"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:19
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:19
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 5 ========================
+Index(dec):62 (hex):3e
+AggregatePort 5 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:19
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 5
+        Name: "AggregatePort 5"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:19
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:19
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 6 ========================
+Index(dec):63 (hex):3f
+AggregatePort 6 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:20
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 6
+        Name: "AggregatePort 6"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 7 ========================
+Index(dec):64 (hex):40
+AggregatePort 7 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:20
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 7
+        Name: "AggregatePort 7"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 8 ========================
+Index(dec):65 (hex):41
+AggregatePort 8 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:20
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 8
+        Name: "AggregatePort 8"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 9 ========================
+Index(dec):66 (hex):42
+AggregatePort 9 is DOWN  , line protocol is DOWN
+  Hardware is AggregateLink AggregatePort, address is 0000.0000.0000 (bia 0000.0000.0000)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:27:20
+    Time duration since last link state change: 185 days, 19 hours, 56 minutes, 14 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: access
+    Vlan id: 4
+  Aggregate Port Informations:
+        Aggregate Number: 9
+        Name: "AggregatePort 9"
+        Members: (count=0)
+        Lower Limit: 1
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:27:20
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== AggregatePort 10 ========================
+Index(dec):60 (hex):3c
+AggregatePort 10 is UP  , line protocol is UP
+  Hardware is AggregateLink AggregatePort, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 40000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:28:08
+    Time duration since last link state change: 185 days, 19 hours, 55 minutes, 26 seconds
+    Priority is 0
+    Medium-type is Fiber
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 40G
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is OFF
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Bridge attributes:
+    Port-type: trunk
+    Native vlan: 1
+    Allowed vlan lists: 1-4094
+    Active vlan lists: 1,4,6,10,1900,2011
+  Aggregate Port Informations:
+        Aggregate Number: 10
+        Name: "AggregatePort 10"
+        Members: (count=1)
+        Lower Limit: 1
+        HundredGigabitEthernet 0/55              Link Status: Up
+    Load Balance by: Source MAC and Destination MAC
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 104356759 bits/sec, at 2023-08-10 12:07:22
+  Output peak rate: 95448 bits/sec, at 2023-08-23 05:25:22
+   10 seconds input rate 6376 bits/sec, 8 packets/sec
+   10 seconds output rate 42105 bits/sec, 52 packets/sec
+    1368584042 packets input, 98922015638 bytes, 0 no buffer, 0 dropped
+    Received 1280651891 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    561251242 packets output, 48024242838 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== Loopback 1 ========================
+Index(dec):16385 (hex):4001
+Loopback 1 is UP  , line protocol is UP
+  Hardware is Loopback
+  Interface address is: 10.255.255.0/32
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 8000000 Kbit
+  Encapsulation protocol is LOOPBACK, loopback not set
+  Keepalive interval is no set
+  Carrier delay is 2 sec
+  Rxload is 0/255, Txload is 0/255
+  Input peak rate: 0 bits/sec, at 1970-01-01 00:00:00
+  Output peak rate: 0 bits/sec, at 1970-01-01 00:00:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== VLAN 4 ========================
+Index(dec):4100 (hex):1004
+VLAN 4 is UP  , line protocol is UP
+  Hardware is VLAN, address is 649d.99d2.502e (bia 649d.99d2.502e)
+  Interface address is: 10.16.207.252/20
+  ARP type: ARPA, ARP Timeout: 3600 seconds
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Rxload is 0/255, Txload is 0/255
+========================== VLAN 10 ========================
+Index(dec):4106 (hex):100a
+VLAN 10 is UP  , line protocol is UP
+  Hardware is VLAN, address is 649d.99d2.502e (bia 649d.99d2.502e)
+  Interface address is: 25.25.25.0/31
+  ARP type: ARPA, ARP Timeout: 3600 seconds
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Rxload is 0/255, Txload is 0/255
+========================== Mgmt 0 ========================
+Index(dec):8193 (hex):2001
+Mgmt 0 is DOWN  , line protocol is DOWN
+  Hardware is Mgmt, address is 649d.99d2.502d (bia 649d.99d2.502d)
+  Description: IP management Console
+  Interface address is: no ip address
+  ARP type: ARPA, ARP Timeout: 3600 seconds
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2023-03-13 22:26:00
+    Time duration since last link state change: 185 days, 19 hours, 57 minutes, 33 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Unknown
+    Admin speed is AUTO, oper speed is Unknown
+    Admin negotiation mode is OFF, oper negotiation state is Unknown
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+    Admin FEC mode is auto, oper FEC mode is auto
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+  Output peak rate: 0 bits/sec, at 2023-03-13 22:26:00
+   10 seconds input rate 0 bits/sec, 0 packets/sec
+   10 seconds output rate 0 bits/sec, 0 packets/sec
+    0 packets input, 0 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    0 packets output, 0 bytes, 0 underruns , 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+========================== OverlayTunnel 1 ========================
+Index(dec):8464 (hex):2110
+OverlayTunnel 1 is UP  , line protocol is UP
+  Hardware is OverlayTunnel
+  Interface address is: no ip address
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Tunnel, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 0 sec
+  Overlay attributes:
+    Overlay mode is VXLAN
+    Tunnel source: 10.255.255.0, destination: 10.255.255.1
+  Rxload is 0/255, Txload is 0/255
