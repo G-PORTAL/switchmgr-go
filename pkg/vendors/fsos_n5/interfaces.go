@@ -2,6 +2,7 @@ package fsos_n5
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"net"
@@ -61,70 +62,8 @@ func (fs *FSComN5) GetInterface(name string) (*models.Interface, error) {
 }
 
 func (fs *FSComN5) ConfigureInterface(update *models.UpdateInterface) (bool, error) {
-	nic, err := fs.GetInterface(update.Name)
-	if err != nil {
-		return false, err
-	}
-
-	// Check if the interface is already configured as requested
-	if !nic.Differs(update) {
-		fs.Logger().Debugf("interface %s is already configured as requested", update.Name)
-		return false, nil
-	}
-
-	commands := []string{
-		"configure terminal",                                  // enter config mode
-		fmt.Sprintf("interface %s", update.Name),              // enter interface config mode,
-		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode
-	}
-
-	if update.Description != nil {
-		commands = append(commands, fmt.Sprintf("description %s", *update.Description)) // set interface description
-	}
-
-	if update.UntaggedVLAN != nil && *update.UntaggedVLAN != 1 {
-		commands = append(commands, fmt.Sprintf("switchport trunk native vlan %d", *update.UntaggedVLAN)) // set untagged vlan
-	} else if update.UntaggedVLAN != nil && *update.UntaggedVLAN == 1 {
-		commands = append(commands, "no switchport trunk native vlan")
-	}
-
-	if update.TaggedVLANs != nil {
-		taggedVLANs := make([]string, 0)
-		if update.UntaggedVLAN != nil {
-			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(*update.UntaggedVLAN)))
-		}
-
-		for _, vlan := range update.TaggedVLANs {
-			taggedVLANs = append(taggedVLANs, strconv.Itoa(int(vlan)))
-		}
-
-		commands = append(commands,
-			"switchport trunk allowed vlan none",
-			fmt.Sprintf("switchport trunk allowed vlan add %s", strings.Join(taggedVLANs, ",")))
-	}
-
-	// exit interface config mode
-	commands = append(commands, "exit", "exit")
-	_, err = fs.SendCommands(commands...)
-	if err != nil {
-		return false, fmt.Errorf("failed to configure interface: %w", err)
-	}
-
-	nic, err = fs.GetInterface(update.Name)
-	if err != nil {
-		return false, err
-	}
-
-	if nic.Differs(update) {
-		return false, fmt.Errorf("interface differs, original %v, updated %v", nic, update)
-	}
-
-	err = fs.Save()
-	if err != nil {
-		return false, err
-	}
-
-	return true, nil
+	// TODO: Currently not implemented since it's not required at this point.e
+	return false, errors.New("not implemented")
 }
 
 func (fs *FSComN5) getInterfaceInfo() (map[string]fscomInterface, error) {
