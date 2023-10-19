@@ -19,6 +19,7 @@ if it works or not.
 
 - FibreStore S3900
 - FibreStore S5800
+- FibreStore N5860 (not all functions are supported yet)
 - Juniper EX3200
 - Juniper EX3300
 - Juniper EX3400
@@ -44,7 +45,7 @@ import (
 )
 
 func main() {
-	driver, err := vendors.New(vendors.VendorFiberStore)
+	driver, err := vendors.New(vendors.VendorFSOSS5)
 	driver.Connect(config.Connection{
 		Host: "10.10.10.2",
 		Port: 22,
