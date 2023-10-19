@@ -34,7 +34,7 @@ service password-encryption
 redundancy
 !
 no zam
-enable password 7 041c0a0868067d3230201d395c2607150e
+enable password 7 xxx
 enable service ssh-server
 !
 vlan range 1,4,6,10,1900,2011
