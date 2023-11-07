@@ -78,6 +78,12 @@ func (fs *FSComS5) ConfigureInterface(update *models.UpdateInterface) (bool, err
 		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode
 	}
 
+	if update.Enabled != nil && !*update.Enabled {
+		commands = append(commands, "shutdown")
+	} else if update.Enabled != nil && *update.Enabled {
+		commands = append(commands, "no shutdown")
+	}
+
 	if update.Description != nil {
 		commands = append(commands, fmt.Sprintf("description %s", *update.Description)) // set interface description
 	}

@@ -121,7 +121,7 @@ func (j *Juniper) GetInterface(name string) (*models.Interface, error) {
 	return nil, fmt.Errorf("interface %s not found", name)
 }
 
-func (s *Juniper) isUplink(inter string) bool {
+func (j *Juniper) isUplink(inter string) bool {
 	inter = strings.TrimSpace(inter)
 
 	// Skip et, xe, ae interfaces for now
@@ -145,6 +145,7 @@ const EditPortConfigurationTemplate = `<edit-config>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
 					<description>{{ .Description }}</description>
+					{{if eq .Enabled false}}<disable/>{{end}}
 					<unit>
 						<name>0</name>
 						<family>

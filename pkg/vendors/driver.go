@@ -71,7 +71,6 @@ type Driver interface {
 	// GetInterface returns the interface with the given name. The interface
 	// may contain not all information, depending on the vendor.
 	GetInterface(name string) (*models.Interface, error)
-
 	// ListLLDPNeighbors returns a list of neighbors, which are discovered
 	// through LLDP. This information can be used to get insights about the
 	// network topology or for debugging purposes.
