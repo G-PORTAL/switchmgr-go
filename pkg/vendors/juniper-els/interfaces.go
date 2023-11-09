@@ -1,7 +1,6 @@
 package juniper_els
 
 import (
-	"bytes"
 	"encoding/xml"
 	"fmt"
 	"github.com/Juniper/go-netconf/netconf"
@@ -9,7 +8,6 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/utils"
 	"strconv"
 	"strings"
-	"text/template"
 )
 
 func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
@@ -144,8 +142,8 @@ const EditPortConfigurationTemplate = `<edit-config>
 			<interfaces>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
-					<description>{{ .Description }}</description>
-					{{if eq .Enabled false}}<disable/>{{end}}
+					{{if .Description}}<description>{{ .Description }}</description>{{end}}
+					{{if .Disabled}}<disable/>{{end}}
 					{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
 					<unit>
 						<name>0</name>
@@ -181,6 +179,7 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 		return false, err
 	}
 
+	update.Fill(swport)
 	if !swport.Differs(update) {
 		return false, nil
 	}
@@ -197,13 +196,8 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 		return false, fmt.Errorf("switch port has no vlans to configure")
 	}
 
-	var tpl bytes.Buffer
-	tmpl, err := template.New("").Parse(EditPortConfigurationTemplate)
+	tpl, err := update.Template(EditPortConfigurationTemplate)
 	if err != nil {
-		return false, err
-	}
-
-	if err = tmpl.Execute(&tpl, update); err != nil {
 		return false, err
 	}
 
