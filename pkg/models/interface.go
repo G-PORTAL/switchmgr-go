@@ -109,14 +109,6 @@ func (u *UpdateInterface) Fill(i *Interface) {
 	if u.MTU == nil {
 		u.MTU = &i.MTU
 	}
-
-	if u.UntaggedVLAN == nil {
-		u.UntaggedVLAN = i.UntaggedVLAN
-	}
-
-	if len(u.TaggedVLANs) == 0 {
-		u.TaggedVLANs = i.TaggedVLANs
-	}
 }
 
 // Differs returns true if the interface differs from the update interface. Every
