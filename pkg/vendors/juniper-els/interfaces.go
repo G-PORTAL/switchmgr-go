@@ -145,7 +145,7 @@ const EditPortConfigurationTemplate = `<edit-config>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
 					<description>{{ .Description }}</description>
-					{{if eq .Enabled false}}<disable/>{{end}}
+					{{if not .Enabled}}<disable/>{{end}}
 					{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
 					<unit>
 						<name>0</name>
