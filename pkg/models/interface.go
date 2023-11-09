@@ -1,7 +1,9 @@
 package models
 
 import (
+	"bytes"
 	"golang.org/x/exp/slices"
+	textTemplate "text/template"
 )
 
 type InterfaceMode string
@@ -72,6 +74,49 @@ type UpdateInterface struct {
 
 	UntaggedVLAN *int32
 	TaggedVLANs  []int32
+}
+
+// Disabled returns true if the interface should be disabled. This is the case if
+// the Enabled field is set to false. If the Enabled field is nil, the interface
+// should be .
+func (u *UpdateInterface) Disabled() bool {
+	return u.Enabled != nil && !*u.Enabled
+}
+
+// Template returns the a templated buffer for the interface, given by the template
+// string. The template string should be a valid Go template. The template will
+// be executed with the UpdateInterface as the data.
+func (u *UpdateInterface) Template(template string) (bytes.Buffer, error) {
+	var tpl bytes.Buffer
+
+	tmpl, err := textTemplate.New("").Parse(template)
+	if err != nil {
+		return tpl, err
+	}
+
+	if err = tmpl.Execute(&tpl, u); err != nil {
+		return tpl, err
+	}
+
+	return tpl, nil
+}
+
+func (u *UpdateInterface) Fill(i *Interface) {
+	if u.Enabled == nil {
+		u.Enabled = &i.Enabled
+	}
+
+	if u.MTU == nil {
+		u.MTU = &i.MTU
+	}
+
+	if u.UntaggedVLAN == nil {
+		u.UntaggedVLAN = i.UntaggedVLAN
+	}
+
+	if len(u.TaggedVLANs) == 0 {
+		u.TaggedVLANs = i.TaggedVLANs
+	}
 }
 
 // Differs returns true if the interface differs from the update interface. Every

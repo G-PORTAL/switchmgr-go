@@ -1,7 +1,6 @@
 package juniper
 
 import (
-	"bytes"
 	"encoding/xml"
 	"errors"
 	"fmt"
@@ -9,7 +8,6 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"strconv"
 	"strings"
-	"text/template"
 )
 
 const defaultMTU = 1500
@@ -144,8 +142,8 @@ const EditPortConfigurationTemplate = `<edit-config>
 			<interfaces>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
-					<description>{{ .Description }}</description>
-					{{if not .Enabled}}<disable/>{{end}}
+					{{if .Description}}<description>{{ .Description }}</description>{{end}}
+					{{if .Disabled}}<disable/>{{end}}
 					<unit>
 						<name>0</name>
 						<family>
@@ -177,6 +175,8 @@ func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, erro
 	if err != nil {
 		return false, err
 	}
+
+	update.Fill(swport)
 	if !swport.Differs(update) {
 		return false, nil
 	}
@@ -185,13 +185,8 @@ func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, erro
 		return false, errors.New("switch port has no vlans to configure")
 	}
 
-	var tpl bytes.Buffer
-	tmpl, err := template.New("").Parse(EditPortConfigurationTemplate)
+	tpl, err := update.Template(EditPortConfigurationTemplate)
 	if err != nil {
-		return false, err
-	}
-
-	if err = tmpl.Execute(&tpl, update); err != nil {
 		return false, err
 	}
 
