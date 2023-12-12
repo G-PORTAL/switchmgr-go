@@ -8,7 +8,7 @@ require (
 	github.com/google/go-cmp v0.5.8
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
 	golang.org/x/crypto v0.11.0
-	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
+	golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb
 )
 
 require (
