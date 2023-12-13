@@ -79,6 +79,14 @@ type Driver interface {
 	// Logger returns the logger of the driver. This is a generic logger, which
 	// can be overwritten by the vendor driver.
 	Logger() *log.Logger
+
+	ListVlans() ([]models.Vlan, error)
+	ConfigureVlan(vlan *models.Vlan) (bool, error)
+	DeleteVlan(id int32) error
+
+	ListVlanMappings() ([]models.VlanMapping, error)
+	ConfigureVlanMapping(mapping *models.VlanMapping) (bool, error)
+	DeleteVLANMapping(name string)
 }
 
 // New returns a new driver for the given vendor. If the vendor is not

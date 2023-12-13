@@ -61,6 +61,10 @@ type Interface struct {
 	LagInterfaces []string
 	IPAddresses   []string
 
+	VlanMappingName *string
+
+	PortIsolationGroup *string
+
 	Management bool
 }
 
@@ -74,6 +78,10 @@ type UpdateInterface struct {
 
 	UntaggedVLAN *int32
 	TaggedVLANs  []int32
+
+	VlanMappingName *string
+
+	PortIsolationGroup *string
 }
 
 // Disabled returns true if the interface should be disabled. This is the case if
@@ -127,6 +135,14 @@ func (i *Interface) Differs(u *UpdateInterface) bool {
 	}
 
 	if u.UntaggedVLAN != nil && (i.UntaggedVLAN == nil || *i.UntaggedVLAN != *u.UntaggedVLAN) {
+		return true
+	}
+
+	if u.PortIsolationGroup != nil && (i.PortIsolationGroup == nil || *i.PortIsolationGroup != *u.PortIsolationGroup) {
+		return true
+	}
+
+	if u.VlanMappingName != nil && (i.VlanMappingName == nil || *i.VlanMappingName != *u.VlanMappingName) {
 		return true
 	}
 

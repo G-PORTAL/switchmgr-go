@@ -39,6 +39,36 @@ func (j *Unimplemented) GetInterface(name string) (*models.Interface, error) {
 	return nil, errors.New("not implemented")
 }
 
+func (j *Unimplemented) ListVlans() ([]models.Vlan, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (j *Unimplemented) ConfigureVlan(vlan *models.Vlan) (bool, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (j *Unimplemented) DeleteVlan(id int32) error {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (j *Unimplemented) ListVlanMappings() ([]models.VlanMapping, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (j *Unimplemented) ConfigureVlanMapping(mapping *models.VlanMapping) (bool, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (j *Unimplemented) DeleteVLANMapping(name string) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (j *Unimplemented) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
 	return nil, nil
 }
