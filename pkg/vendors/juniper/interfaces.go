@@ -142,9 +142,9 @@ const EditPortConfigurationTemplate = `<edit-config>
 			<interfaces>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
-					{{if .Description}}<description>{{ .Description }}</description>{{end}}
-					{{if .Disabled}}<disable/>{{end}}
-					<unit>
+{{if .Description}}					<description>{{ .Description }}</description>
+{{end}}{{if .Disabled}}					<disable/>
+{{end}}					<unit>
 						<name>0</name>
 						<family>
 							<ethernet-switching>

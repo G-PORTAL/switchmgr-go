@@ -39,6 +39,16 @@ enable service ssh-server
 !
 vlan range 1,4,6,10,1900,2011
 !
+ethernet evc internal
+ dot1q mapped-vlan 1010
+!
+ethernet evc public
+ dot1q mapped-vlan 1515
+!
+vlan mapping table custom_mapping
+ raw-vlan 10 evc internal
+ raw-vlan 15 evc public
+!
 interface TenGigabitEthernet 0/1
  port-group 4 mode active
 !
@@ -96,12 +106,16 @@ interface TenGigabitEthernet 0/16
  spanning-tree portfast
 !
 interface TenGigabitEthernet 0/17
- switchport access vlan 4
- spanning-tree portfast
+ port-isolate group 1
+ switchport trunk vlan-translation
+ switchport trunk vlan-translation mapping table custom_mapping
+ switchport trunk native vlan 15
+ switchport trunk allowed vlan add 10
 !
 interface TenGigabitEthernet 0/18
- switchport access vlan 4
- spanning-tree portfast
+ port-isolate group 1
+ switchport trunk native vlan 1515
+ switchport trunk allowed vlan add 1010
 !
 interface TenGigabitEthernet 0/19
  switchport access vlan 4

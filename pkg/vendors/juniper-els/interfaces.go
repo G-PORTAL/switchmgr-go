@@ -142,10 +142,10 @@ const EditPortConfigurationTemplate = `<edit-config>
 			<interfaces>
 				<interface operation="replace">
 					<name>{{ .Name }}</name>
-					{{if .Description}}<description>{{ .Description }}</description>{{end}}
-					{{if .Disabled}}<disable/>{{end}}
-					{{if .UntaggedVLAN}}<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>{{end}}
-					<unit>
+{{if .Description}}					<description>{{ .Description }}</description>
+{{end}}{{if .Disabled}}					<disable/>
+{{end}}{{if .UntaggedVLAN}}					<native-vlan-id>{{ .UntaggedVLAN }}</native-vlan-id>
+{{end}}					<unit>
 						<name>0</name>
 						<family>
 							<ethernet-switching>
