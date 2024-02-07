@@ -7,8 +7,8 @@ require (
 	github.com/charmbracelet/log v0.3.1
 	github.com/google/go-cmp v0.6.0
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
-	golang.org/x/crypto v0.16.0
-	golang.org/x/exp v0.0.0-20231206192017-f3f8817b8deb
+	golang.org/x/crypto v0.19.0
+	golang.org/x/exp v0.0.0-20240205201215-2c58cdc269a3
 )
 
 require (
@@ -21,5 +21,5 @@ require (
 	github.com/muesli/reflow v0.3.0 // indirect
 	github.com/muesli/termenv v0.15.2 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
-	golang.org/x/sys v0.15.0 // indirect
+	golang.org/x/sys v0.17.0 // indirect
 )
