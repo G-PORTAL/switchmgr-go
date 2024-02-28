@@ -76,6 +76,38 @@ func TestListInterfaces(t *testing.T) {
 
 }
 
+func TestGetInterfaces(t *testing.T) {
+	iosConfig := fsos_s5.ParseConfiguration(utils.ReadTestData("show running-config", nil))
+
+	cfg := fsos_s5.Configuration(iosConfig)
+
+	expectedConfig := map[string][]*string{
+		"eth-0-16": {
+			utils.PtrFromString("1"), utils.PtrFromString("custom_mapping"),
+		},
+		"eth-0-17": {
+			utils.PtrFromString("1"), nil,
+		},
+	}
+	for iface, exp := range expectedConfig {
+		nic, err := cfg.GetInterface(iface)
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		if !(nic.PortIsolationGroup == nil && exp[0] == nil) && ((nic.PortIsolationGroup == nil && exp[0] != nil) ||
+			(nic.PortIsolationGroup != nil && exp[0] == nil) || *nic.PortIsolationGroup != *exp[0]) {
+			t.Fatalf("interface %s has wrong port isolation group, expected %v, got %v", iface, utils.StringFromPtr(exp[0]), utils.StringFromPtr(nic.PortIsolationGroup))
+		}
+
+		if !(nic.VlanMappingName == nil && exp[1] == nil) && ((nic.VlanMappingName == nil && exp[1] != nil) ||
+			(nic.VlanMappingName != nil && exp[1] == nil) || *nic.VlanMappingName != *exp[1]) {
+			t.Fatalf("interface %s has wrong vlan mapping %v, got %v", iface, utils.StringFromPtr(exp[1]), utils.StringFromPtr(nic.VlanMappingName))
+		}
+	}
+
+}
+
 func TestParseInterfaces(t *testing.T) {
 	nics, err := fsos_s5.ParseInterfaces(utils.ReadTestData("show interface", nil))
 	if err != nil {

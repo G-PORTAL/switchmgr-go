@@ -75,14 +75,26 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 			mgmt = true
 		}
 
+		var vlanMappingName *string
+		if mapping := config.GetStringValue("switchport trunk vlan-translation mapping table", ""); mapping != "" {
+			vlanMappingName = &mapping
+		}
+
+		var portIsolationGroup *string
+		if group := config.GetStringValue("port-isolate group", ""); group != "" {
+			portIsolationGroup = &group
+		}
+
 		interfaces = append(interfaces, &models.Interface{
-			Name:         nic,
-			Description:  config.GetStringValue("description", ""),
-			Enabled:      enable,
-			Mode:         interfaceMode,
-			UntaggedVLAN: untaggedVLAN,
-			TaggedVLANs:  taggedVLANs,
-			Management:   mgmt,
+			Name:               nic,
+			Description:        config.GetStringValue("description", ""),
+			Enabled:            enable,
+			Mode:               interfaceMode,
+			UntaggedVLAN:       untaggedVLAN,
+			TaggedVLANs:        taggedVLANs,
+			Management:         mgmt,
+			VlanMappingName:    vlanMappingName,
+			PortIsolationGroup: portIsolationGroup,
 		})
 	}
 

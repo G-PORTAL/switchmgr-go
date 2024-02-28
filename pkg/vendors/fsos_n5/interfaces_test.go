@@ -92,35 +92,6 @@ func TestListInterfaces(t *testing.T) {
 		t.Fatalf("Expected untagged VLAN to be %d, got %d", untaggedVLAN, *nic.UntaggedVLAN)
 	}
 
-	expectedConfig := map[string][]*string{
-		"TenGigabitEthernet 0/17": {
-			ptrstr("1"), ptrstr("custom_mapping"),
-		},
-		"TenGigabitEthernet 0/18": {
-			ptrstr("1"), nil,
-		},
-	}
-	for iface, exp := range expectedConfig {
-		nic, err = cfg.GetInterface(iface)
-		if err != nil {
-			t.Fatal(err)
-		}
-
-		if !(nic.PortIsolationGroup == nil && exp[0] == nil) && ((nic.PortIsolationGroup == nil && exp[0] != nil) ||
-			(nic.PortIsolationGroup != nil && exp[0] == nil) || *nic.PortIsolationGroup != *exp[0]) {
-			t.Fatalf("interface %s has wrong port isolation group, expected %v, got %v", iface, *exp[0], *nic.PortIsolationGroup)
-		}
-
-		if !(nic.VlanMappingName == nil && exp[1] == nil) && ((nic.VlanMappingName == nil && exp[1] != nil) ||
-			(nic.VlanMappingName != nil && exp[1] == nil) || *nic.VlanMappingName != *exp[1]) {
-			t.Fatalf("interface %s has wrong vlan mapping %v, got %v", iface, *exp[1], *nic.VlanMappingName)
-		}
-	}
-
-}
-
-func ptrstr(v string) *string {
-	return &v
 }
 
 func TestParseInterfaces(t *testing.T) {

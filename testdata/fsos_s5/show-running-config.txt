@@ -93,6 +93,16 @@ policy-map PM-EDGE
 cpu-traffic-protect arp
  apply access-list ACL-PROTECT-ARP mode whitelist rate 32
 !
+ethernet evc internal
+ dot1q mapped-vlan 100
+!
+ethernet evc public
+ dot1q mapped-vlan 150
+!
+vlan mapping table custom_mapping
+ raw-vlan 10 evc internal
+ raw-vlan 15 evc public
+!
 interface eth-0-1
  port-isolate group 1
  switchport mode trunk
@@ -277,8 +287,10 @@ interface eth-0-15
 interface eth-0-16
  port-isolate group 1
  switchport mode trunk
- switchport trunk native vlan 1160
- switchport trunk allowed vlan add 15,1160
+ switchport trunk vlan-translation
+ switchport trunk vlan-translation mapping table custom_mapping
+ switchport trunk native vlan 10
+ switchport trunk allowed vlan add 15
  service-policy input PM-EDGE
  switchport port-security
  switchport port-security maximum 256

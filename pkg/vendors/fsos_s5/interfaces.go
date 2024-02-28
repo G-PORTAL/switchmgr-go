@@ -72,6 +72,23 @@ func (fs *FSComS5) ConfigureInterface(update *models.UpdateInterface) (bool, err
 		return false, nil
 	}
 
+	if update.VlanMappingName != nil && *update.VlanMappingName != "" {
+		vm, err := fs.ListVlanMappings()
+		if err != nil {
+			return false, err
+		}
+		if exists := func() bool {
+			for i := range vm {
+				if vm[i].GroupName == *update.VlanMappingName {
+					return true
+				}
+			}
+			return false
+		}(); !exists {
+			return false, fmt.Errorf("vlan mapping %s not found", *update.VlanMappingName)
+		}
+	}
+
 	commands := []string{
 		"configure terminal",                                  // enter config mode
 		fmt.Sprintf("interface %s", update.Name),              // enter interface config mode,
