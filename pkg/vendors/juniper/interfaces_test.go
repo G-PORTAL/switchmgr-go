@@ -3,7 +3,9 @@ package juniper_test
 import (
 	"bytes"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/g-portal/switchmgr-go/pkg/utils"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
+	"github.com/google/go-cmp/cmp"
 	"golang.org/x/exp/slices"
 	"net"
 	"testing"
@@ -59,7 +61,8 @@ const EditPortConfigurationExpected = `<edit-config>
 			<interfaces>
 				<interface operation="replace">
 					<name>eth0</name>
-					<description>example interface</description>
+					<description>example interface 2</description>
+
 					<unit>
 						<name>0</name>
 						<family>
@@ -86,7 +89,7 @@ func TestConfigureInterfaceTemplate(t *testing.T) {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
 
-	interfaceDescription := "example interface"
+	interfaceDescription := "example interface 2"
 	untaggedVlan := int32(1337)
 	if err = tmpl.Execute(&tpl, &models.UpdateInterface{
 		Name:         "eth0",
@@ -96,7 +99,12 @@ func TestConfigureInterfaceTemplate(t *testing.T) {
 	}); err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
-	if tpl.String() != EditPortConfigurationExpected {
-		t.Errorf("expected:\n%s\ngot:\n%s", EditPortConfigurationExpected, tpl.String())
+	isEqual, err := utils.CompareXMLIgnoreWhitespace(tpl.String(), EditPortConfigurationExpected)
+	if err != nil {
+		t.Errorf("error while comparing XML: %s", err.Error())
+	}
+	if !isEqual {
+		diff := cmp.Diff(EditPortConfigurationExpected, tpl.String())
+		t.Errorf("expected:\n%s\ngot:\n%s\n\ndiff:\n%s", EditPortConfigurationExpected, tpl.String(), diff)
 	}
 }
