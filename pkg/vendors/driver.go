@@ -5,41 +5,20 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/models"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
-	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
+	"os"
+	"plugin"
+	"strings"
+
+	// load all native vendor drivers
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5"
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
 )
 
-// Vendor is the type for the vendor name. It is used to identify the vendor
-// and to load the correct driver.
-type Vendor string
-
-const (
-	// VendorFSOSS3 FSComS3 (FiberStore), series S3XX
-	VendorFSOSS3 Vendor = "fsos_s3"
-	// VendorFSOSS5 FSComS3 (FiberStore), series S5XX
-	VendorFSOSS5 Vendor = "fsos_s5"
-	// VendorFSOSN5 FSComS3 (FiberStore), series N5XX
-	VendorFSOSN5 Vendor = "fsos_n5"
-	// VendorJuniper Juniper, up to version 15 (legacy)
-	VendorJuniper Vendor = "juniper"
-	// VendorJuniperELS Juniper, version 15.1 and higher with advanced
-	// ELS (enhanced layer 2 software) features.
-	VendorJuniperELS Vendor = "juniper_els"
-)
-
-// Valid checks if this lib supports the given vendor.
-func (v Vendor) Valid() bool {
-	switch v {
-	case VendorFSOSS3, VendorFSOSS5, VendorFSOSN5, VendorJuniper, VendorJuniperELS:
-		return true
-	default:
-		return false
-	}
-}
+const pluginsVar = "SWITCHMGR_PLUGINS"
 
 // Driver is the interface, which all vendor drivers have to implement. The
 // driver is responsible for connecting to the switch, getting information
@@ -47,6 +26,10 @@ func (v Vendor) Valid() bool {
 // the logger. Some vendors do not support all features, so some functions
 // may return the "not implemented" error.
 type Driver interface {
+	// Vendor returns the vendor and the driver instance. The vendor is used
+	// to identify the driver and the driver instance is used to call the
+	// functions of the driver.
+	Vendor() registry.Vendor
 	// Connect connects to the switch via SSH. The connection information is
 	// provided via the first parameter. Keep in mind that the password is
 	// not encrypted.
@@ -83,40 +66,57 @@ type Driver interface {
 
 // New returns a new driver for the given vendor. If the vendor is not
 // supported, an error is returned.
-func New(vendor Vendor) (Driver, error) {
+func New(vendor registry.Vendor) (Driver, error) {
+	// load plugins
+	err := loadPlugins()
+	if err != nil {
+		return nil, fmt.Errorf("failed to load plugins: %v", err)
+	}
+
 	if !vendor.Valid() {
 		return nil, fmt.Errorf("unsupported vendor %s", vendor)
 	}
 
-	switch vendor {
-	case VendorJuniper:
-		return &juniper.Juniper{}, nil
-	case VendorJuniperELS:
-		return &juniper_els.JuniperELS{}, nil
-	case VendorFSOSS3:
-		return &fsos_s3.FSComS3{
-			LoginCommands: []string{
-				"enter", "terminal length 0",
-			},
-		}, nil
-	case VendorFSOSS5:
-		return &fsos_s5.FSComS5{
-			FSComS3: fsos_s3.FSComS3{
-				LoginCommands: []string{
-					"terminal length 0",
-				},
-			},
-		}, nil
-	case VendorFSOSN5:
-		return &fsos_n5.FSComN5{
-			FSComS3: fsos_s3.FSComS3{
-				LoginCommands: []string{
-					"terminal length 0",
-				},
-			},
-		}, nil
-	default:
-		// Should never be reached because of the Valid() check above.
-		return &unimplemented.Unimplemented{}, nil
+	// Return the driver instance for the given vendor.
+	implementation, err := registry.GetVendor(vendor)
+	if err != nil {
+		return nil, err
 	}
+
+	if driver, ok := implementation.(Driver); ok {
+		return driver, nil
+	}
+
+	return nil, fmt.Errorf("vendor %s does not implement the driver interface", vendor)
+}
+
+func loadPlugins() error {
+	pluginPaths := os.Getenv(pluginsVar)
+	// we have no plugins, so we allow the program to continue
+	if pluginPaths == "" {
+		return nil
+	}
+
+	for _, path := range strings.Split(pluginPaths, ",") {
+		p, err := plugin.Open(path)
+		if err != nil {
+			return fmt.Errorf("failed to open plugin %s: %v", path, err)
+		}
+
+		sym, err := p.Lookup("Driver")
+		if err != nil {
+			return fmt.Errorf("failed to lookup Driver symbol in plugin %s: %v", path, err)
+		}
+
+		// check if the symbol is implementing the driver interface
+		if _, ok := sym.(*Driver); !ok {
+			return fmt.Errorf("the plugin %s does not implement the driver interface", path)
+		}
+
+		driver := *sym.(*Driver)
+
+		registry.RegisterVendor(driver.Vendor(), driver)
+	}
+
+	return nil
 }

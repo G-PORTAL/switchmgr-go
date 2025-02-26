@@ -64,6 +64,21 @@ func main() {
 
 ```
 
+## Use vendor plugins to extend the library
+
+The library can be extended by using vendor plugins. The following example shows how to build
+a plugin for other switches.
+
+```bash
+# Build the example plugin
+go build -buildmode=plugin -o example.so examples/plugin/plugin.go
+
+# Run the info example with the example plugin
+export SWITCH_VENDOR=example
+export SWITCHMGR_PLUGINS=example.so
+go run examples/info/run.go
+```
+
 ## Test
 
     go test ./... -count=1 -v

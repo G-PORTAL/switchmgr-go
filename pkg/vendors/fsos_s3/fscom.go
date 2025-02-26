@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/config"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/exp/slices"
@@ -12,6 +13,8 @@ import (
 	"strings"
 	"time"
 )
+
+const Vendor registry.Vendor = "fsos_s3"
 
 type FSComS3 struct {
 	unimplemented.Unimplemented
@@ -23,6 +26,10 @@ type FSComS3 struct {
 
 	writer io.WriteCloser
 	reader io.Reader
+}
+
+func (fs *FSComS3) Vendor() registry.Vendor {
+	return Vendor
 }
 
 // Connect Connecting to a FiberStore switch using SSH
@@ -106,7 +113,7 @@ func (fs *FSComS3) Disconnect() error {
 	return nil
 }
 
-// / save saves the configuration to startup config
+// Save  saves the configuration to startup config
 func (fs *FSComS3) Save() error {
 	output, err := fs.SendCommands("write")
 	if err != nil {
@@ -189,4 +196,12 @@ func readUntil(command string, reader *bufio.Reader, writer io.Writer) (string, 
 func commandFinished(line string) bool {
 	line = strings.TrimSpace(line)
 	return strings.HasSuffix(line, "#") || strings.HasSuffix(line, ">")
+}
+
+func init() {
+	registry.RegisterVendor(Vendor, &FSComS3{
+		LoginCommands: []string{
+			"enter", "terminal length 0",
+		},
+	})
 }

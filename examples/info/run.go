@@ -5,11 +5,12 @@ import (
 	"github.com/charmbracelet/log"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/vendors"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"os"
 )
 
 func main() {
-	driver, err := vendors.New(vendors.Vendor(os.Getenv("SWITCH_VENDOR")))
+	driver, err := vendors.New(registry.Vendor(os.Getenv("SWITCH_VENDOR")))
 	if err != nil {
 		log.Fatalf("Failed to create driver: %v", err)
 	}

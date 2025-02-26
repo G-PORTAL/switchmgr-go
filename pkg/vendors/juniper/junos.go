@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/Juniper/go-netconf/netconf"
 	"github.com/g-portal/switchmgr-go/pkg/config"
+	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"github.com/neverlee/keymutex"
 	"golang.org/x/crypto/ssh"
@@ -17,7 +18,13 @@ type Juniper struct {
 	identifier string
 }
 
+const Vendor registry.Vendor = "juniper"
+
 var configMutex = keymutex.New(128)
+
+func (j *Juniper) Vendor() registry.Vendor {
+	return Vendor
+}
 
 func (j *Juniper) Connect(cfg config.Connection) error {
 	sshConfig := &ssh.ClientConfig{
@@ -47,4 +54,8 @@ func (j *Juniper) Connect(cfg config.Connection) error {
 }
 func (j *Juniper) Disconnect() error {
 	return j.session.Close()
+}
+
+func init() {
+	registry.RegisterVendor(Vendor, &Juniper{})
 }
