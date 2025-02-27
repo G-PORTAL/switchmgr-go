@@ -28,7 +28,7 @@ func TestParseHardwareInfo(t *testing.T) {
 		t.Fatalf("Vendor is wrong: %s", hwInfo.Vendor)
 	}
 
-	if hwInfo.FirmwareVersion != "N5860_FSOS 11.0(5)B9P66S2" {
+	if hwInfo.FirmwareVersion != "FSOS 11.0(5)B9P66S2" {
 		t.Fatalf("Firmware version is wrong: %s", hwInfo.FirmwareVersion)
 	}
 

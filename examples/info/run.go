@@ -21,11 +21,11 @@ func main() {
 		Username: os.Getenv("SWITCH_USERNAME"),
 		Password: os.Getenv("SWITCH_PASSWORD"),
 	}); err != nil {
-		log.Errorf(fmt.Sprintf("Failed to connect to switch: %v", err))
+		log.Errorf("Failed to connect to switch: %v", err)
 	}
 	defer func() {
 		if err := driver.Disconnect(); err != nil {
-			log.Errorf(fmt.Sprintf("Failed to disconnect from switch: %v", err))
+			log.Errorf("Failed to disconnect from switch: %v", err)
 		}
 	}()
 

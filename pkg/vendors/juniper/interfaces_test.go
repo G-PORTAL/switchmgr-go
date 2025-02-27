@@ -3,6 +3,7 @@ package juniper_test
 import (
 	"bytes"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/g-portal/switchmgr-go/pkg/utils"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper"
 	"golang.org/x/exp/slices"
 	"net"
@@ -52,8 +53,8 @@ const EditPortConfigurationExpected = `<edit-config>
 	<target>
 		<candidate/>
 	</target>
-    <default-operation>merge</default-operation>
-    <test-option>test-then-set</test-option>
+	<default-operation>merge</default-operation>
+	<test-option>test-then-set</test-option>
 	<config>
 		<configuration>
 			<interfaces>
@@ -96,7 +97,6 @@ func TestConfigureInterfaceTemplate(t *testing.T) {
 	}); err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
-	if tpl.String() != EditPortConfigurationExpected {
-		t.Errorf("expected:\n%s\ngot:\n%s", EditPortConfigurationExpected, tpl.String())
-	}
+
+	utils.AssertXMLEquals(t, tpl.String(), EditPortConfigurationExpected)
 }

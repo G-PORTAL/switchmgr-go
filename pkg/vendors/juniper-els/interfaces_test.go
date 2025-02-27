@@ -3,6 +3,7 @@ package juniper_els_test
 import (
 	"bytes"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/g-portal/switchmgr-go/pkg/utils"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/juniper-els"
 	"golang.org/x/exp/slices"
 	"net"
@@ -121,7 +122,6 @@ func TestConfigureInterfaceTemplate(t *testing.T) {
 	}); err != nil {
 		t.Errorf("unexpected error: %s", err.Error())
 	}
-	if tpl.String() != EditPortConfigurationExpected {
-		t.Errorf("expected:\n%s\ngot:\n%s", EditPortConfigurationExpected, tpl.String())
-	}
+
+	utils.AssertXMLEquals(t, tpl.String(), EditPortConfigurationExpected)
 }

@@ -2,13 +2,14 @@ package fsos_n5
 
 import (
 	"errors"
+	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"regexp"
 )
 
 var serialRegex = regexp.MustCompile(`System\sserial\snumber\s+:\s([0-9A-Z]+)\r\n`)
 var modelRegex = regexp.MustCompile(`System\sdescription\s+:\s.+\(([0-9A-Z-]+)\).+\r\n`)
-var versionRegex = regexp.MustCompile(`System\ssoftware\sversion\s+:\s(.+)\r\n`)
+var versionRegex = regexp.MustCompile(`System\ssoftware\sversion\s+:\s.+_FSOS\s(.+)\r\n`)
 var hostnameRegex = regexp.MustCompile(`hostname\s(.+)\r\n`)
 
 func (fs *FSComN5) GetHardwareInfo() (*models.HardwareInfo, error) {
@@ -44,7 +45,7 @@ func ParseHardwareInfo(output string) (*models.HardwareInfo, error) {
 	if len(matches) != 2 {
 		return nil, errors.New("could not parse firmware version")
 	}
-	hwInfo.FirmwareVersion = matches[1]
+	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", matches[1])
 
 	// hostname
 	matches = hostnameRegex.FindStringSubmatch(output)

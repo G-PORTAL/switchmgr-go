@@ -55,7 +55,7 @@ func ParseHardwareInfo(output string) (*models.HardwareInfo, error) {
 			return nil, errors.New("could not parse firmware version")
 		}
 	}
-	hwInfo.FirmwareVersion = fmt.Sprintf("FSComS5 %s", matches[1])
+	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", matches[1])
 
 	// hostname
 	matches = hostnameRegex.FindStringSubmatch(output)

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/charmbracelet/log"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/models"
@@ -24,11 +23,11 @@ func main() {
 		Username: os.Getenv("SWITCH_USERNAME"),
 		Password: os.Getenv("SWITCH_PASSWORD"),
 	}); err != nil {
-		log.Errorf(fmt.Sprintf("Failed to connect to switch: %v", err))
+		log.Errorf("Failed to connect to switch: %v", err)
 	}
 	defer func() {
 		if err := driver.Disconnect(); err != nil {
-			log.Errorf(fmt.Sprintf("Failed to disconnect from switch: %v", err))
+			log.Errorf("Failed to disconnect from switch: %v", err)
 		}
 	}()
 
@@ -57,7 +56,7 @@ func main() {
 	if untaggedVLANString != "" {
 		vlanID, err := strconv.Atoi(untaggedVLANString)
 		if err != nil {
-			log.Errorf(fmt.Sprintf("Failed to parse untagged VLAN ID: %v", err))
+			log.Errorf("Failed to parse untagged VLAN ID: %v", err)
 		}
 
 		untaggedVLAN := int32(vlanID)
@@ -70,7 +69,7 @@ func main() {
 		for _, vlanIDString := range strings.Split(taggedVLANIds, ",") {
 			vlanID, err := strconv.Atoi(vlanIDString)
 			if err != nil {
-				log.Errorf(fmt.Sprintf("Failed to parse tagged VLAN ID: %v", err))
+				log.Errorf("Failed to parse tagged VLAN ID: %v", err)
 			}
 
 			taggedVLANs = append(taggedVLANs, int32(vlanID))
@@ -81,7 +80,7 @@ func main() {
 
 	changed, err := driver.ConfigureInterface(update)
 	if err != nil {
-		log.Errorf(fmt.Sprintf("Failed to configure interface: %v", err))
+		log.Errorf("Failed to configure interface: %v", err)
 	}
 
 	if changed {

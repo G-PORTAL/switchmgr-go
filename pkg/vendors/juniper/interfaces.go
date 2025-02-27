@@ -135,8 +135,8 @@ const EditPortConfigurationTemplate = `<edit-config>
 	<target>
 		<candidate/>
 	</target>
-    <default-operation>merge</default-operation>
-    <test-option>test-then-set</test-option>
+	<default-operation>merge</default-operation>
+	<test-option>test-then-set</test-option>
 	<config>
 		<configuration>
 			<interfaces>

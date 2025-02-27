@@ -28,7 +28,7 @@ func TestParseHardwareInfo(t *testing.T) {
 		t.Fatalf("Vendor is wrong: %s", hwInfo.Vendor)
 	}
 
-	if hwInfo.FirmwareVersion != "FSComS5 7.4.1.r1" {
+	if hwInfo.FirmwareVersion != "FSOS 7.4.1.r1" {
 		t.Fatalf("Firmware version is wrong: %s", hwInfo.FirmwareVersion)
 	}
 
@@ -60,7 +60,7 @@ func TestParseHardwareInfo2(t *testing.T) {
 		t.Fatalf("Vendor is wrong: %s", hwInfo.Vendor)
 	}
 
-	if hwInfo.FirmwareVersion != "FSComS5 7.4.3.r5" {
+	if hwInfo.FirmwareVersion != "FSOS 7.4.3.r5" {
 		t.Fatalf("Firmware version is wrong: %s", hwInfo.FirmwareVersion)
 	}
 
