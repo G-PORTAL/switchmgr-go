@@ -38,7 +38,8 @@ func (fs *FSComS3) Connect(cfg config.Connection) error {
 
 	var err error
 	sshConfig := &ssh.ClientConfig{
-		User: cfg.Username,
+		User:    cfg.Username,
+		Timeout: 30 * time.Second,
 		Auth: []ssh.AuthMethod{
 			ssh.KeyboardInteractive(func(user, instruction string, questions []string, echos []bool) (answers []string, err error) {
 				return []string{}, err
