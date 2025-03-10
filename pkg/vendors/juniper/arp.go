@@ -2,8 +2,8 @@ package juniper
 
 import (
 	"encoding/xml"
-	"github.com/Juniper/go-netconf/netconf"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/openshift-telco/go-netconf-client/netconf/message"
 	"strings"
 )
 
@@ -48,7 +48,7 @@ func ParseArpTable(data []byte) ([]models.ArpEntry, error) {
 }
 
 func (j *Juniper) ListArpTable() ([]models.ArpEntry, error) {
-	reply, err := j.session.Exec(netconf.RawMethod("<get-ethernet-switching-table-information/>"))
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-ethernet-switching-table-information/>"), 10)
 	if err != nil {
 		return nil, err
 	}

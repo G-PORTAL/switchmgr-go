@@ -3,13 +3,13 @@ package juniper_els
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/Juniper/go-netconf/netconf"
 	"github.com/g-portal/switchmgr-go/pkg/models"
+	"github.com/openshift-telco/go-netconf-client/netconf/message"
 	"strings"
 )
 
 func (j *JuniperELS) GetHardwareInfo() (*models.HardwareInfo, error) {
-	reply, err := j.session.Exec(netconf.RawMethod("<get-system-information/>"))
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-system-information/>"), 10)
 	if err != nil {
 		return nil, err
 	}

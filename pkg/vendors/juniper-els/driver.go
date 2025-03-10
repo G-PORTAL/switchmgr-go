@@ -2,7 +2,8 @@ package juniper_els
 
 import (
 	"fmt"
-	"github.com/Juniper/go-netconf/netconf"
+	"github.com/openshift-telco/go-netconf-client/netconf"
+	"github.com/openshift-telco/go-netconf-client/netconf/message"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -10,7 +11,7 @@ import (
 )
 
 type JuniperDriver interface {
-	Exec(methods ...netconf.RPCMethod) (*netconf.RPCReply, error)
+	SyncRPC(operation message.RPCMethod, timeout int32) (*message.RPCReply, error)
 	Close() error
 }
 
@@ -35,23 +36,24 @@ func NewMockDriver() *JuniperELS {
 	}
 }
 
-func (j *MockDriver) Exec(methods ...netconf.RPCMethod) (*netconf.RPCReply, error) {
-	if len(methods) != 1 {
-		return nil, fmt.Errorf("mock driver does not support multiple RPC methods")
-	}
-
-	method, ok := methods[0].(netconf.RawMethod)
-	if !ok {
-		return nil, fmt.Errorf("mock driver only supports raw RPC methods")
-	}
-
+func (j *MockDriver) SyncRPC(operation message.RPCMethod, timeout int32) (*message.RPCReply, error) {
 	mockFileRegex := regexp.MustCompile(`<([^>]+)>`)
 
-	match := mockFileRegex.FindStringSubmatch(strings.Replace(string(method), "/", "", 1))
+	rpc, ok := operation.(*message.RPC)
+	if !ok {
+		return nil, fmt.Errorf("operation is not an RPC method, got %T", operation)
+	}
+
+	rpcPayload, ok := rpc.Data.(string)
+	if !ok {
+		return nil, fmt.Errorf("data is not a byte array, got %T", rpc)
+	}
+
+	match := mockFileRegex.FindStringSubmatch(strings.Replace(rpcPayload, "/", "", 1))
 	if len(match) != 2 {
 		return nil, fmt.Errorf("could not find mock file for RPC method")
 	}
-	reply := &netconf.RPCReply{}
+	reply := &message.RPCReply{}
 	absPath, err := filepath.Abs(fmt.Sprintf("%s/%s.xml", j.mockBasePath, match[1]))
 	if err != nil {
 		return nil, err
@@ -72,8 +74,8 @@ type LiveDriver struct {
 	session *netconf.Session
 }
 
-func (j *LiveDriver) Exec(methods ...netconf.RPCMethod) (*netconf.RPCReply, error) {
-	return j.session.Exec(methods...)
+func (j *LiveDriver) SyncRPC(operation message.RPCMethod, timeout int32) (*message.RPCReply, error) {
+	return j.session.SyncRPC(operation, timeout)
 }
 func (j *LiveDriver) Close() error {
 	return j.session.Close()
