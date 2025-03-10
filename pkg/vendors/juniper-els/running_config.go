@@ -4,9 +4,9 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"github.com/Juniper/go-netconf/netconf"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/utils"
+	"github.com/openshift-telco/go-netconf-client/netconf/message"
 	"log"
 	"regexp"
 	"strconv"
@@ -14,7 +14,7 @@ import (
 )
 
 func (j *JuniperELS) GetRunningConfig() (*junosConfiguration, error) {
-	reply, err := j.session.Exec(netconf.RawMethod("<get-config><source><running/></source></get-config>"))
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-config><source><running/></source></get-config>"), 10)
 	if err != nil {
 		return nil, err
 	}
