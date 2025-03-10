@@ -8,7 +8,7 @@ require (
 	github.com/charmbracelet/log v0.4.0
 	github.com/google/go-cmp v0.7.0
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
-	github.com/openshift-telco/go-netconf-client v0.0.0-20241021185752-06deeda82baa
+	github.com/openshift-telco/go-netconf-client v1.0.6
 	github.com/stretchr/testify v1.10.0
 	golang.org/x/crypto v0.36.0
 	golang.org/x/exp v0.0.0-20250218142911-aa4b98e5adaa
