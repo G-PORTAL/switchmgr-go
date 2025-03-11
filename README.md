@@ -28,6 +28,7 @@ if it works or not.
 - Juniper EX4600
 - Juniper QFX510002
 - Juniper QFX5100-48S-8C
+- Arista CCS-720DT-48S-2F
 
 # Usage
 

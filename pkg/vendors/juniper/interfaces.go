@@ -17,7 +17,7 @@ func (j *Juniper) ListInterfaces() ([]*models.Interface, error) {
 	if err != nil {
 		return nil, err
 	}
-	reply, err := j.session.SyncRPC(message.NewRPC("<get-interface-information><level>extensive</level></get-interface-information>"), 30)
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-interface-information><level>extensive</level></get-interface-information>"), Timeout)
 	if err != nil {
 		return nil, err
 	}
@@ -190,12 +190,12 @@ func (j *Juniper) ConfigureInterface(update *models.UpdateInterface) (bool, erro
 		return false, err
 	}
 
-	_, err = j.session.SyncRPC(message.NewRPC(tpl.String()), 10)
+	_, err = j.session.SyncRPC(message.NewRPC(tpl.String()), Timeout)
 	if err != nil {
 		return false, err
 	}
 
-	_, err = j.session.SyncRPC(message.NewRPC("<commit/>"), 10)
+	_, err = j.session.SyncRPC(message.NewRPC("<commit/>"), Timeout)
 	if err != nil {
 		return false, err
 	}

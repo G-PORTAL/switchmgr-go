@@ -33,11 +33,14 @@ func main() {
 	driver.Logger().Info("+++++++++++++++++++")
 	driver.Logger().Info("System Information:")
 	driver.Logger().Info("+++++++++++++++++++")
-	if info, err := driver.GetHardwareInfo(); err == nil {
+	info, err := driver.GetHardwareInfo()
+	if err == nil {
 		driver.Logger().Infof("Hostname: %s", info.Hostname)
 		driver.Logger().Infof("Serial: %s", info.Serial)
 		driver.Logger().Infof("Model: %s", info.Model)
 		driver.Logger().Infof("Firmware Version: %s", info.FirmwareVersion)
+	} else {
+		driver.Logger().Errorf("Failed to get system information: %v", err)
 	}
 
 	driver.Logger().Info("+++++++++++++++++++")

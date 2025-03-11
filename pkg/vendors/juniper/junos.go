@@ -21,6 +21,7 @@ type Juniper struct {
 }
 
 const Vendor registry.Vendor = "juniper"
+const Timeout = 180
 
 var configMutex = keymutex.New(128)
 

@@ -14,7 +14,7 @@ import (
 )
 
 func (j *JuniperELS) GetRunningConfig() (*junosConfiguration, error) {
-	reply, err := j.session.SyncRPC(message.NewRPC("<get-config><source><running/></source></get-config>"), 10)
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-config><source><running/></source></get-config>"), Timeout)
 	if err != nil {
 		return nil, err
 	}
