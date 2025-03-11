@@ -1,0 +1,42 @@
+{
+    "unicastTable": {
+        "tableEntries": [
+            {
+                "vlanId": 10,
+                "macAddress": "9c:6b:00:5e:00:f0",
+                "entryType": "dynamic",
+                "interface": "Ethernet31",
+                "moves": 1,
+                "lastMove": 1741662301.055726
+            },
+            {
+                "vlanId": 2060,
+                "macAddress": "9c:6b:00:5e:00:f1",
+                "entryType": "dynamic",
+                "interface": "Ethernet31",
+                "moves": 1,
+                "lastMove": 1741373260.515911
+            },
+            {
+                "vlanId": 2065,
+                "macAddress": "9c:6b:00:5e:00:58",
+                "entryType": "dynamic",
+                "interface": "Ethernet11",
+                "moves": 1,
+                "lastMove": 1741349169.575743
+            },
+            {
+                "vlanId": 2065,
+                "macAddress": "9c:6b:00:5e:00:26",
+                "entryType": "dynamic",
+                "interface": "Ethernet2",
+                "moves": 1,
+                "lastMove": 1741359482.905251
+            }
+        ]
+    },
+    "multicastTable": {
+        "tableEntries": []
+    },
+    "disabledMacLearningVlans": []
+}

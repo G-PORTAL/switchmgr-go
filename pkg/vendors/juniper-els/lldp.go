@@ -8,7 +8,7 @@ import (
 )
 
 func (j *JuniperELS) ListLLDPNeighbors() ([]models.LLDPNeighbor, error) {
-	output, err := j.session.SyncRPC(message.NewRPC("<get-lldp-neighbors-information/>"), 10)
+	output, err := j.session.SyncRPC(message.NewRPC("<get-lldp-neighbors-information/>"), Timeout)
 	if err != nil {
 		return nil, err
 	}

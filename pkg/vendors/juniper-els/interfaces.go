@@ -16,7 +16,7 @@ func (j *JuniperELS) ListInterfaces() ([]*models.Interface, error) {
 		return nil, err
 	}
 
-	reply, err := j.session.SyncRPC(message.NewRPC("<get-interface-information><level>extensive</level></get-interface-information>"), 10)
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-interface-information><level>extensive</level></get-interface-information>"), Timeout)
 	if err != nil {
 		return nil, err
 	}
@@ -201,12 +201,12 @@ func (j *JuniperELS) ConfigureInterface(update *models.UpdateInterface) (bool, e
 		return false, err
 	}
 
-	_, err = j.session.SyncRPC(message.NewRPC(tpl.String()), 10)
+	_, err = j.session.SyncRPC(message.NewRPC(tpl.String()), Timeout)
 	if err != nil {
 		return false, err
 	}
 
-	_, err = j.session.SyncRPC(message.NewRPC("<commit/>"), 10)
+	_, err = j.session.SyncRPC(message.NewRPC("<commit/>"), Timeout)
 	if err != nil {
 		return false, err
 	}

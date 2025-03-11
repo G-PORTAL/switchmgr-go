@@ -1,0 +1,20 @@
+{
+    "mfgName": "Arista",
+    "modelName": "CCS-720DT-48S-2F",
+    "hardwareRevision": "11.07",
+    "serialNumber": "WTW22400000",
+    "systemMacAddress": "c0:69:11:00:00:00",
+    "hwMacAddress": "c0:69:11:00:00:00",
+    "configMacAddress": "00:00:00:00:00:00",
+    "version": "4.31.3M",
+    "architecture": "i686",
+    "internalVersion": "4.31.3M-36737551.4313M",
+    "internalBuildId": "c8d3a574-c649-455d-90a4-b2510051cf0d",
+    "imageFormatVersion": "3.0",
+    "imageOptimization": "Strata-4GB",
+    "bootupTimestamp": 1725878168.023846,
+    "uptime": 15813538.79,
+    "memTotal": 8084928,
+    "memFree": 5903564,
+    "isIntlVersion": false
+}
