@@ -48,7 +48,7 @@ func ParseArpTable(data []byte) ([]models.ArpEntry, error) {
 }
 
 func (j *Juniper) ListArpTable() ([]models.ArpEntry, error) {
-	reply, err := j.session.SyncRPC(message.NewRPC("<get-ethernet-switching-table-information/>"), 10)
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-ethernet-switching-table-information/>"), Timeout)
 	if err != nil {
 		return nil, err
 	}

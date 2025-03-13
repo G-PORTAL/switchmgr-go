@@ -1,15 +1,14 @@
 package fsos_s3
 
 import (
-	"bufio"
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/config"
+	"github.com/g-portal/switchmgr-go/pkg/utils"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/exp/slices"
 	"io"
-	"regexp"
 	"strings"
 	"time"
 )
@@ -130,73 +129,12 @@ func (fs *FSComS3) Save() error {
 
 // SendCommands sends a command to the switch and returns the output
 func (fs *FSComS3) SendCommands(commands ...string) (string, error) {
-	output := ""
-
-	startTime := time.Now()
-	fs.Logger().Debugf("SendCommands %q", commands)
-	defer func() {
-		fs.Logger().Debugf("SendCommands %q took %s", commands, time.Since(startTime).String())
-	}()
-
-	reader := bufio.NewReader(fs.reader)
-	for _, s := range commands {
-		// send the command to the switch
-		if _, err := fmt.Fprintf(fs.writer, "%s\n\n", s); err != nil {
-			return "", fmt.Errorf("failed to send command %q: %s", s, err)
-		}
-
-		// read the output of the command
-		commandOutput, err := readUntil(s, reader, fs.writer)
-		if err != nil {
-			return "", err
-		}
-
-		fs.Logger().Debugf("cmd: %q output: %q", s, commandOutput)
-		output += commandOutput
+	outputs, err := utils.SendCommands(fs.Logger(), fs.writer, fs.reader, commands...)
+	if err != nil {
+		return "", err
 	}
 
-	return output, nil
-}
-
-var moreRgx = regexp.MustCompile(`--More--[\s\\b]+`)
-
-func readUntil(command string, reader *bufio.Reader, writer io.Writer) (string, error) {
-	output := ""
-
-	for {
-		line, err := reader.ReadString('\n')
-		if err != nil {
-			if strings.TrimSpace(line) == "" {
-				break
-			}
-
-			continue
-		}
-
-		// sending enter when switch asks for more even if terminal length is set to 0
-		if moreRgx.MatchString(line) {
-			if _, err := fmt.Fprintf(writer, "\n"); err != nil {
-				return "", fmt.Errorf("failed to send space: %s", err)
-			}
-
-			line = moreRgx.ReplaceAllString(line, "")
-		}
-
-		if commandFinished(line) {
-			break
-		}
-
-		if !strings.HasSuffix(line, strings.TrimSpace(command)+"\r\n") && line != "" {
-			output += fmt.Sprintf("%s\n", line)
-		}
-	}
-
-	return output, nil
-}
-
-func commandFinished(line string) bool {
-	line = strings.TrimSpace(line)
-	return strings.HasSuffix(line, "#") || strings.HasSuffix(line, ">")
+	return strings.Join(outputs, "\n"), nil
 }
 
 func init() {

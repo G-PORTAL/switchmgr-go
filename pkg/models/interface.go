@@ -61,6 +61,9 @@ type Interface struct {
 	LagInterfaces []string
 	IPAddresses   []string
 
+	// The key is the original VLAN ID, the value is the new VLAN ID
+	VlanMapping map[int32]int32
+
 	Management bool
 }
 
@@ -74,6 +77,9 @@ type UpdateInterface struct {
 
 	UntaggedVLAN *int32
 	TaggedVLANs  []int32
+
+	// The key is the original VLAN ID, the value is the new VLAN ID
+	VlanMapping map[int32]int32
 }
 
 // Disabled returns true if the interface should be disabled. This is the case if
@@ -136,6 +142,18 @@ func (i *Interface) Differs(u *UpdateInterface) bool {
 
 		if !slices.Equal(i.TaggedVLANs, u.TaggedVLANs) {
 			return true
+		}
+	}
+
+	if len(u.VlanMapping) != 0 && len(i.VlanMapping) != len(u.VlanMapping) {
+		return true
+	}
+
+	if len(u.VlanMapping) != 0 {
+		for originalVlan, newVlan := range u.VlanMapping {
+			if existingNewVlan, ok := i.VlanMapping[originalVlan]; ok && existingNewVlan != newVlan {
+				return true
+			}
 		}
 	}
 

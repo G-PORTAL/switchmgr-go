@@ -44,6 +44,7 @@ func main() {
 	update := &models.UpdateInterface{
 		Name:         name,
 		Enabled:      &t,
+		VlanMapping:  make(map[int32]int32),
 		UntaggedVLAN: nil,
 		TaggedVLANs:  nil,
 	}
@@ -61,6 +62,29 @@ func main() {
 
 		untaggedVLAN := int32(vlanID)
 		update.UntaggedVLAN = &untaggedVLAN
+	}
+
+	translation := os.Getenv("PORT_VLAN_TRANSLATION")
+	if translation != "" {
+		translations := strings.Split(translation, ",")
+		for _, s := range translations {
+			vlanTranslation := strings.Split(s, ":")
+			if len(vlanTranslation) != 2 {
+				log.Fatalf("Invalid VLAN translation: %s", s)
+			}
+
+			originalVLANID, err := strconv.Atoi(vlanTranslation[0])
+			if err != nil {
+				log.Fatalf("Failed to parse original VLAN ID: %v", err)
+			}
+
+			newVLANID, err := strconv.Atoi(vlanTranslation[1])
+			if err != nil {
+				log.Fatalf("Failed to parse new VLAN ID: %v", err)
+			}
+
+			update.VlanMapping[int32(originalVLANID)] = int32(newVLANID)
+		}
 	}
 
 	taggedVLANIds := os.Getenv("PORT_TAGGED_VLAN_IDS")

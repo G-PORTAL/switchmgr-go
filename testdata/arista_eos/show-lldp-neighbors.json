@@ -1,0 +1,27 @@
+{
+    "tablesLastChangeTime": 1734360536.9618857,
+    "tablesInserts": 4,
+    "tablesDeletes": 1,
+    "tablesDrops": 0,
+    "tablesAgeOuts": 0,
+    "lldpNeighbors": [
+        {
+            "port": "Ethernet51",
+            "neighborDevice": "core1.host.com",
+            "neighborPort": "Ethernet1/4",
+            "ttl": 120
+        },
+        {
+            "port": "Ethernet52",
+            "neighborDevice": "core2.host.com",
+            "neighborPort": "Ethernet1/4",
+            "ttl": 120
+        },
+        {
+            "port": "Management1",
+            "neighborDevice": "switch2.host.com",
+            "neighborPort": "eth-0-48",
+            "ttl": 120
+        }
+    ]
+}

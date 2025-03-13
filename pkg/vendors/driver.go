@@ -6,11 +6,13 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
+	"net"
 	"os"
 	"plugin"
 	"strings"
 
 	// load all native vendor drivers
+	_ "github.com/g-portal/switchmgr-go/pkg/vendors/arista_eos"
 	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_n5"
 	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s3"
 	_ "github.com/g-portal/switchmgr-go/pkg/vendors/fsos_s5"
@@ -58,6 +60,11 @@ type Driver interface {
 	// through LLDP. This information can be used to get insights about the
 	// network topology or for debugging purposes.
 	ListLLDPNeighbors() ([]models.LLDPNeighbor, error)
+	// AddVRFRoute adds a new VRF route to the switch. The VRF route is used
+	// in a VRF network to route traffic to a specific interface.
+	AddVRFRoute(vrfName, interfaceName string, network *net.IPNet) error
+	// RemoveVRFRoute removes a VRF route from the switch.
+	RemoveVRFRoute(vrfName, interfaceName string, network *net.IPNet) error
 
 	// Logger returns the logger of the driver. This is a generic logger, which
 	// can be overwritten by the vendor driver.

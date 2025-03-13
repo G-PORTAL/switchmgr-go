@@ -19,6 +19,23 @@ func (cv ConfigValues) GetStringValue(config string, def string) string {
 	return def
 }
 
+func (cv ConfigValues) GetLines(prefix string, trim bool) []string {
+	lines := make([]string, 0)
+
+	for _, line := range cv {
+		line = strings.TrimSpace(line)
+		if strings.HasPrefix(line, prefix) {
+			if trim {
+				line = strings.TrimPrefix(line, prefix)
+			}
+
+			lines = append(lines, strings.TrimSpace(line))
+		}
+	}
+
+	return lines
+}
+
 // Exists checks if a config value exists
 func (cv ConfigValues) Exists(config string, exact bool) bool {
 	for _, line := range cv {
@@ -94,6 +111,15 @@ func (cv ConfigValues) GetInt32Values(config string, def []int32) []int32 {
 }
 
 type Config map[string]ConfigValues
+
+func (c Config) Values() ConfigValues {
+	values := make(ConfigValues, 0)
+	for _, v := range c {
+		values = append(values, v...)
+	}
+
+	return values
+}
 
 var parentRgx = regexp.MustCompile(`^[a-z]+`)
 

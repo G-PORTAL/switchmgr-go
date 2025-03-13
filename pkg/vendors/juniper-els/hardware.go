@@ -9,7 +9,7 @@ import (
 )
 
 func (j *JuniperELS) GetHardwareInfo() (*models.HardwareInfo, error) {
-	reply, err := j.session.SyncRPC(message.NewRPC("<get-system-information/>"), 10)
+	reply, err := j.session.SyncRPC(message.NewRPC("<get-system-information/>"), Timeout)
 	if err != nil {
 		return nil, err
 	}
