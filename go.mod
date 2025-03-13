@@ -5,7 +5,7 @@ go 1.24
 toolchain go1.24.0
 
 require (
-	github.com/charmbracelet/log v0.4.0
+	github.com/charmbracelet/log v0.4.1
 	github.com/google/go-cmp v0.7.0
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
 	github.com/openshift-telco/go-netconf-client v0.0.0-20241021185752-06deeda82baa
