@@ -24,8 +24,9 @@ type AristaEOS struct {
 	conn    *ssh.Client
 	session *ssh.Session
 
-	writer io.WriteCloser
-	reader io.Reader
+	writer    io.WriteCloser
+	reader    io.Reader
+	errReader io.Reader
 }
 
 func (arista *AristaEOS) Vendor() registry.Vendor {
@@ -87,6 +88,12 @@ func (arista *AristaEOS) Connect(cfg config.Connection) error {
 		return fmt.Errorf("failed to create stdout pipe: %s", err)
 	}
 
+	// create pipe to the stderr of the SSH process
+	arista.errReader, err = arista.session.StderrPipe()
+	if err != nil {
+		return fmt.Errorf("failed to create stderr pipe: %s", err)
+	}
+
 	// start the shell
 	arista.Logger().Debugf("Starting the session.")
 	if err = arista.session.Shell(); err != nil {
@@ -136,7 +143,7 @@ func (arista *AristaEOS) Save() error {
 
 // SendCommands sends a list of commands to the switch and returns the output
 func (arista *AristaEOS) SendCommands(commands ...string) ([]string, error) {
-	return utils.SendCommands(arista.Logger(), arista.writer, arista.reader, commands...)
+	return utils.SendCommands(arista.Logger(), arista.writer, arista.reader, arista.errReader, commands...)
 }
 
 // GetJsonResponse Runs a command and returns the json as bytes

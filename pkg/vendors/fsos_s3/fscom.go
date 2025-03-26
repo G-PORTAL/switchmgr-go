@@ -23,8 +23,9 @@ type FSComS3 struct {
 	conn    *ssh.Client
 	session *ssh.Session
 
-	writer io.WriteCloser
-	reader io.Reader
+	writer    io.WriteCloser
+	reader    io.Reader
+	errReader io.Reader
 }
 
 func (fs *FSComS3) Vendor() registry.Vendor {
@@ -79,6 +80,12 @@ func (fs *FSComS3) Connect(cfg config.Connection) error {
 		return fmt.Errorf("failed to create stdout pipe: %s", err)
 	}
 
+	// create pipe to the stderr of the SSH process
+	fs.errReader, err = fs.session.StderrPipe()
+	if err != nil {
+		return fmt.Errorf("failed to create stderr pipe: %s", err)
+	}
+
 	// start the shell
 	fs.Logger().Debugf("Starting the session.")
 	if err = fs.session.Shell(); err != nil {
@@ -129,7 +136,7 @@ func (fs *FSComS3) Save() error {
 
 // SendCommands sends a command to the switch and returns the output
 func (fs *FSComS3) SendCommands(commands ...string) (string, error) {
-	outputs, err := utils.SendCommands(fs.Logger(), fs.writer, fs.reader, commands...)
+	outputs, err := utils.SendCommands(fs.Logger(), fs.writer, fs.reader, fs.errReader, commands...)
 	if err != nil {
 		return "", err
 	}

@@ -10,9 +10,13 @@ import (
 	"time"
 )
 
-func SendCommands(logger *log.Logger, stdin io.WriteCloser, stdout io.Reader, commands ...string) ([]string, error) {
+func SendCommands(logger *log.Logger, stdin io.WriteCloser, stdout, stderr io.Reader, commands ...string) ([]string, error) {
 	startTime := time.Now()
-	reader := bufio.NewReaderSize(stdout, 10240)
+
+	// delete data from stdout and stderr
+	combinedReader := io.MultiReader(stdout, stderr)
+	reader := bufio.NewReaderSize(combinedReader, 10240)
+
 	logger.Debugf("SendCommands %q", commands)
 	defer func() {
 		logger.Debugf("SendCommands %q took %s", commands, time.Since(startTime).String())
@@ -20,6 +24,15 @@ func SendCommands(logger *log.Logger, stdin io.WriteCloser, stdout io.Reader, co
 
 	output := make([]string, 0)
 	for _, s := range commands {
+		// discard any unread data
+		for reader.Buffered() > 0 {
+			buffered := reader.Buffered()
+			logger.Debugf("Discarding unread data from reader: %d", buffered)
+			if _, err := reader.Discard(buffered); err != nil {
+				return nil, fmt.Errorf("failed to discard unread data: %s", err)
+			}
+		}
+
 		// send the command to the switch
 		if _, err := fmt.Fprintf(stdin, "%s\n\n", s); err != nil {
 			return nil, fmt.Errorf("failed to send command %q: %s", s, err)
@@ -54,7 +67,7 @@ func readUntil(command string, reader *bufio.Reader, writer io.Writer, duration 
 
 		// sending enter when switch asks for more even if terminal length is set to 0
 		if moreRgx.MatchString(line) {
-			if _, err := fmt.Fprintf(writer, "\n\n\n"); err != nil {
+			if _, err := fmt.Fprintf(writer, "\n"); err != nil {
 				return "", fmt.Errorf("failed to send space: %s", err)
 			}
 
@@ -66,7 +79,7 @@ func readUntil(command string, reader *bufio.Reader, writer io.Writer, duration 
 		}
 
 		if !strings.HasSuffix(line, strings.TrimSpace(command)+"\r\n") && line != "" {
-			output += fmt.Sprintf("%s\n", line)
+			output += fmt.Sprintf("%s\n", strings.TrimSpace(line))
 		}
 	}
 
