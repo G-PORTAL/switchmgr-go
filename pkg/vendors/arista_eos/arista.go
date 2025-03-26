@@ -8,7 +8,6 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
-	"golang.org/x/exp/slices"
 	"io"
 	"strings"
 	"time"
@@ -134,7 +133,7 @@ func (arista *AristaEOS) Save() error {
 		return err
 	}
 
-	if !slices.Contains([]string{"Copy completed successfully."}, strings.TrimSpace(output[0])) {
+	if !strings.Contains(strings.TrimSpace(output[0]), "successfully") {
 		return fmt.Errorf("failed to save the configuration: %s", output)
 	}
 
