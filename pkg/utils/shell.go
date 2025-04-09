@@ -96,6 +96,13 @@ func readWithTimeout(reader *bufio.Reader, timeout time.Duration) (string, error
 	errChan := make(chan error)
 
 	go func() {
+		defer func() {
+			if r := recover(); r != nil {
+				errChan <- fmt.Errorf("panic recovered: %v", r)
+			}
+		}()
+
+		// wait for new line in reader
 		line, err := reader.ReadString('\n')
 		if err != nil {
 			errChan <- err
