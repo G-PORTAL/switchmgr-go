@@ -160,9 +160,15 @@ func ParseInterfaces(output AristaInterfacesResponse, config iosconfig.Config) (
 		var untaggedVlan *int32
 		var taggedVlans []int32
 
+		// we assume the interface is enabled as long we did not check the config
+
+		isEnabled := true
 		interfaceConfig, err := config.Interface(nic.Name)
 		if err == nil {
 			mode = interfaceConfig.GetStringValue("switchport mode", "access")
+
+			// if shutdown exists, the interface is disabled
+			isEnabled = !interfaceConfig.Exists("shutdown", true)
 
 			if interfaceConfig.Exists("switchport access vlan", true) {
 				untaggedVlanFromConfig := interfaceConfig.GetInt32Value("switchport access vlan", 1)
@@ -208,7 +214,7 @@ func ParseInterfaces(output AristaInterfacesResponse, config iosconfig.Config) (
 			Name:         nic.Name,
 			Description:  nic.Description,
 			Type:         interfaceType,
-			Enabled:      nic.InterfaceStatus == "connected",
+			Enabled:      isEnabled,
 			MTU:          uint32(nic.Mtu),
 			Speed:        uint32(nic.Bandwidth / 1000),
 			Mode:         models.InterfaceMode(mode),

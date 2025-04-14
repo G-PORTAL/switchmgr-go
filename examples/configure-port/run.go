@@ -39,11 +39,20 @@ func main() {
 	}
 
 	description := os.Getenv("PORT_DESCRIPTION")
-	t := true
+
+	var changeEnabled *bool
+	if os.Getenv("PORT_DISABLED") == "true" {
+		changeEnabled = new(bool)
+		*changeEnabled = false
+	}
+	if os.Getenv("PORT_DISABLED") == "false" {
+		changeEnabled = new(bool)
+		*changeEnabled = true
+	}
 
 	update := &models.UpdateInterface{
 		Name:         name,
-		Enabled:      &t,
+		Enabled:      changeEnabled,
 		VlanMapping:  make(map[int32]int32),
 		UntaggedVLAN: nil,
 		TaggedVLANs:  nil,
