@@ -69,3 +69,35 @@ func TestParseHardwareInfo2(t *testing.T) {
 	}
 
 }
+
+func TestParseHardwareInfo3(t *testing.T) {
+	hwInfo, err := fsos_s5.ParseHardwareInfo(utils.ReadTestData("show version 3", nil))
+	if err != nil {
+		t.Fatalf("Error parsing hardware info: %s", err.Error())
+	}
+
+	if hwInfo == nil {
+		t.Fatalf("Hardware info is nil")
+	}
+
+	if hwInfo.Serial != "CG2406284200N0000" {
+		t.Fatalf("Serial number is wrong: %s", hwInfo.Serial)
+	}
+
+	if hwInfo.Model != "S5800-48T4S-P" {
+		t.Fatalf("Model is wrong: %s", hwInfo.Model)
+	}
+
+	if hwInfo.Vendor != "Fiberstore" {
+		t.Fatalf("Vendor is wrong: %s", hwInfo.Vendor)
+	}
+
+	if hwInfo.FirmwareVersion != "FSOS 7.4.8" {
+		t.Fatalf("Firmware version is wrong: %s", hwInfo.FirmwareVersion)
+	}
+
+	if hwInfo.Hostname != "sin-as-SG00000" {
+		t.Fatalf("Hostname is wrong: %s", hwInfo.Hostname)
+	}
+
+}

@@ -1,0 +1,12 @@
+FSOS Software, S5800, Version 7.4.8
+Copyright (C) 2009-2024 FS.COM Inc.  All Rights Reserved.
+The current running image is flash:/boot/FSOS-S5800-48T4S-PE-v7.4.8.r.bin
+
+sin-as-SG00000 uptime is 133 days, 3 hours, 31 minutes
+Hardware Type is 48T4S-PE
+Hardware Version is 3.1
+SDRAM size 2048M
+Flash size 8192M
+BootRom Version is A.2.30
+System serial number is CG2406284200N00000
+Current Web Version is 7.4.8

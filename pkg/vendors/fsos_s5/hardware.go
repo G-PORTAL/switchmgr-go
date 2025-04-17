@@ -7,9 +7,9 @@ import (
 	"regexp"
 )
 
-var serialRegex = regexp.MustCompile(`System\sserial\snumber\sis\s([0-9A-Z]+)\r\n`)
+var serialRegex = regexp.MustCompile(`System\sserial\snumber\sis\s([0-9A-Z]+)\w`)
 var seriesRegex = regexp.MustCompile(`FSOS\sSoftware,\s([0-9A-Z]+),\sVersion`)
-var modelRegex = regexp.MustCompile(`Hardware\sType\sis\s([0-9A-Z-]+)\r\n`)
+var modelRegex = regexp.MustCompile(`Hardware\sType\sis\s([0-9A-Z-]+)\w`)
 var versionRegex = regexp.MustCompile(`Current\sWeb\sVersion\sis\s([0-9A-Za-z.]+)`)
 var version2Regex = regexp.MustCompile(`,\sVersion\s([0-9A-Za-z.]+)`)
 var hostnameRegex = regexp.MustCompile(`(.+)\suptime\sis\s`)
