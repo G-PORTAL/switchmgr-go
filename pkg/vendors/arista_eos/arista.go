@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/utils"
+	"github.com/g-portal/switchmgr-go/pkg/utils/sshconn"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
@@ -60,7 +61,7 @@ func (arista *AristaEOS) Connect(cfg config.Connection) error {
 		sshConfig.Auth = append(sshConfig.Auth, ssh.RetryableAuthMethod(ssh.Password(strings.TrimSpace(cfg.Password)), 3))
 	}
 
-	arista.conn, err = ssh.Dial("tcp", fmt.Sprintf("%s:%v", cfg.Host, cfg.Port), sshConfig)
+	arista.conn, err = sshconn.Dial("tcp", fmt.Sprintf("%s:%v", cfg.Host, cfg.Port), sshConfig)
 	if err != nil {
 		return err
 	}

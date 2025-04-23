@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/config"
 	"github.com/g-portal/switchmgr-go/pkg/utils"
+	"github.com/g-portal/switchmgr-go/pkg/utils/sshconn"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"golang.org/x/crypto/ssh"
@@ -52,7 +53,7 @@ func (fs *FSComS3) Connect(cfg config.Connection) error {
 		sshConfig.Auth = append(sshConfig.Auth, ssh.RetryableAuthMethod(ssh.Password(strings.TrimSpace(cfg.Password)), 3))
 	}
 
-	fs.conn, err = ssh.Dial("tcp", fmt.Sprintf("%s:%v", cfg.Host, cfg.Port), sshConfig)
+	fs.conn, err = sshconn.Dial("tcp", fmt.Sprintf("%s:%v", cfg.Host, cfg.Port), sshConfig)
 	if err != nil {
 		return err
 	}
