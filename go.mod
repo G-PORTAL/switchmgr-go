@@ -5,7 +5,8 @@ go 1.24
 toolchain go1.24.0
 
 require (
-	github.com/charmbracelet/log v0.4.0
+	github.com/aristanetworks/goeapi v1.0.0
+	github.com/charmbracelet/log v0.4.2
 	github.com/google/go-cmp v0.7.0
 	github.com/neverlee/keymutex v0.0.0-20171121013845-f593aa834bf9
 	github.com/openshift-telco/go-netconf-client v0.0.0-20241021185752-06deeda82baa
@@ -15,10 +16,12 @@ require (
 )
 
 require (
-	github.com/aristanetworks/goeapi v1.0.0 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
-	github.com/charmbracelet/lipgloss v1.0.0 // indirect
+	github.com/charmbracelet/colorprofile v0.2.3-0.20250311203215-f60798e515dc // indirect
+	github.com/charmbracelet/lipgloss v1.1.0 // indirect
 	github.com/charmbracelet/x/ansi v0.8.0 // indirect
+	github.com/charmbracelet/x/cellbuf v0.0.13-0.20250311204145-2c3ea96c31dd // indirect
+	github.com/charmbracelet/x/term v0.2.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
@@ -30,6 +33,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/vaughan0/go-ini v0.0.0-20130923145212-a98ad7ee00ec // indirect
+	github.com/xo/terminfo v0.0.0-20220910002029-abceb7e1c41e // indirect
 	golang.org/x/sys v0.31.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
