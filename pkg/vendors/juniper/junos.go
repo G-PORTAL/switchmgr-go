@@ -21,7 +21,9 @@ type Juniper struct {
 }
 
 const Vendor registry.Vendor = "juniper"
-const Timeout = 180
+
+// Timeout is the default timeout for netconf operations in seconds
+const Timeout = 300
 
 var configMutex = keymutex.New(128)
 
