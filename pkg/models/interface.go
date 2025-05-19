@@ -157,5 +157,9 @@ func (i *Interface) Differs(u *UpdateInterface) bool {
 		}
 	}
 
+	if len(u.VlanMapping) == 0 && (i.VlanMapping != nil && len(i.VlanMapping) > 0) {
+		return true
+	}
+
 	return false
 }
