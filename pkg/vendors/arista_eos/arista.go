@@ -13,6 +13,8 @@ import (
 
 const Vendor registry.Vendor = "arista_eos"
 
+// AristaEOS Please note that the goeapi library is not thread-safe
+// See also: https://github.com/aristanetworks/goeapi/issues/73
 type AristaEOS struct {
 	unimplemented.Unimplemented
 
@@ -30,6 +32,9 @@ func (arista *AristaEOS) Vendor() registry.Vendor {
 func (arista *AristaEOS) Connect(cfg config.Connection) error {
 	arista.Logger().SetPrefix(fmt.Sprintf("[arista/%s]", cfg.Host))
 
+	arista.mu.Lock()
+	defer arista.mu.Unlock()
+
 	var err error
 	connection, err := goeapi.Connect("https", cfg.Host, cfg.Username, cfg.Password, 443)
 	if err != nil {
@@ -37,6 +42,8 @@ func (arista *AristaEOS) Connect(cfg config.Connection) error {
 	}
 
 	arista.connection = *connection
+	arista.connection.GetConnection().SetDisableKeepAlive(true)
+	arista.connection.GetConnection().SetTimeout(60)
 
 	return nil
 }
