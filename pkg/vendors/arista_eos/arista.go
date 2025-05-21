@@ -13,6 +13,8 @@ import (
 
 const Vendor registry.Vendor = "arista_eos"
 
+var aristaMutex sync.Mutex
+
 // AristaEOS Please note that the goeapi library is not thread-safe
 // See also: https://github.com/aristanetworks/goeapi/issues/73
 type AristaEOS struct {
@@ -21,7 +23,6 @@ type AristaEOS struct {
 	LoginCommands []string
 
 	connection goeapi.Node
-	mu         sync.Mutex
 }
 
 func (arista *AristaEOS) Vendor() registry.Vendor {
@@ -32,8 +33,8 @@ func (arista *AristaEOS) Vendor() registry.Vendor {
 func (arista *AristaEOS) Connect(cfg config.Connection) error {
 	arista.Logger().SetPrefix(fmt.Sprintf("[arista/%s]", cfg.Host))
 
-	arista.mu.Lock()
-	defer arista.mu.Unlock()
+	aristaMutex.Lock()
+	defer aristaMutex.Unlock()
 
 	var err error
 	connection, err := goeapi.Connect("https", cfg.Host, cfg.Username, cfg.Password, 443)
@@ -68,8 +69,8 @@ func (arista *AristaEOS) Save() error {
 
 // SendCommands sends a list of commands to the switch and returns the output
 func (arista *AristaEOS) SendCommands(commands ...string) ([]string, error) {
-	arista.mu.Lock()
-	defer arista.mu.Unlock()
+	aristaMutex.Lock()
+	defer aristaMutex.Unlock()
 
 	response, err := arista.connection.RunCommands(commands, "text")
 	if err != nil {
