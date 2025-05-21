@@ -21,7 +21,7 @@ type FSComS3 struct {
 	LoginCommands []string
 
 	conn    *ssh.Client
-	session *ssh.Session
+	session ssh.Session
 
 	writer    io.WriteCloser
 	reader    io.Reader
@@ -58,9 +58,12 @@ func (fs *FSComS3) Connect(cfg config.Connection) error {
 		return err
 	}
 
-	if fs.session, err = fs.conn.NewSession(); err != nil {
+	session, err := fs.conn.NewSession()
+	if err != nil {
 		return err
 	}
+
+	fs.session = *session
 
 	// Set up terminal modes
 	fs.Logger().Debugf("Requesting pseudo terminal.")
@@ -101,12 +104,6 @@ func (fs *FSComS3) Connect(cfg config.Connection) error {
 }
 
 func (fs *FSComS3) Disconnect() error {
-	if fs.session != nil {
-		if err := fs.session.Close(); err != nil && err != io.EOF {
-			return err
-		}
-	}
-
 	fs.Logger().Debug("Closed the session.")
 
 	if fs.conn != nil {

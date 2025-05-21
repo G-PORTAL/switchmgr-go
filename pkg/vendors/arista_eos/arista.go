@@ -17,7 +17,7 @@ type AristaEOS struct {
 
 	LoginCommands []string
 
-	connection *goeapi.Node
+	connection goeapi.Node
 }
 
 func (arista *AristaEOS) Vendor() registry.Vendor {
@@ -34,7 +34,7 @@ func (arista *AristaEOS) Connect(cfg config.Connection) error {
 		return fmt.Errorf("failed to connect to eapi: %w", err)
 	}
 
-	arista.connection = connection
+	arista.connection = *connection
 
 	return nil
 }
