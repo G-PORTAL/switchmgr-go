@@ -142,9 +142,11 @@ func (fs *FSComS3) SendCommands(commands ...string) (string, error) {
 }
 
 func init() {
-	registry.RegisterVendor(Vendor, &FSComS3{
-		LoginCommands: []string{
-			"enter", "terminal length 0",
-		},
+	registry.RegisterVendorFactory(Vendor, func() interface{} {
+		return &FSComS3{
+			LoginCommands: []string{
+				"enter", "terminal length 0",
+			},
+		}
 	})
 }

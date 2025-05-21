@@ -122,7 +122,9 @@ func loadPlugins() error {
 
 		driver := *sym.(*Driver)
 
-		registry.RegisterVendor(driver.Vendor(), driver)
+		registry.RegisterVendorFactory(driver.Vendor(), func() interface{} {
+			return &driver
+		})
 	}
 
 	return nil

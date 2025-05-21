@@ -108,9 +108,11 @@ func (arista *AristaEOS) GetJsonResponse(resp interface{}, command string) error
 }
 
 func init() {
-	registry.RegisterVendor(Vendor, &AristaEOS{
-		LoginCommands: []string{
-			"terminal length 0",
-		},
+	registry.RegisterVendorFactory(Vendor, func() interface{} {
+		return &AristaEOS{
+			LoginCommands: []string{
+				"terminal length 0",
+			},
+		}
 	})
 }
