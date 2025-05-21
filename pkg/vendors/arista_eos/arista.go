@@ -8,6 +8,7 @@ import (
 	"github.com/g-portal/switchmgr-go/pkg/vendors/registry"
 	"github.com/g-portal/switchmgr-go/pkg/vendors/unimplemented"
 	"strings"
+	"sync"
 )
 
 const Vendor registry.Vendor = "arista_eos"
@@ -18,6 +19,7 @@ type AristaEOS struct {
 	LoginCommands []string
 
 	connection goeapi.Node
+	mu         sync.Mutex
 }
 
 func (arista *AristaEOS) Vendor() registry.Vendor {
@@ -59,6 +61,9 @@ func (arista *AristaEOS) Save() error {
 
 // SendCommands sends a list of commands to the switch and returns the output
 func (arista *AristaEOS) SendCommands(commands ...string) ([]string, error) {
+	arista.mu.Lock()
+	defer arista.mu.Unlock()
+
 	response, err := arista.connection.RunCommands(commands, "text")
 	if err != nil {
 		return nil, err
