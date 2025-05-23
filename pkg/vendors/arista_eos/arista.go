@@ -55,7 +55,7 @@ func (arista *AristaEOS) Disconnect() error {
 
 // Save  saves the configuration to startup config
 func (arista *AristaEOS) Save() error {
-	output, err := arista.SendCommands("write memory")
+	output, err := arista.SendCommands("enable", "write memory")
 	if err != nil {
 		return err
 	}
@@ -67,12 +67,30 @@ func (arista *AristaEOS) Save() error {
 	return err
 }
 
+// cmdsToInterface, copied from https://github.com/aristanetworks/goeapi/blob/7090068b8735dc15c22444cbda080db4052ae8af/client.go#L440
+func (arista *AristaEOS) cmdsToInterface(commands []string) []interface{} {
+	if commands == nil || len(commands) == 0 {
+		return nil
+	}
+	var interfaceSlice []interface{}
+	length := len(commands)
+
+	interfaceSlice = make([]interface{}, length)
+
+	for i := 0; i < length; i++ {
+		interfaceSlice[i] = commands[i]
+	}
+	return interfaceSlice
+}
+
 // SendCommands sends a list of commands to the switch and returns the output
 func (arista *AristaEOS) SendCommands(commands ...string) ([]string, error) {
 	aristaMutex.Lock()
 	defer aristaMutex.Unlock()
 
-	response, err := arista.connection.RunCommands(commands, "text")
+	// we use arista.connection.RunCommands but it always adds "enable" before all commands, even for
+	// those where we don't need those privileges.
+	response, err := arista.connection.GetConnection().Execute(arista.cmdsToInterface(commands), "text")
 	if err != nil {
 		return nil, err
 	}

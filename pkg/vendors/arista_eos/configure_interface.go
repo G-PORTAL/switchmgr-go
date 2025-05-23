@@ -27,6 +27,7 @@ func (arista *AristaEOS) ConfigureInterface(update *models.UpdateInterface) (boo
 	}
 
 	commands := []string{
+		"enable",
 		"configure",                              // enter config mode
 		fmt.Sprintf("interface %s", update.Name), // enter interface config mode,
 		fmt.Sprintf("switchport mode %s", InterfaceModeTrunk), // set interface mode

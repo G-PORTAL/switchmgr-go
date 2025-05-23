@@ -6,7 +6,7 @@ import (
 )
 
 func (arista *AristaEOS) getRunningConfig() (iosconfig.Config, error) {
-	output, err := arista.SendCommands("show running-config")
+	output, err := arista.SendCommands("enable", "show running-config")
 	if err != nil {
 		return nil, fmt.Errorf("failed to show running-config: %w", err)
 	}

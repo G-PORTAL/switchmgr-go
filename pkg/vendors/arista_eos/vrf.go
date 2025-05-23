@@ -21,7 +21,7 @@ func (arista *AristaEOS) AddVRFRoute(vrfName, interfaceName string, network *net
 		return nil
 	}
 
-	_, err = arista.SendCommands("configure", vrfConfig)
+	_, err = arista.SendCommands("enable", "configure", vrfConfig)
 	return err
 }
 
@@ -40,6 +40,6 @@ func (arista *AristaEOS) RemoveVRFRoute(vrfName, interfaceName string, network *
 		return nil
 	}
 
-	_, err = arista.SendCommands("configure", "no "+vrfConfig)
+	_, err = arista.SendCommands("enable", "configure", "no "+vrfConfig)
 	return err
 }
