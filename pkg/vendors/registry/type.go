@@ -9,7 +9,7 @@ import (
 // and to load the correct driver.
 type Vendor string
 
-var registeredVendors map[Vendor]interface{}
+var vendorFactories = make(map[Vendor]func() interface{})
 var registeredVendorsMtx sync.RWMutex
 
 // Valid checks if this lib supports the given vendor.
@@ -17,35 +17,26 @@ func (v Vendor) Valid() bool {
 	registeredVendorsMtx.RLock()
 	defer registeredVendorsMtx.RUnlock()
 
-	// we have no implementation
-	if _, ok := registeredVendors[v]; !ok {
-		return false
-	}
+	_, ok := vendorFactories[v]
 
-	return true
+	return ok
 }
 
 // GetVendor returns the vendor implementation
-func GetVendor(v Vendor) (interface{}, error) {
+func GetVendor(vendor Vendor) (interface{}, error) {
 	registeredVendorsMtx.RLock()
 	defer registeredVendorsMtx.RUnlock()
 
-	// we have no implementation
-	if implementation, ok := registeredVendors[v]; ok {
-		return implementation, nil
+	if factory, ok := vendorFactories[vendor]; ok {
+		return factory(), nil
 	}
 
-	return nil, fmt.Errorf("failed to get implementation for vendor %s", v)
+	return nil, fmt.Errorf("vendor %s not found", vendor)
 }
 
-// RegisterVendor registers a vendor plugin
-func RegisterVendor(v Vendor, implementation interface{}) {
+func RegisterVendorFactory(vendor Vendor, factory func() interface{}) {
 	registeredVendorsMtx.Lock()
 	defer registeredVendorsMtx.Unlock()
 
-	if registeredVendors == nil {
-		registeredVendors = make(map[Vendor]interface{})
-	}
-
-	registeredVendors[v] = implementation
+	vendorFactories[vendor] = factory
 }

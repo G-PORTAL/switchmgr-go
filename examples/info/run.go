@@ -58,6 +58,20 @@ func main() {
 		}
 	}
 
+	if vrfName := os.Getenv("VRF_NAME"); vrfName != "" {
+		driver.Logger().Info("+++++++++++++++++++")
+		driver.Logger().Infof("VRF Routing Table (VRF %q):", vrfName)
+		driver.Logger().Info("+++++++++++++++++++")
+		routes, err := driver.ListVRFRoutes(vrfName)
+		if err == nil {
+			for _, entry := range routes {
+				driver.Logger().Infof("Route %q via %q", entry.Network.String(), entry.InterfaceName)
+			}
+		} else {
+			driver.Logger().Errorf("Failed to get VRF routes: %v", err)
+		}
+	}
+
 	driver.Logger().Info("+++++++++++++++++++")
 	driver.Logger().Info("LLDP Table:")
 	driver.Logger().Info("+++++++++++++++++++")

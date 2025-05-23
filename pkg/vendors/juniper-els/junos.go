@@ -71,5 +71,7 @@ func (j *JuniperELS) Disconnect() error {
 }
 
 func init() {
-	registry.RegisterVendor(Vendor, &JuniperELS{})
+	registry.RegisterVendorFactory(Vendor, func() interface{} {
+		return &JuniperELS{}
+	})
 }

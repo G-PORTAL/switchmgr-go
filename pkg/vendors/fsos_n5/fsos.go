@@ -16,11 +16,13 @@ func (fs *FSComN5) Vendor() registry.Vendor {
 }
 
 func init() {
-	registry.RegisterVendor(Vendor, &FSComN5{
-		FSComS3: fsos_s3.FSComS3{
-			LoginCommands: []string{
-				"terminal length 0",
+	registry.RegisterVendorFactory(Vendor, func() interface{} {
+		return &FSComN5{
+			FSComS3: fsos_s3.FSComS3{
+				LoginCommands: []string{
+					"terminal length 0",
+				},
 			},
-		},
+		}
 	})
 }

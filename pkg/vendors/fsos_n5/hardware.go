@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"github.com/g-portal/switchmgr-go/pkg/models"
 	"regexp"
+	"strings"
 )
 
-var serialRegex = regexp.MustCompile(`System\sserial\snumber\s+:\s([0-9A-Z]+)\r\n`)
-var modelRegex = regexp.MustCompile(`System\sdescription\s+:\s.+\(([0-9A-Z-]+)\).+\r\n`)
-var versionRegex = regexp.MustCompile(`System\ssoftware\sversion\s+:\s.+_FSOS\s(.+)\r\n`)
-var hostnameRegex = regexp.MustCompile(`hostname\s(.+)\r\n`)
+var serialRegex = regexp.MustCompile(`System\sserial\snumber\s+:\s([0-9A-Z]+)`)
+var seria2lRegex = regexp.MustCompile(`Serial\snumber\s+:\s([0-9A-Z]+)`)
+var modelRegex = regexp.MustCompile(`System\sdescription\s+:\s.+\(([0-9A-Z-]+)\).+`)
+var versionRegex = regexp.MustCompile(`System\ssoftware\sversion\s+:\s.+_FSOS\s(.+)`)
+var hostnameRegex = regexp.MustCompile(`hostname\s(.+)`)
 
 func (fs *FSComN5) GetHardwareInfo() (*models.HardwareInfo, error) {
 	output, err := fs.SendCommands("show version", "show running-config | include hostname")
@@ -29,30 +31,33 @@ func ParseHardwareInfo(output string) (*models.HardwareInfo, error) {
 	// serial
 	matches := serialRegex.FindStringSubmatch(output)
 	if len(matches) != 2 {
-		return nil, errors.New("could not parse serial")
+		matches = seria2lRegex.FindStringSubmatch(output)
+		if len(matches) != 2 {
+			return nil, errors.New("could not parse serial")
+		}
 	}
-	hwInfo.Serial = matches[1]
+	hwInfo.Serial = strings.TrimSpace(matches[1])
 
 	// model
 	matches = modelRegex.FindStringSubmatch(output)
 	if len(matches) != 2 {
 		return nil, errors.New("could not parse model")
 	}
-	hwInfo.Model = matches[1]
+	hwInfo.Model = strings.TrimSpace(matches[1])
 
 	// firmware version
 	matches = versionRegex.FindStringSubmatch(output)
 	if len(matches) != 2 {
 		return nil, errors.New("could not parse firmware version")
 	}
-	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", matches[1])
+	hwInfo.FirmwareVersion = fmt.Sprintf("FSOS %s", strings.TrimSpace(matches[1]))
 
 	// hostname
 	matches = hostnameRegex.FindStringSubmatch(output)
 	if len(matches) != 2 {
 		return nil, errors.New("could not parse hostname")
 	}
-	hwInfo.Hostname = matches[1]
+	hwInfo.Hostname = strings.TrimSpace(matches[1])
 
 	return hwInfo, nil
 }
