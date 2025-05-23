@@ -11,5 +11,5 @@ func (arista *AristaEOS) getRunningConfig() (iosconfig.Config, error) {
 		return nil, fmt.Errorf("failed to show running-config: %w", err)
 	}
 
-	return iosconfig.Parse(output[0]), nil
+	return iosconfig.Parse(output[1]), nil
 }

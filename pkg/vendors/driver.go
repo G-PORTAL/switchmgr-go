@@ -60,6 +60,8 @@ type Driver interface {
 	// through LLDP. This information can be used to get insights about the
 	// network topology or for debugging purposes.
 	ListLLDPNeighbors() ([]models.LLDPNeighbor, error)
+	// ListVRFRoutes returns a list of all static VRF routes that are configured.
+	ListVRFRoutes(vrfName string) ([]models.VRFRoute, error)
 	// AddVRFRoute adds a new VRF route to the switch. The VRF route is used
 	// in a VRF network to route traffic to a specific interface.
 	AddVRFRoute(vrfName, interfaceName string, network *net.IPNet) error

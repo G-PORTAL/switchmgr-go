@@ -33,6 +33,9 @@ func (j *Unimplemented) ListArpTable() ([]models.ArpEntry, error) {
 func (j *Unimplemented) ListInterfaces() ([]*models.Interface, error) {
 	return nil, errors.New("not implemented")
 }
+func (j *Unimplemented) ListVRFRoutes(vrfName string) ([]models.VRFRoute, error) {
+	return nil, errors.New("not implemented")
+}
 func (j *Unimplemented) AddVRFRoute(vrfName, interfaceName string, network *net.IPNet) error {
 	return errors.New("not implemented")
 }

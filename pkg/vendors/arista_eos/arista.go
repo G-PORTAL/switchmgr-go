@@ -60,7 +60,7 @@ func (arista *AristaEOS) Save() error {
 		return err
 	}
 
-	if !strings.Contains(strings.TrimSpace(output[0]), "successfully") {
+	if !strings.Contains(strings.TrimSpace(output[1]), "successfully") {
 		return fmt.Errorf("failed to save the configuration: %s", output)
 	}
 
