@@ -76,13 +76,14 @@ func (cfg Configuration) ListInterfaces() ([]*models.Interface, error) {
 		}
 
 		interfaces = append(interfaces, &models.Interface{
-			Name:         nic,
-			Description:  config.GetStringValue("description", ""),
-			Enabled:      enable,
-			Mode:         interfaceMode,
-			UntaggedVLAN: untaggedVLAN,
-			TaggedVLANs:  taggedVLANs,
-			Management:   mgmt,
+			Name:          nic,
+			Description:   config.GetStringValue("description", ""),
+			Enabled:       enable,
+			Mode:          interfaceMode,
+			UntaggedVLAN:  untaggedVLAN,
+			TaggedVLANs:   taggedVLANs,
+			Management:    mgmt,
+			PortIsolation: config.Exists("port-isolate group 1", true),
 		})
 	}
 

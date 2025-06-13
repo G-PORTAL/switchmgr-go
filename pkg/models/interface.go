@@ -64,7 +64,8 @@ type Interface struct {
 	// The key is the original VLAN ID, the value is the new VLAN ID
 	VlanMapping map[int32]int32
 
-	Management bool
+	Management    bool
+	PortIsolation bool
 }
 
 type UpdateInterface struct {
@@ -80,6 +81,9 @@ type UpdateInterface struct {
 
 	// The key is the original VLAN ID, the value is the new VLAN ID
 	VlanMapping map[int32]int32
+
+	// Change port isolation status
+	PortIsolation *bool
 }
 
 // Disabled returns true if the interface should be disabled. This is the case if
@@ -158,6 +162,10 @@ func (i *Interface) Differs(u *UpdateInterface) bool {
 	}
 
 	if len(u.VlanMapping) == 0 && (i.VlanMapping != nil && len(i.VlanMapping) > 0) {
+		return true
+	}
+
+	if u.PortIsolation != nil && i.PortIsolation != *u.PortIsolation {
 		return true
 	}
 

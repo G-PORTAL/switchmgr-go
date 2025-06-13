@@ -94,6 +94,14 @@ func (fs *FSComS5) ConfigureInterface(update *models.UpdateInterface) (bool, err
 		commands = append(commands, "no switchport trunk native vlan")
 	}
 
+	if update.PortIsolation != nil {
+		if *update.PortIsolation && !nic.PortIsolation {
+			commands = append(commands, "port-isolate group 1")
+		} else if !*update.PortIsolation && nic.PortIsolation {
+			commands = append(commands, "no port-isolate group")
+		}
+	}
+
 	if update.TaggedVLANs != nil {
 		taggedVLANs := make([]string, 0)
 		if update.UntaggedVLAN != nil {

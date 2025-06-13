@@ -2,4 +2,5 @@
 .env.*
 *.so
 
+/tools/
 /examples/local
